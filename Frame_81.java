@@ -12,8 +12,8 @@ import java.lang.reflect.Method;
 public class Frame_81 {
     
     //all the tab class names that needs to be added
-    private static String[] tabNames =  {"Tab_21", "Tab_45", "Tab_69",
-                                            "Tab_XX", "Tab_XX"};
+    private static String[] tabNames =  {"Tab_21", "Tab_27", "Tab_45",
+                                            "Tab_69", "Tab_XX"};
 
     private static void addTab(String tabClassName, JTabbedPane tabbedPane){
         // takes the class name as parameter and if the class exists then adds 
