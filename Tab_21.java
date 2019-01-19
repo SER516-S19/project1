@@ -5,9 +5,7 @@
     Date:   1/19/2019
 */
 
-import javax.swing.JPanel;
-
-public class Tab_21 extends JPanel
+public class Tab_21 extends MainTab
 {
     @Override
     public String getName()
