@@ -12,6 +12,8 @@ public class Tab_21 extends MainTab
 {
     private static String[] panelNums = {"53", "82", "29","87", "57"};
     
+    private static String[] panelNums = {"53", "82", "29","87","40","02","22","57"};
+
     public Tab_21()
     {
         super();
