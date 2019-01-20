@@ -1,6 +1,8 @@
-import java.awt.LayoutManager;
+import java.awt.*;
+import java.sql.SQLOutput;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 
 /*
 * Create a panel with self-defined label
@@ -9,24 +11,27 @@ import javax.swing.*;
 * */
 
 public class Panel_35 extends JPanel {
-	JPanel panel = null;
 	JLabel label = null;
+	boolean testMode = false;
 	public Panel_35() {
-       init();
-       assemble();
+		init();
+		stylize();
+		assemble();
 	}
 
 	private void init() {
-        panel = new JPanel();
-        label = new JLabel("Hongfei Ju");
+		if (testMode) System.out.println("initialize...");
+		label = new JLabel("Hongfei Ju");
     }
+
+    private void stylize() {
+		if (testMode) System.out.println("stylize...");
+		setBackground(Color.orange);
+	}
 
     private void assemble() {
-	    panel.add(label);
-    }
-
-	public JPanel getPanel() {
-		return panel;
+		if (testMode) System.out.println("assemble...");
+		add(new JLabel("Hongfei Ju"));
 	}
 
 
@@ -34,8 +39,7 @@ public class Panel_35 extends JPanel {
 /*	public static void main(String[] args) {
 		JFrame frame = new JFrame();
 		frame.setSize(500, 500);
-        Panel_35 panel = new Panel_35();
-		frame.add(panel.getPanel());
+		frame.add(new Panel_35());
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}*/
