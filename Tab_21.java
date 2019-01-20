@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 public class Tab_21 extends MainTab
 {
-    private static String[] panelNums = {"53", "82"};
+    private static String[] panelNums = {"53", "82", "29"};
     
     public Tab_21()
     {
