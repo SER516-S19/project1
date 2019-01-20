@@ -9,7 +9,7 @@ public class Panel_63 extends JPanel {
 		
 	}
 
-	private createPanel(){
+	private void createPanel(){
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(10, 10, 250, 60);	//setting co-ordinates and size of the panel
