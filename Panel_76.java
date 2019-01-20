@@ -17,7 +17,6 @@ public class Panel_76 extends JPanel
     p.setBounds(10,10,250,60);
     p.setBackground(Color.YELLOW);
     }
-
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
 
