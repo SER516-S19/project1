@@ -9,6 +9,7 @@ public class Panel_29 extends JPanel {
     public Panel_29() {
         init();
     }
+    
     /**
      * Method to Initialize components of the JPanel
      */
@@ -21,4 +22,5 @@ public class Panel_29 extends JPanel {
         this.setBackground(Color.lightGray);
         this.setVisible(true);
     }
+    
 }
