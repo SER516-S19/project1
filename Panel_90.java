@@ -14,24 +14,22 @@ public class Panel_90 extends JPanel{
 	
 	//constructor
 	public Panel_90() {
-		createMyPanel();
+		initialPanel();
 	}
 	
-	//panel creation
-	private void createMyPanel() {
+	//panel init
+	private void initialPanel() {
 		
-		JPanel panel41= new JPanel();
-		JLabel myLabel = new JLabel("Xiangwei Zheng");
 		
-		panel41.add(myLabel);
+		this.setLayout(new GridBagLayout());
+                this.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+                JLabel nameLabel = new JLabel("Xiangwei Zheng");
+                nameLabel.setFont(new Font("Arial", Font.BOLD,20));
+                this.add(nameLabel);
+                this.setBackground(Color.cyan);
+                this.setVisible(true);
 		
-		//styling the Panel
-		panel41.setBounds(20,30,50,60);
-		panel41.setBackground(Color.ORANGE);
-		panel41.setForeground(Color.RED);
-		
-		//styling the Label
-		myLabel.setFont(new Font("Arial",Font.ITALIC,15));
+
 		
 	}
 }
