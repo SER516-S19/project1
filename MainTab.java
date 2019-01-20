@@ -9,7 +9,7 @@ public class MainTab extends JPanel {
     }
 
     public  MainTab(String name) {
-        this.setLayout(new GridLayout(5,4));
+        this();
         this.setName(name);
 
     }
