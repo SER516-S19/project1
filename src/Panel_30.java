@@ -17,13 +17,13 @@ Label contains First name & Last name of the student */
 
    public void createPanel() {
 
-    // JFrame frame = new JFrame();
+     // JFrame frame = new JFrame();
      JPanel panel_30 = new JPanel();
      JLabel name = new JLabel("Krishna Gurram");
 
      panel_30.setBackground(Color.WHITE);
      panel_30.add(name);
-     name.setFont(new Font("Osaka",Font.PLAIN,15));
+     name.setFont(new Font("Osaka", Font.PLAIN, 15));
 
   /*  For testing
 
@@ -35,4 +35,5 @@ Label contains First name & Last name of the student */
  public static void main(String[] args) {
   Panel_30 panel = new Panel_30();
 } */
+   }
  }

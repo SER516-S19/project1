@@ -23,8 +23,4 @@ public class Panel_76 extends JPanel {
     }
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    public static void main(String args[])
-    {
-        new Panel_76();
-    }
 }
