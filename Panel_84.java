@@ -26,7 +26,7 @@ public class Panel_84 extends JPanel {
     panel_object.setBackground(color);
     Border line_border=new LineBorder(Color.GRAY);
     panel_object.setBorder(line_border); 
-    panel_object.setBounds(0,0,800,300);
+    //panel_object.setBounds(0,0,800,300);
     
 //    frame_object.add(panel_object);  //for testing the code frame objects are existed													
 //    frame_object.setSize(800,700); 
