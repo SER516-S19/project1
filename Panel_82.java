@@ -15,21 +15,13 @@ public class Panel_82 extends JPanel {
     }
 	
 	private void initComponents() {
-		JPanel panel = new JPanel();
+		
 		JLabel label = new JLabel("Tsao Yu-Ting");
-		
-		label.setFont(new Font("Calibri", Font.BOLD, 18));
+		label.setFont(new Font("TimesRoman", Font.BOLD, 18));
+		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setForeground(Color.decode("#800000"));// Maroon
-		panel.setBackground(Color.decode("#FFD700"));// Gold
-		panel.add(label);
-		
-//		JFrame frame = new JFrame();
-//		frame.add(panel);
-//		frame.setSize(250, 60);
-//		frame.setVisible(true);
+		this.setBackground(Color.decode("#FFD700"));// Gold
+		this.setLayout(new BorderLayout());
+		this.add(label);
 	}
-
-//	public static void main(String args[]) {
-//		new Panel_82();
-//	}
 }
