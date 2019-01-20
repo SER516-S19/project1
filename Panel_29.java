@@ -16,7 +16,6 @@ public class Panel_29 extends JPanel {
     private void init() {
         this.setLayout(new GridBagLayout());
         JLabel nameLabel = new JLabel("Abhishek Gupta");
-        nameLabel.setFont(new Font("Calibri", Font.BOLD,20));
         this.add(nameLabel);
         this.setBackground(Color.lightGray);
         this.setVisible(true);
