@@ -22,4 +22,7 @@ public class Panel_29 extends JPanel {
         this.setVisible(true);
     }
     
+    public static void main(String args[]) {
+    	new Panel_29();
+    }
 }
