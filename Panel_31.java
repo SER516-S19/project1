@@ -23,7 +23,7 @@ public class Panel_31 extends JPanel
 
 	j_panel.add(j_label);		
 	j_panel.setBackground(Color.RED);		
-	j_panel.setBounds(20,20,450,80);	
+//	j_panel.setBounds(20,20,450,80);	
 	
 	j_label.setFont(new Font("Arial",1,20));
 	j_label.setText("Srivan Reddy");
