@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 public class Tab_21 extends MainTab
 {
     private static String[] panelNums = {"53", "82", "29"};
+    private static String[] panelNums = {"53", "82", "29","87"};
     
     public Tab_21()
     {
