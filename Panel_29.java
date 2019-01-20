@@ -15,7 +15,6 @@ public class Panel_29 extends JPanel {
      */
     private void init() {
         this.setLayout(new GridBagLayout());
-        this.setBorder(BorderFactory.createEmptyBorder(10, 10, 100, 100));
         JLabel nameLabel = new JLabel("Abhishek Gupta");
         nameLabel.setFont(new Font("Calibri", Font.BOLD,20));
         this.add(nameLabel);
