@@ -5,8 +5,6 @@
     Date:   1/19/2019
 */
 
-import java.awt.GridLayout;
-import java.awt.LayoutManager;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
