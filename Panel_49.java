@@ -11,7 +11,7 @@ public class Panel_49 extends JPanel{
 Panel_49()
 {
 	//Creating Temporary Frame object
-	JFrame Tmp_Frame= new JFrame();
+	//JFrame Tmp_Frame= new JFrame();
 	
 	JPanel panel_49 = new JPanel();
 	
@@ -26,18 +26,18 @@ Panel_49()
 	panel_49.setPreferredSize(new Dimension(300,200));
 	
 	
-	//Temporary Frame     
-	Tmp_Frame.add(panel_49);
-	Tmp_Frame.setSize(400, 400);
-	Tmp_Frame.setVisible(true);  
+		/*
+		 * //Temporary Frame Tmp_Frame.add(panel_49); Tmp_Frame.setSize(400, 400);
+		 * Tmp_Frame.setVisible(true);
+		 */
 	
 		
 	
 }
 
-public static void main(String[] args)
-{
-	new Panel_49();
-	
-}
+	/*
+	 * public static void main(String[] args) { new Panel_49();
+	 * 
+	 * }
+	 */
 }
