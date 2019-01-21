@@ -30,13 +30,13 @@ public class Panel_66 {
         return panel;
 	}
 
-	public static void main(String[] args) {
+// 	public static void main(String[] args) {
 		
-		Panel_66 panel_66 = new Panel_66();
-		JFrame frame = new JFrame();
-		frame.add(panel_66.createPanel_66());
-		frame.setSize(new Dimension(300,300));
-		frame.setVisible(true);
-	}
+// 		Panel_66 panel_66 = new Panel_66();
+// 		JFrame frame = new JFrame();
+// 		frame.add(panel_66.createPanel_66());
+// 		frame.setSize(new Dimension(300,300));
+// 		frame.setVisible(true);
+// 	}
 
 }
