@@ -6,7 +6,7 @@ import java.awt.*;
 
 /**
  *
- * @author Alsha SAmantaray
+ * @author Alsha Samantaray
  * gitID: 72
  */
  public class Panel_72 extends JPanel{
