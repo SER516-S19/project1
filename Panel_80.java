@@ -18,7 +18,7 @@ public class Panel_80 extends JPanel
         this.setMinimumSize(new java.awt.Dimension(500, 300));
 
         jLabel1.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel1.setFont(new java.awt.Font("Algerian", 0, 48));
+        jLabel1.setFont(new java.awt.Font("Algerian", 0, 24));
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setText("Sajith Thattazhi");
 		
