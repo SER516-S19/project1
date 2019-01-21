@@ -7,25 +7,25 @@ public class Panel_17 extends JPanel {
     private void initComponents() 
     {
     //Frames are commented out, they were used just to check the code and errors
-    JFrame frame = new JFrame("Panel Example");
+    //JFrame frame = new JFrame("Panel Example");
 	
     JPanel panel = new JPanel();
     JLabel label = new JLabel("Manikanta Chintakunta");
     
     
     panel.add(label);
-    panel.setBounds(20,20,450,80);
+    //panel.setBounds(20,20,450,80);
     panel.setBackground(Color.GRAY);
 	
-	label.setFont(new Font("TimesRoman", Font.BOLD ,60));
-    frame.add(panel);  
-    frame.setSize(750,450);    
-    frame.setVisible(true);        
+	label.setFont(new Font("TimesRoman", Font.BOLD ,30));
+    //frame.add(panel);  
+    //frame.setSize(750,450);    
+    //frame.setVisible(true);        
     }
     //private javax.swing.JLabel jLabel1;
     //private javax.swing.JPanel jPanel1;
-    public static void main(String args[])
-    {
-        new Panel_17();
-    }
-}
+    //public static void main(String args[])
+    //{
+    //    new Panel_17();
+  //  }
+//}
