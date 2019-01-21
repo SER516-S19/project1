@@ -8,12 +8,10 @@ public class Panel_84 extends JPanel {
  * Author : Shashidhar, Panel 84, svanter1@asu.edu
  */
 
-	// constructor for invoking method GUI_panel
     public Panel_84() {
         GUI_panel();
     }
 
-    //declaring a method GUI panel which creates our panel and label
     private void GUI_panel() 
     {
     JLabel label_object = new JLabel("Shashidhar reddy",JLabel.CENTER); 
