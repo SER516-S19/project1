@@ -13,7 +13,7 @@ import javax.swing.border.LineBorder;
  * @author $Darshan Prakash
  */
 
-public class Panel_66 {
+public class Panel_66 extends JPanel {
 	
 	public Panel_66() {
 		
