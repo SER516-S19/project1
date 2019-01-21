@@ -6,7 +6,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel_86 extends JPanel{
+public class Panel_86 extends JPanel {
 	
 	/*
 	 Class Constructor
@@ -35,7 +35,7 @@ public class Panel_86 extends JPanel{
 		/* To test the panel
 		 frame.add(panel);
 		 frame.setSize(300, 150);
-         frame.setVisible(true);
+         	 frame.setVisible(true);
 		 */
 		
 	}
