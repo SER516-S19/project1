@@ -33,23 +33,16 @@ class Panel_44 extends JPanel {
 
         String name = "Koushik Kotamraju";
 
-       // JFrame jFrame = new JFrame();
         JPanel panel = new JPanel();
         JLabel label = new JLabel(name);
 
         label.setFont(new Font("Papyrus",Font.PLAIN,15));
 
+        setvisible(true);
         panel.add(label);
         panel.setBounds(coordinateX, coordinateY, panelWidth, panelHeight);
         panel.setBackground(Color.LIGHT_GRAY);
+        
 
-        /*jFrame.add(panel);
-        jFrame.setSize(300, 150);
-        jFrame.setLayout(null);
-        jFrame.setVisible(true);*/
     }
-
-    /*public static void main(String args[]) {
-        new Panel_44();
-    }*/
 }
