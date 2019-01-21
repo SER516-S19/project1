@@ -5,24 +5,26 @@
     Date:   1/19/2019
 */
 
+import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Tab_21 extends MainTab
+public class Tab_21 extends JPanel
 {
     
-    private static String[] panelNums = {"53", "82", "29","87","40","02","22","57"};
+    private static String[] panelNums = {"53", "82", "29", "87", "40", "02", "22", "57"};
 
+    
     public Tab_21()
     {
-        super();
+        this.setLayout(new GridLayout(5,4, 5, 5));
         addPanels();
     }
-    
-    public Tab_21(String name)
-    {
-        super(name);
-        addPanels();
+
+    public Tab_21(String name) {
+        this();
+        this.setName(name);
+
     }
     
     @Override
