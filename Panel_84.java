@@ -16,23 +16,22 @@ public class Panel_84 extends JPanel {
     private void GUI_panel() 
     {
    //JFrame frame_object = new JFrame("Shashi's panel");  // for testing purpose
-    JPanel panel_object = new JPanel();
-    JLabel label_object = new JLabel(); 
-    label_object.setText("Shashidhar Reddy Vanteru");
-    panel_object.add(label_object);
+    JLabel label_object = new JLabel("Shashidhar reddy Vannteru",JLabel.CENTER); 
+    this.add(label_object);
     Color color= new java.awt.Color(0,255,255);
-    Font font_setter = new Font("TimesRoman", Font.BOLD+Font.ITALIC, 60);
+    Font font_setter = new Font("TimesRoman", Font.BOLD+Font.ITALIC, 30);
     label_object.setFont(font_setter);
-    panel_object.setBackground(color);
+    this.setBackground(color);
+    this.setForeground(Color.BLACK);
     Border line_border=new LineBorder(Color.GRAY);
-    panel_object.setBorder(line_border); 
+    this.setBorder(line_border); 
     //panel_object.setBounds(0,0,800,300);
     
 //    frame_object.add(panel_object);  //for testing the code frame objects are existed													
 //    frame_object.setSize(800,700); 
 //    //frame_object.setBackground(Color.CYAN);
 //    //frame_object.setLayout(new BorderLayout());
-//    frame_object.setLayout(null);
+//    //frame_object.setLayout(null);
 //    frame_object.setVisible(true);        
     }
    
