@@ -1,8 +1,8 @@
 import java.awt.*;  
 import javax.swing.*;
 @SuppressWarnings("serial")
-public class Panel_Surya extends JPanel {
-    public Panel_Surya() {
+public class Panel_19 extends JPanel {
+    public Panel_19() {
         initComponents();
     }
     private void initComponents() 
@@ -15,7 +15,7 @@ public class Panel_Surya extends JPanel {
     label.setFont(new Font("TimesRoman",Font.BOLD,50));
     
     panel.add(label);
-    panel.setBounds(10,10,450,410);
+    //panel.setBounds(10,10,450,410);
     panel.setBackground(Color.MAGENTA);
     frame.add(panel);  
     frame.setSize(500,500);    
@@ -23,8 +23,8 @@ public class Panel_Surya extends JPanel {
     frame.setVisible(true);        
     }
     
-    public static void main(String args[])
-    {
-        new Panel_Surya();
-    }
+    //public static void main(String args[])
+    //{
+        //new Panel_19();
+    //}
 }
