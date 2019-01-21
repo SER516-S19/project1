@@ -20,7 +20,7 @@ public class Panel_66 extends JPanel {
 		createPanel_66();
 	}
 	
-	private JPanel createPanel_66() {
+	private void createPanel_66() {
 		
 	JLabel label = new JLabel();
 	label.setText("Darshan Prakash");
@@ -29,7 +29,7 @@ public class Panel_66 extends JPanel {
 	setBorder(new LineBorder(new Color(255, 198, 39)));
 	setVisible(true);
         add(label);
-        return panel;
+
 	}
 
 }
