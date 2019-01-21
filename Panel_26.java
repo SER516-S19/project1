@@ -19,8 +19,7 @@ public Font font1;
 		//Label Design
 		font1= new Font("Cooper black", Font.BOLD, 25);
 		newLabel.setFont(font1);
-		newLabel.setForeground(Color.black);
-		this.setBounds(100,100,100,100);  
+		newLabel.setForeground(Color.black); 
 		//add the label to a Panel
 		this.add(newLabel);
 		this.setBackground(Color.red);
