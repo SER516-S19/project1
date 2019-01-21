@@ -2,7 +2,6 @@
 Author: Sakshi Gautam, GitID:26, Git username:sakshi7373
 Description: Created panel 26 which displays name of student for SER516 Project1.
 */
-package Project1;
 import javax.swing.*;
 import java.awt.*;
 public class Panel_26 extends JPanel 
