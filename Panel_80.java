@@ -24,23 +24,6 @@ public class Panel_80 extends JPanel
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setText("Sajith Thattazhi");
 		
-		GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(28, 28, 28))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addComponent(jLabel1)
-                .addContainerGap(129, Short.MAX_VALUE))
-        );
-		
 		//jPanel1.add(jLabel1);
 		//f.add(jPanel1);
 		//f.setSize(600,450);
