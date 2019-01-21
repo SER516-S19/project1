@@ -4,27 +4,29 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-/* panel_37
+/* panel_37 creation for displaying panel name 
  * @author: Harshita Kajal
  * ID: 37
  */
 
 public class Panel_37 extends JPanel
 {
-  Panel_37()  
+
+/* Constructor for panel */
+  public Panel_37()  
    {  
 	  buildPanel_37();
    }
   
-  private JPanel buildPanel_37()
+  private void buildPanel_37()
   {  
-	  	 JLabel label = new JLabel("Harshita Kajal");
-	  	 JPanel myPanel = new JPanel();
+	     JLabel label = new JLabel("Harshita Kajal");
+	  
 	     label.setFont(new Font("Arial",1,25)); 
-	     myPanel.setBackground(Color.BLUE);
 	     label.setForeground(Color.MAGENTA);
-	     myPanel.add(label);
-	     return myPanel;
+	     setBackground(Color.BLUE);
+	     setVisible(true);
+	     add(label);	     
 	  
   }
 }
