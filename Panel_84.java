@@ -19,7 +19,7 @@ public class Panel_84 extends JPanel {
     JLabel label_object = new JLabel("Shashidhar reddy Vannteru",JLabel.CENTER); 
     this.add(label_object);
     Color color= new java.awt.Color(0,255,255);
-    Font font_setter = new Font("TimesRoman", Font.BOLD+Font.ITALIC, 60);
+    Font font_setter = new Font("TimesRoman", Font.BOLD+Font.ITALIC, 30);
     label_object.setFont(font_setter);
     this.setBackground(color);
     this.setForeground(Color.BLACK);
