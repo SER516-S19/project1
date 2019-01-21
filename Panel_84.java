@@ -2,20 +2,20 @@ import javax.swing.*;
 import java.awt.*;  
 import javax.swing.border.*;
 public class Panel_84 extends JPanel {
-	
-//	 public static void main(String args[])         //to test the code, main method exists 
-//	    {
-//	        new Panel_84();
-//	    }
-	 
+
+/**
+ * panel which displays name as "Shashidhar Reddy" is created in this Class
+ * Author : Shashidhar, Panel 84, svanter1@asu.edu
+ */
+
 	// constructor for invoking method GUI_panel
     public Panel_84() {
         GUI_panel();
     }
+
     //declaring a method GUI panel which creates our panel and label
     private void GUI_panel() 
     {
-   //JFrame frame_object = new JFrame("Shashi's panel");  // for testing purpose
     JLabel label_object = new JLabel("Shashidhar reddy",JLabel.CENTER); 
     this.add(label_object);
     Color color= new java.awt.Color(0,255,255);
@@ -25,14 +25,7 @@ public class Panel_84 extends JPanel {
     this.setForeground(Color.BLACK);
     Border line_border=new LineBorder(Color.GRAY);
     this.setBorder(line_border); 
-    //panel_object.setBounds(0,0,800,300);
-    
-//    frame_object.add(panel_object);  //for testing the code frame objects are existed													
-//    frame_object.setSize(800,700); 
-//    //frame_object.setBackground(Color.CYAN);
-//    //frame_object.setLayout(new BorderLayout());
-//    //frame_object.setLayout(null);
-//    frame_object.setVisible(true);        
+        
     }
    
 }
