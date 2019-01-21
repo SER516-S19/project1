@@ -41,10 +41,4 @@ public class Tab_27 extends JPanel {
 
     }
 
-    public static void main(String[] args){
-        JFrame frame = new JFrame();
-        frame.add(new Tab_27());
-        frame.setVisible(true);
-        frame.setBounds(0, 0, 500, 500);
-    }
 }
