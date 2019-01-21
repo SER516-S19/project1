@@ -30,7 +30,7 @@ public class Tab_48 extends JPanel {
         for (int k = 0; k < myTeamPanels.length; k++) {
             try {
                 Class<?> clazz = Class.forName(myTeamPanels[k]);
-                Object myPanel = clazz.getDeclaredConstructors().newInstance();
+                Object myPanel = clazz.getDeclaredConstructor().newInstance();
                 this.add((JPanel) myPanel);
             } catch (Exception e) {
                 JPanel myNewPanels = new JPanel();
