@@ -16,10 +16,10 @@ public class Panel_84 extends JPanel {
     private void GUI_panel() 
     {
    //JFrame frame_object = new JFrame("Shashi's panel");  // for testing purpose
-    JLabel label_object = new JLabel("Shashidhar reddy Vannteru",JLabel.CENTER); 
+    JLabel label_object = new JLabel("Shashidhar reddy",JLabel.CENTER); 
     this.add(label_object);
     Color color= new java.awt.Color(0,255,255);
-    Font font_setter = new Font("TimesRoman", Font.BOLD+Font.ITALIC, 30);
+    Font font_setter = new Font("TimesRoman", Font.BOLD+Font.ITALIC, 22);
     label_object.setFont(font_setter);
     this.setBackground(color);
     this.setForeground(Color.BLACK);

@@ -16,17 +16,18 @@ public class Panel_70 extends JPanel {
 
     public Panel_70() {
         //JFrame frame = new JFrame("Example Panel"); //For Testing
-        JPanel jPanel = new JPanel();
+        //JPanel jPanel = new JPanel();
         JLabel jLabel = new JLabel("Nikhila Saini");
    	jLabel.setFont(new Font("Algerian", Font.BOLD, 24));
-        jPanel.add(jLabel);
+	this.setBackground(Color.CYAN);
+        this.add(jLabel);
 
         //frame.setSize(700, 600);
         //frame.add(jPanel);
 	    //frame.setVisible(true);
 
         //jPanel.setBounds(10, 10, 250, 60);
-        jPanel.setBackground(Color.CYAN);
+        this.setBackground(Color.CYAN);
         
     }
 

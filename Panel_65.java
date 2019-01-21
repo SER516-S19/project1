@@ -4,17 +4,21 @@ import java.awt.*;
 /**
  * Panel class for GIT ID - 65
  */
-public class Panel_65 {
+public class Panel_65 extends JPanel {
+
+    /**
+     * Default Constructor.
+     */
+    public Panel_65(){
+        createPanel();
+    }
 
     /**
      * This method creates the panel.
      */
-    public JPanel createPanel(){
-        JPanel jPanel = new JPanel();
-        jPanel.setBackground(Color.lightGray);
-        jPanel.setSize(100,100);
-        jPanel.add(createJLabel());
-        return jPanel;
+    public void createPanel(){
+        this.setBackground(Color.lightGray);
+        this.add(createJLabel());
     }
 
     /**
@@ -30,7 +34,7 @@ public class Panel_65 {
 //    public static void main(String[] args){
 //        Panel_65 panel_65 = new Panel_65();
 //        JFrame jFrame = new JFrame();
-//        jFrame.add(panel_65.createPanel());
+//        jFrame.add(panel_65);
 //        jFrame.setSize(new Dimension(500, 500));
 //        jFrame.setVisible(true);
 //    }
