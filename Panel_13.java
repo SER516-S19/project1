@@ -5,14 +5,15 @@ import javax.swing.border.LineBorder;
 
 /*
  * @author:  Subhradeep Biswas
- * Creating panel 16
+ * GitID: 13
+ * Creating panel_13
  */
 
 
-public class Panel_16 extends JPanel
+public class Panel_13 extends JPanel
 {
 
-    Panel_16()
+    Panel_13()
     {
 
         JLabel jlabel = new JLabel("Subhradeep Biswas");

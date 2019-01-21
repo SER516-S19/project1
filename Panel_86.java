@@ -24,11 +24,11 @@ public class Panel_86 extends JPanel {
 		String name = "Aditya Vikram";
 		
 		//JFrame frame = new JFrame(); //To test the panel
-		JPanel panel = new JPanel();
+		//JPanel panel = new JPanel();
 		JLabel label = new JLabel(name);
 		
-		panel.add(label);
-		panel.setBackground(Color.CYAN);
+		this.add(label);
+		this.setBackground(Color.CYAN);
 
 		label.setFont(new Font("Papyrus", Font.BOLD, 20));
 				
