@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 public class Tab_21 extends JPanel
 {
     
-    private static String[] panelNums = {"53", "82", "29", "87", "40", "02", "22", "57"};
+    private static String[] panelNums = {"53", "82", "29", "87", "40", "02", "22", "57", "34"};
 
     
     public Tab_21()
