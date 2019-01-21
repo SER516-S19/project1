@@ -38,9 +38,11 @@ class Panel_44 extends JPanel {
 
         label.setFont(new Font("Papyrus",Font.PLAIN,15));
 
+        setvisible(true);
         panel.add(label);
         panel.setBounds(coordinateX, coordinateY, panelWidth, panelHeight);
         panel.setBackground(Color.LIGHT_GRAY);
+        
 
     }
 }
