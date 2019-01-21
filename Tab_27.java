@@ -1,30 +1,43 @@
 import javax.swing.*;
 import java.awt.*;
 
+/** Tab 27 with 18 panels + 2 blank
+ * Author: Bharat Goel
+ */
+
 public class Tab_27 extends JPanel {
+
+    String myTab = "Bharat";
+
+    public String getName() {
+        return myTab;
+    }
+
+    public void setTabName(String tabName) {
+        this.myTab = myTab;
+    }
+
+    public String[] myPanels;
 
     Tab_27() {
         this.setLayout(new GridLayout(4,5));
-        this.add(new Panel_06());
-        this.add(new Panel_18());
-        this.add(new Panel_20());
-        this.add(new Panel_59());
-        this.add(new Panel_84());
-        //this.add(new Panel_05());
-        this.add(new Panel_70());
-        this.add(new Panel_80());
-        this.add(new Panel_17());
-        this.add(new Panel_49());
-        this.add(new Panel_55());
-        this.add(new Panel_52());
-        //this.add(new Panel_65());
-        this.add(new Panel_31());
-        //this.add(new Panel_19());
-        this.add(new Panel_26());
-        this.add(new Panel_08());
-        this.add(new Panel_39());
-        this.add(new Panel_80());
 
+        myPanels = new String[]{"Panel_06", "Panel_18", "Panel_20", "Panel_59", "Panel_84", "Panel_05", "Panel_70",
+                "Panel_80", "Panel_17", "Panel_49", "Panel_55", "Panel_52", "Panel_65", "Panel_31", "Panel_19", "Panel_26",
+                "Panel_08", "Panel_39", "Panel_XX", "Panel_XX"};
+
+        for(int i = 0; i<myPanels.length; i++){
+            try{
+                Class<?> c = Class.forName(myPanels[i]);
+                Object newPanel = c.getDeclaredConstructor().newInstance();
+                this.add((JPanel)newPanel);
+            }
+            catch (Exception e){
+                JPanel blankPanel = new JPanel();
+                blankPanel.add(new JLabel(myPanels[i] + " unavailable"));
+                this.add(blankPanel);
+            }
+        }
 
     }
 
@@ -34,5 +47,4 @@ public class Tab_27 extends JPanel {
         frame.setVisible(true);
         frame.setBounds(0, 0, 500, 500);
     }
-
 }
