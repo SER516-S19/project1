@@ -13,8 +13,8 @@ public class Panel_14 extends JPanel
    {  
      JLabel mylabel = new JLabel("Sakshi Chaudhary");
      mylabel.setFont(new Font("Calibri",1,20)); 
-     setBorder(new LineBorder(Color.pink));
-     setBackground(Color.LIGHT_GRAY);
+     setBorder(new LineBorder(Color.black));
+     setBackground(Color.pink);
      setVisible(true);
      add(mylabel);	    
     }
