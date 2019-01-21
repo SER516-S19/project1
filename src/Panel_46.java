@@ -4,7 +4,7 @@ import java.awt.Font;
 import javax.swing.*;
 
 /**
- * Panel_41 creation
+ * Panel_46 creation
  * 
  * @author Sneha Lakshminarasimhan
  * @version 1.0
