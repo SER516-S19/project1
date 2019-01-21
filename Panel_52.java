@@ -3,6 +3,7 @@ import java.awt.*;
 
 /* Author: Manisha Miriyala
  panel id: 52 
+ GitHub username: MiriyalaM
 */
 
 public class Panel_52 extends JPanel {
@@ -20,17 +21,18 @@ public class Panel_52 extends JPanel {
 	label.setFont(new Font("GEORGIA",10,40));
     //Adding the label to the particular panel and setting boundary and background values
     
-/*  frame.add(panel);  
+  /* frame.add(panel);  
     frame.setSize(350,350);    
     frame.setLayout(null);
     frame.setVisible(true);
-*/	
+	*/
+	
 	panel.add(label);
-    panel.setBounds(10,10,350,300);
+    //panel.setBounds(10,10,350,300);
     panel.setBackground(Color.GRAY);
     }
    
-  /*public static void main(String args[]){
+ /* public static void main(String args[]){
       new Panel_52();
-  */}
+  }*/
 }
