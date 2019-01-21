@@ -1,46 +1,77 @@
-// This tab contains 20 panels.
+// This class Tab_48 contains 20 panels.
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 
-public class Tab_48 extends MainTab {
+public class Tab_48 extends JPanel {
 
+    private static String[] myTeamPanels = {"Panel_23", "Panel_30", "Panel_90",
+            "Panel_41", "Panel_10", "Panel_46", "Panel_61", "Panel_04", "Panel_79",
+            "Panel_??", "Panel_??", "Panel_??", "Panel_??", "Panel_??", "Panel_??",
+            "Panel_??", "Panel_??", "Panel_??", "Panel_??", "Panel_??"};
 
-    JPanel Panel_48 = new JPanel();
+    String name = "Hsin-Jung Lee";
 
-
-    JLabel Label_48 = new JLabel("");
-
-    JTabbedPane tabbedPane = new JTabbedPane();
-
-    public Tab_48(){
-        Panel_48.add(Label_48);
-        tabbedPane.add("Hsin-Jung Lee", Label_48);
-        add(tabbedPane);
-
-        //create 20 empty panels
-//        for (int j = 0; j < 1; j++){
-//            JPanel p = new JPanel();
-//            p.setVisible(true);
-//            p.setSize(50, 50);
-//            p.setBackground(Color.WHITE);
-//            p.setBorder(new LineBorder(Color.BLACK));
-//            add(p);
-//        }
-
-
+    public Tab_48() {
+        this.setLayout(new GridLayout(5, 4, 3, 3));
+        addMyTeamPanels();
     }
 
-//    public static void main (String[]args){
+//    public Tab_48(){
+//        super("Hsin-Jung Lee");
 //
-//        Tab_48 tab_48 = new Tab_48();
-//        tab_48.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        tab_48.setSize(600,400);
-//        tab_48.setLocationRelativeTo(null);
-//        tab_48.setVisible(true);
+//        this.setLayout(new GridLayout(5, 4,3, 3));
+//        addMyTeamPanels();
+//
+//        for (int i = 0; i < 20; i++){
+//            JPanel p = new JPanel();
+//            p.setBackground(Color.ORANGE);
+//            p.setVisible(true);
+//            p.setSize( 10,  10);
+//            p.setBorder(new LineBorder(Color.BLACK));
+//            this.add(p);
+//        }
 //    }
+
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+
+    public String getName() {
+        return name;
+    }
+
+    private void addMyTeamPanels() {
+        for (int k = 0; k < myTeamPanels.length; k++) {
+            try {
+                Class<?> clazz = Class.forName(myTeamPanels[k]);
+                Object myPanel = clazz.getDeclaredConstructors();
+                this.add((JPanel) myPanel);
+            } catch (Exception e) {
+                JPanel myNewPanels = new JPanel();
+                myNewPanels.add(new JLabel("Panel is missing: " + myTeamPanels[k]));
+                this.add(myNewPanels);
+            }
+        }
+    }
+
 }
+
+
+//    public static void main (String[] args){
+//        JFrame frame = new JFrame(" GridLayout");
+//
+//        JPanel p1 = new JPanel( );
+//
+//        JButton button = new JButton("1");
+//        p1.add(button);
+//
+//        frame.add(p1, BorderLayout.SOUTH);
+//        frame.pack();
+//        frame.setVisible(true);
+//    }
+//}
+
 
 // for test
 //public class Tab_48 extends JFrame {
