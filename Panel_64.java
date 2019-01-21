@@ -12,7 +12,7 @@ public class Panel_64 extends JPanel {
     Panel_64()  
     {   
 	    JLabel jlabel = new JLabel("Jinal Patel");
-	    jlabel.setFont(new Font("Arial",1,20));
+	    jlabel.setFont(new Font("Brush Script MT",1,20));
 	    setBounds(10,10,200,60);
       setBackground(Color.YELLOW);
       setBorder(new LineBorder(Color.BLACK));
