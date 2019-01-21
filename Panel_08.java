@@ -2,6 +2,8 @@
 //This file displays author's name on the JPanel.
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 
 /**
  * This class is responsible for displaying author's name on the JPanel .
@@ -20,10 +22,11 @@ public class Panel_08 extends JPanel {
 	 * This method displays the name on Panel.
 	 */
 	void displayPanel_08() {
-		// Create the panel and set its properties.
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.ORANGE);
-		// panel.setBounds(50, 60, 300, 90);
+		//Set Panel's properties.		
+		this.setBackground(Color.ORANGE);
+		Border border=new LineBorder(Color.RED);
+	    this.setBorder(border);
+	    this.setPreferredSize(new Dimension(300, 300));		
 
 		// Create the label and set the font and color.
 		JLabel labelName = new JLabel("Pallavi Bahl");
@@ -32,20 +35,7 @@ public class Panel_08 extends JPanel {
 		labelName.setForeground(Color.white);
 
 		// Add the label to panel.
-		panel.add(labelName);
-
-		/*
-		 * For testing purpose. Create the frame and add the panel to frame. JFrame
-		 * frame = new JFrame(); frame.add(panel); frame.setSize(400, 200);
-		 * frame.setVisible(true);
-		 */
+		this.add(labelName);
 
 	}
-	/*
-	 * For testing purpose. 
-	 * public static void main(String args[]) 
-	 * { new Panel_08();
-	 * }
-	 */
-
 }
