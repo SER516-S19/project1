@@ -4,22 +4,22 @@ import javax.swing.border.LineBorder;
 
 
 /* 
- * @author:  Viraj Talaty
- * @gitID:   78
+ * @author:  Lehar Bhatt
+ * @gitID:   12
  */
 
 
-public class Panel_78 extends JPanel
+public class Panel_12 extends JPanel
 {
 	
-	Panel_78()  
+	Panel_12()  
     {  
 	    
-	    JLabel jlabel = new JLabel("Viraj Talaty");
+	    JLabel jlabel = new JLabel("Lehar Bhatt");
 	    jlabel.setFont(new Font("Verdana",1,20));
 	    
         setBackground(Color.LIGHT_GRAY);
-        setBorder(new LineBorder(Color.yellow));
+        setBorder(new LineBorder(Color.red));
         setVisible(true);
         add(jlabel);	    
     }

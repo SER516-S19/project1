@@ -18,11 +18,11 @@ public class Panel_89 extends JPanel {
 	//Private method creating the panel
 	private void constructPanel() {		
 		JLabel label = new JLabel("Qianru Zhao");
-        label.setFont(new Font("Georgia", Font.PLAIN, 16));
+        	label.setFont(new Font("Georgia", Font.PLAIN, 16));
         
-        JPanel panel = new JPanel();
-        panel.add(label);
-        panel.setBackground(Color.white);  
-        panel.setVisible(true);
+        	setBackground(Color.LIGHT_GRAY);  
+        	setVisible(true);
+		add(label);
+
 	}
 }
