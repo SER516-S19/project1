@@ -17,21 +17,6 @@ public class Tab_48 extends JPanel {
         addMyTeamPanels();
     }
 
-//    public Tab_48(){
-//        super("Hsin-Jung Lee");
-//
-//        this.setLayout(new GridLayout(5, 4,3, 3));
-//        addMyTeamPanels();
-//
-//        for (int i = 0; i < 20; i++){
-//            JPanel p = new JPanel();
-//            p.setBackground(Color.ORANGE);
-//            p.setVisible(true);
-//            p.setSize( 10,  10);
-//            p.setBorder(new LineBorder(Color.BLACK));
-//            this.add(p);
-//        }
-//    }
 
 //    public void setName(String name) {
 //        this.name = name;
@@ -45,7 +30,7 @@ public class Tab_48 extends JPanel {
         for (int k = 0; k < myTeamPanels.length; k++) {
             try {
                 Class<?> clazz = Class.forName(myTeamPanels[k]);
-                Object myPanel = clazz.getDeclaredConstructors();
+                Object myPanel = clazz.getDeclaredConstructors().newInstance();
                 this.add((JPanel) myPanel);
             } catch (Exception e) {
                 JPanel myNewPanels = new JPanel();
