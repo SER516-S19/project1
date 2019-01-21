@@ -18,11 +18,11 @@ public class Panel_31 extends JPanel
 	
 //	JFrame j_frame= new JFrame("Sample Panel");	//		To test the code for myself
 	
-	JPanel j_panel=new JPanel();  
+	//JPanel j_panel=new JPanel();  
 	JLabel j_label = new JLabel();	
 
-	j_panel.add(j_label);		
-	j_panel.setBackground(Color.RED);		
+	this.add(j_label);		
+	this.setBackground(Color.RED);		
 //	j_panel.setBounds(20,20,450,80);	
 	
 	j_label.setFont(new Font("Arial",1,20));
