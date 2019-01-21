@@ -26,8 +26,7 @@ public class Panel_08 extends JPanel {
 		this.setBackground(Color.ORANGE);
 		Border border=new LineBorder(Color.RED);
 	    this.setBorder(border);
-	    this.setPreferredSize(new Dimension(300, 300));
-		// panel.setBounds(50, 60, 300, 90);
+	    this.setPreferredSize(new Dimension(300, 300));		
 
 		// Create the label and set the font and color.
 		JLabel labelName = new JLabel("Pallavi Bahl");
@@ -39,14 +38,4 @@ public class Panel_08 extends JPanel {
 		this.add(labelName);
 
 	}
-	/*
-	 * For testing purpose. 
-	 * public static void main(String args[]) 
-	 * { Panel_08 panel = new Panel_08();
-	 */ 
-	 /* For testing purpose. Create the frame and add the panel to frame.
-	 * JFrame frame = new JFrame(); frame.add(panel); frame.setSize(400, 200);
-	 * frame.setVisible(true);
-	 * }
-	*/
 }
