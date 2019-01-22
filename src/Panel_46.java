@@ -20,18 +20,16 @@ public class Panel_46 extends JPanel{
 	//panel creation
 	private void createMyPanel() {
 		
-		JPanel panel41= new JPanel();
+		//JPanel panel46= new JPanel();
 		JLabel myLabel = new JLabel("Sneha Lakshminarasimhan");
-		
-		panel41.add(myLabel);
-		
-		//styling the Panel
-		panel41.setBounds(20,30,50,60);
-		panel41.setBackground(Color.ORANGE);
-		panel41.setForeground(Color.RED);
-		
+		myLabel.setFont(new Font("Arial Bold Italic", Font.BOLD,15));
+		add(myLabel);
 		//styling the Label
-		myLabel.setFont(new Font("Calibri",Font.ITALIC,15));
+		//panel46.setBounds(20,30,50,60);
+		myLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		setBackground(Color.pink);	//setting background color to orange
+		setBorder(BorderFactory.createLineBorder(Color.black, 1));
+
 		
 	}
 }
