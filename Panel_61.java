@@ -18,13 +18,12 @@ public class Panel_61 extends  JPanel{
     private void create_Panel_61()
     {
         String user_name = "Yuvan Pradeep";
-        JPanel panel61 = new JPanel();
+        
         JLabel label = new JLabel(user_name);
         label.setFont(new Font("Calibri",Font.PLAIN,12));
         // Panel styling
-        panel61.add(label);
-        panel61.setBounds(20, 25, 30, 50);
-        panel61.setBackground(Color.gray);
+        add(label);
+        setBackground(Color.gray);
 
     }
 }
