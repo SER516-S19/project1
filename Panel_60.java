@@ -8,17 +8,15 @@ public class Panel_60 extends JPanel{
 	Panel_60()
 	{	JPanel p= new JPanel();
 		JLabel l=new JLabel("Amit Pandey");
-		JFrame f=new JFrame();
-		JTextField name = new JTextField(50);
+		//JFrame f=new JFrame();
 		//frame
-		f.setVisible(true);
-		f.setSize(800,450);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		f.add(p);
-		f.add(l);
-		f.setSize(160,90);
-		f.setLayout(null);
-		f.setVisible(true);
+		this.setVisible(true);
+		this.setSize(800,450);
+		this.add(p);
+		this.add(l);
+		this.setSize(160,90);
+		this.setLayout(null);
+		this.setVisible(true);
 		//panel
 		p.setBounds(40,80,320,180);
 		p.add(l);
