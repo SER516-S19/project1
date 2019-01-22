@@ -1,8 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel_40 extends JPanel {
-    public Panel_40() {
+public class Panel_34 extends JPanel {
+    public Panel_34() {
         init();
     }
     
@@ -11,8 +11,8 @@ public class Panel_40 extends JPanel {
      */
     private void init() {
         this.setLayout(new GridBagLayout());
-        JLabel nameLabel = new JLabel("Kirti Jha");
-        this.add(nameLabel);
+        JLabel j = new JLabel("Kirti Jha");
+        this.add(j);
         this.setBackground(Color.yellow);
         this.setVisible(true);
     }
