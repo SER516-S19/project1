@@ -1,26 +1,14 @@
-import java.awt.*;
+import java.awt.*;  
 import javax.swing.*;
-import javax.swing.border.LineBorder;
-
-
-/*
- * @author:  Subhradeep Biswas
- * Creating panel 16
- */
-
-
-public class Panel_16 extends JPanel
-{
-
-    Panel_16()
-    {
-
-        JLabel jlabel = new JLabel("Subhradeep Biswas");
-        jlabel.setFont(new Font("Arial", Font.PLAIN, 20));
-
-        setBackground(Color.LIGHT_GRAY);
-        setBorder(new LineBorder(Color.BLACK));
-        setVisible(true);
-        add(jlabel);
+@SuppressWarnings("serial")
+public class Panel_16 extends JPanel {
+    public Panel_16() {
+        Init();
+    }
+    private void Init() {
+    	JLabel label = new JLabel("Surya Cherukuri",JLabel.CENTER);
+    	label.setFont(new Font("TimesRoman",Font.BOLD,30));
+    	this.add(label);
+    	this.setBackground(Color.MAGENTA);      
     }
 }

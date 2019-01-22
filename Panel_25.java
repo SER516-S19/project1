@@ -1,23 +1,25 @@
-import java.awt.*;
-import java.swing.*;
-
-/*
-Author: Sai Vinay Gangadharabhatla
-*/
-public class Panel_25 extends JPanel{
-
-  public Panel_25(){
-  Panel25();
-  }
-  private void Panel25(){
- // Frame f= new Frame("Panel 25");    
-        JPanel panel=new JPanel();
-    	JLabel label=new JLabel("Sai Vinay G");
-    	label.setFont(new Font("Arial",15,45));
-    	panel.add(label);
-        panel.setBounds(45,90,300,300);    
-        panel.setBackground(Color.YELLOW);  
-    
-  }
-}
+import java.awt.*;  
+import javax.swing.border.LineBorder;
+import javax.swing.*;  
+public class Panel_25 extends JPanel {  
+     Panel_25()  
+        {  
+   //     JFrame f25= new JFrame("Panel_25");    
+     //   JPanel p25=new JPanel(); 
+        this.setBackground(Color.CYAN);
+        this.setBounds(15, 30, 250, 250);
+        this.setBorder(new LineBorder(Color.BLUE));
+        this.setAlignmentX(CENTER_ALIGNMENT);
+        this.setAlignmentY(CENTER_ALIGNMENT);
+        this.add(new JLabel("SAI VINAY. G"),new Font("Valencia",Font.HANGING_BASELINE,30));
+   /*    f25.add(this);  
+                f25.setSize(450,450);    
+                f25.setLayout(null);    
+                f25.setVisible(true);    */
+        }  
+   /*    public static void main(String args[])  
+        {  
+        new Panel_25();  
+        }  */
+    }
 
