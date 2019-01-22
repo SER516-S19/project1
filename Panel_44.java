@@ -23,10 +23,11 @@ class Panel_44 extends JPanel {
     private void init() {
         
         JLabel label = new JLabel("Koushik Kotamraju");
-        this.setLayout(new BorderLayout());
         label.setFont(new Font("Papyrus",Font.PLAIN,15));
+        this.setLayout(new GridBagLayout());
+        this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         this.setVisible(true);
         this.setBackground(Color.LIGHT_GRAY);
-        this.add(label);        
+        this.add(label);       
     }
 }
