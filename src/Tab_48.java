@@ -5,10 +5,10 @@ import java.awt.*;
 
 public class Tab_48 extends JPanel {
 
-    private static String[] myTeamPanels = {"Panel_23", "Panel_30", "Panel_90",
-            "Panel_41", "Panel_10", "Panel_46", "Panel_61", "Panel_04", "Panel_79",
-            "Panel_??", "Panel_??", "Panel_??", "Panel_??", "Panel_??", "Panel_??",
-            "Panel_??", "Panel_??", "Panel_??", "Panel_??", "Panel_??"};
+    private static String[] myTeamPanels = {"Panel_04", "Panel_??", "Panel_10",
+            "Panel_23", "Panel_30", "Panel_??", "Panel_41", "Panel_??", "Panel_46",
+            "Panel_??", "Panel_??", "Panel_61", "Panel_63", "Panel_??", "Panel_79",
+            "Panel_90", "Panel_??", "Panel_??", "Panel_??", "Panel_??"};
 
     String name = "Hsin-Jung Lee";
 
@@ -17,11 +17,6 @@ public class Tab_48 extends JPanel {
         addMyTeamPanels();
     }
 
-
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-
     public String getName() {
         return name;
     }
@@ -29,8 +24,8 @@ public class Tab_48 extends JPanel {
     private void addMyTeamPanels() {
         for (int k = 0; k < myTeamPanels.length; k++) {
             try {
-                Class<?> clazz = Class.forName(myTeamPanels[k]);
-                Object myPanel = clazz.getDeclaredConstructor().newInstance();
+                Class<?> myClass = Class.forName(myTeamPanels[k]);
+                Object myPanel = myClass.getDeclaredConstructor().newInstance();
                 this.add((JPanel) myPanel);
             } catch (Exception e) {
                 JPanel myNewPanels = new JPanel();
