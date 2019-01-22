@@ -30,6 +30,7 @@ public class Tab_45 extends JPanel{
         } catch (Exception e){
             addError("54");
         }
+        //Ishan
         try{
             Class c74 = Class.forName("Panel_74");
             JPanel p74 = (JPanel) c74.getDeclaredConstructor().newInstance();
@@ -37,6 +38,7 @@ public class Tab_45 extends JPanel{
         } catch(Exception e){
             addError("74");
         }
+        //Mayank
         try{
             Class c09 = Class.forName("Panel_09");
             JPanel p09 = (JPanel) c09.getDeclaredConstructor().newInstance();
@@ -44,6 +46,7 @@ public class Tab_45 extends JPanel{
         } catch (Exception e){
             addError("09");
         }
+        //Vaibhav
         try{
             Class c76 = Class.forName("Panel_76");
             JPanel p76 = (JPanel) c76.getDeclaredConstructor().newInstance();
@@ -72,6 +75,7 @@ public class Tab_45 extends JPanel{
         } catch (Exception e){
             addError("03");
         }
+        //Hari
         try{
             Class c68 = Class.forName("Panel_68");
             JPanel p68 = (JPanel) c68.getDeclaredConstructor().newInstance();
@@ -79,6 +83,7 @@ public class Tab_45 extends JPanel{
         } catch (Exception e){
             addError("68");
         }
+        //Sai
         try{
             Class c25 = Class.forName("Panel_25");
             JPanel p25 = (JPanel) c25.getDeclaredConstructor().newInstance();
