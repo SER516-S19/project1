@@ -4,6 +4,7 @@
     Date:   1/19/2019
 */
 
+import java.awt.Component;
 import java.awt.Dimension;
 import javax.swing.*; 
 import java.io.File;
@@ -27,7 +28,9 @@ public class Frame_81 {
         }
         catch (Exception e){
             JPanel newTab = new JPanel();
-            newTab.add(new JLabel("Class Missing " + tabClassName));
+            JPanel namePanel = new JPanel();
+            namePanel.add(new JLabel("Class Missing " + tabClassName));
+            newTab.add(namePanel);
             tabbedPane.addTab(tabClassName, newTab);
         }
     }
@@ -35,7 +38,7 @@ public class Frame_81 {
     private static void createAndShowGUI() {
         //Create and set up the window.
         JFrame frame = new JFrame("Sarthak");
-        frame.setMinimumSize(new Dimension(800, 600));
+        frame.setMinimumSize(new Dimension(600, 500));
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -46,12 +49,33 @@ public class Frame_81 {
             addTab(tabNames[i], tabbedPane);
         }
 
+        fixChildSizes(tabbedPane);
+
         //Add tabbedPane to frame
         frame.getContentPane().add(tabbedPane);
  
         //Display the window.
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+    }
+
+    private static void fixChildSizes(JTabbedPane tabPane){
+        //goes in the hierarchy to fix size issues in name panels
+        Component[] tabs = tabPane.getComponents();
+
+        for(int i=0; i<tabs.length; i++){
+
+            Component[] panels = ((JPanel)tabs[i]).getComponents();
+            for(int j=0; j<panels.length; j++){
+                ((JPanel)panels[j]).setMaximumSize(new Dimension(100, 100));
+                ((JPanel)panels[j]).setMinimumSize(new Dimension(100, 100));
+                ((JPanel)panels[j]).setSize(new Dimension(100, 100));
+                ((JPanel)panels[j]).setPreferredSize(new Dimension(300, 125));
+                ((JPanel)panels[j]).setBounds(0, 0, 100, 100);
+            }
+        }
+
     }
  
     public static void main(String[] args) {
