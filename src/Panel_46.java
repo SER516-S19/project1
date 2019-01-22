@@ -20,15 +20,15 @@ public class Panel_46 extends JPanel{
 	//panel creation
 	private void createMyPanel() {
 		
-		JPanel panel41= new JPanel();
+		JPanel panel46= new JPanel();
 		JLabel myLabel = new JLabel("Sneha Lakshminarasimhan");
 		
-		panel41.add(myLabel);
+		panel46.add(myLabel);
 		
 		//styling the Panel
-		panel41.setBounds(20,30,50,60);
-		panel41.setBackground(Color.ORANGE);
-		panel41.setForeground(Color.RED);
+		panel46.setBounds(20,30,50,60);
+		panel46.setBackground(Color.ORANGE);
+		panel46.setForeground(Color.RED);
 		
 		//styling the Label
 		myLabel.setFont(new Font("Calibri",Font.ITALIC,15));
