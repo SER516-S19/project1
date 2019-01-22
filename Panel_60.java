@@ -18,7 +18,7 @@ public class Panel_60 extends JPanel{
 		this.setLayout(null);
 		this.setVisible(true);
 		//panel
-		this.setBounds(40,80,320,180);
+		this.setBounds(40,80,160,50);
 		this.add(l);
 		this.setBorder(new LineBorder(Color.BLACK));
 	}
