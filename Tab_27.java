@@ -20,7 +20,7 @@ public class Tab_27 extends JPanel {
     public String[] myPanels;
 
     Tab_27() {
-        this.setLayout(new GridLayout(4,5));
+        this.setLayout(new GridLayout(5,4));
 
         myPanels = new String[]{"Panel_06", "Panel_18", "Panel_20", "Panel_59", "Panel_84", "Panel_05", "Panel_70",
                 "Panel_80", "Panel_17", "Panel_49", "Panel_55", "Panel_52", "Panel_65", "Panel_31", "Panel_16", "Panel_26",
