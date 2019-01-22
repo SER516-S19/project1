@@ -12,8 +12,9 @@ public class Tab_48 extends JPanel {
 
     String name = "Hsin-Jung Lee";
 
+    // constructor
     public Tab_48() {
-        this.setLayout(new GridLayout(5, 4, 3, 3));
+        this.setLayout(new GridLayout(5, 4, 4, 4));
         addMyTeamPanels();
     }
 
@@ -34,7 +35,6 @@ public class Tab_48 extends JPanel {
             }
         }
     }
-
 }
 
 
