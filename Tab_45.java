@@ -5,7 +5,7 @@ public class Tab_45 extends JPanel{
     
     public Tab_45(){
         //2 rows * 5 columns = 20 name panels
-        this.setLayout(new GridLayout(4, 5));
+        this.setLayout(new GridLayout(5, 4));
         
         try {
             Class<?> c47 = Class.forName("Panel_47");
