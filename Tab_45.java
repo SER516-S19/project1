@@ -5,7 +5,7 @@ public class Tab_45 extends JPanel{
     
     public Tab_45(){
         //2 rows * 5 columns = 20 name panels
-        this.setLayout(new GridLayout(4, 5));
+        this.setLayout(new GridLayout(5, 4));
         
         try {
             Class<?> c47 = Class.forName("Panel_47");
@@ -103,7 +103,13 @@ public class Tab_45 extends JPanel{
         } catch(Exception e){
             addError("25");
         }
-        addError("GitID not known");
+        try{
+            Class<?> c42 = Class.forName("Panel_42");
+            JPanel p42 = (JPanel) c42.getDeclaredConstructor().newInstance();
+            this.add(p42);
+        } catch(Exception e){
+            addError("42");
+        }
         try{
             Class<?> c86 = Class.forName("Panel_86");
             JPanel p86 = (JPanel) c86.getDeclaredConstructor().newInstance();
