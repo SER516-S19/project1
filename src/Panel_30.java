@@ -8,7 +8,7 @@ Label contains First name & Last name of the student */
 //Author :  Krishna Gurram
 
 
- class Panel_30 {
+ public class Panel_30 extends JPanel {
 
    Panel_30() {
 
