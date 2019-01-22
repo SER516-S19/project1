@@ -6,23 +6,23 @@ import javax.swing.JPanel;
 
 public class Panel_10 extends JPanel {
 	
-	String name = "Ankita";
+	//String name = "Ankita";
 	
 
-	public Panel_10(String name) {
-		getPanel(name);
+	public Panel_10() {
+		getPanel();
 	}
 
 /* Creating the Panel*/
-	private void getPanel(String name)
+	private void getPanel()
 	{
 		//JPanel jpanelObj = new JPanel();
-		JLabel jlabelObj = new JLabel(name);
+		JLabel jlabelObj = new JLabel("Ankita Shivanand Bhandari");
 		/* Set Font*/
-		jlabelObj.setFont(new Font("Calibri",10,50));
+		jlabelObj.setFont(new Font("Courier",Font.BOLD,20));
 		add(jlabelObj);
 		/*Set background color*/
-		setBackground(Color.GRAY);
+		setBackground(Color.BLUE);
 		
 		
 	}
