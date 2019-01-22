@@ -7,23 +7,21 @@ import javax.swing.border.LineBorder;
 public class Panel_60 extends JPanel{
 	Panel_60()
 	{	JPanel p= new JPanel();
-		JLabel l=new JLabel("Amit Pandey");
-		//JFrame f=new JFrame();
+		JLabel l=new JLabel("Amit Pandey",JLabel.CENTER);
 		//frame
 		this.setVisible(true);
 		this.setSize(800,450);
 		this.add(p);
-		this.add(l);
 		this.setSize(160,90);
-		this.setLayout(null);
+		//this.setLayout(null);
 		this.setVisible(true);
 		//panel
-		this.setBounds(40,80,320,180);
+		this.setBounds(40,80,160,50);
 		this.add(l);
 		this.setBorder(new LineBorder(Color.BLACK));
 	}
-	public static void main(String args[])
+	/*public static void main(String args[])	for testing
 	{
 		new Panel_60();
-	}
+	}*/ 
 }	
