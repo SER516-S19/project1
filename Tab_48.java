@@ -9,7 +9,7 @@ public class Tab_48 extends JPanel {
             "Panel_23", "Panel_30", "Panel_35", "Panel_41", "Panel_43",
             "Panel_46", "Panel_56", "Panel_61", "Panel_63", "Panel_79",
             "Panel_90", "Panel_missing 1", "Panel_missing 2", "Panel_missing 3",
-            "Panel_missing 4", "Panel_missing 5", "Panel_missing 6"};
+            "Panel_04", "Panel_missing 5", "Panel_missing 6"};
 
     String name = "Hsin-Jung Lee";
 
