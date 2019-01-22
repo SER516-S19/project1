@@ -7,17 +7,11 @@ import javax.swing.*;
  */
 
 class Panel_04 extends JPanel {
-
     public Panel_04() {
-        initializePanel();
-    }
-
-    private void initializePanel() {
         String name = "Pradeep Ambalam Jawaharlal";
-        JPanel panel = new JPanel();
         JLabel label = new JLabel(name);
-        label.setFont(new Font("Papyrus",Font.PLAIN,15));
-        panel.add(label);
-        panel.setBackground(Color.LIGHT_GRAY);
+        label.setFont(new Font("Papyrus",Font.BOLD,20));
+        add(label);
+        setBackground(Color.LIGHT_GRAY);
     }
 }
