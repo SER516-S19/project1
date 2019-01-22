@@ -10,9 +10,10 @@ public class Panel_63 extends JPanel {
 	}
 
 	private void createPanel(){
-		setLayout(new GridBagLayout());
+
 		JLabel name = new JLabel("Dhruv Patel"); 	//creating label with my name
 		name.setFont(new Font("Courier", Font.BOLD, 20));	//setting font to the label
+		setLayout(new GridBagLayout());		//Align name to center
 		add(name);
 
 		setBackground(Color.cyan);	//setting background color to cyan
