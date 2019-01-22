@@ -24,7 +24,8 @@ public class Panel_86 extends JPanel {
 		String name = "Aditya Vikram";
 		
 		//JFrame frame = new JFrame(); //To test the panel
-		//JPanel panel = new JPanel();
+		//JPanel panel = new JPanel(); //To test the panel
+
 		JLabel label = new JLabel(name);
 		
 		this.add(label);
