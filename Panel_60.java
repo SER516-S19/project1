@@ -22,8 +22,4 @@ public class Panel_60 extends JPanel{
 		this.add(l);
 		this.setBorder(new LineBorder(Color.BLACK));
 	}
-	public static void main(String args[])
-	{
-		new Panel_60();
-	}
 }	
