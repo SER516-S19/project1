@@ -28,7 +28,13 @@ public class Tab_45 extends JPanel{
         } catch (Exception e){
             addError("71");
         }
-        addError("GitId unknown");
+        try {
+            Class<?> c38 = Class.forName("Panel_38");
+            JPanel p38 = (JPanel) c38.getDeclaredConstructor().newInstance();
+            this.add(p38);
+        } catch (Exception e){
+            addError("38");
+        }
         try{
             Class<?> c54 = Class.forName("Panel_54");
             JPanel p54 = (JPanel) c54.getDeclaredConstructor().newInstance();
