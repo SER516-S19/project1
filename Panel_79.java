@@ -1,7 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 
-class Panel_79 extends JPanel {
+public class Panel_79 extends JPanel {
     public Panel_79() {
         String name = "Aprajita Thakur";
         JLabel label = new JLabel(name);
