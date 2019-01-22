@@ -14,42 +14,20 @@ class Panel_44 extends JPanel {
     * Class constructor.
     */
     public Panel_44() {
-        createPanel44();
+        init();
     }
 
     /**
     * This method creates the panel with name label
-     * @param	coordinateX describes the X coordinate of the Panel boundary
-     * @param	coordinateY describes the Y coordinate of the Panel boundary
-     * @param	panelHeight describes the height of the Panel created.
-     * @param	panelWidth describes the width of the Panel boundary
      */
-    private void createPanel44() {
-
-        int coordinateX = 10;
-        int coordinateY = 10;
-        int panelHeight = 60;
-        int panelWidth = 250;
-
-        String name = "Koushik Kotamraju";
-
-       // JFrame jFrame = new JFrame();
-        JPanel panel = new JPanel();
-        JLabel label = new JLabel(name);
-
+    private void init() {
+        
+        JLabel label = new JLabel("Koushik Kotamraju");
         label.setFont(new Font("Papyrus",Font.PLAIN,15));
-
-        panel.add(label);
-        panel.setBounds(coordinateX, coordinateY, panelWidth, panelHeight);
-        panel.setBackground(Color.LIGHT_GRAY);
-
-        /*jFrame.add(panel);
-        jFrame.setSize(300, 150);
-        jFrame.setLayout(null);
-        jFrame.setVisible(true);*/
+        this.setLayout(new GridBagLayout());
+        this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        this.setVisible(true);
+        this.setBackground(Color.LIGHT_GRAY);
+        this.add(label);       
     }
-
-    /*public static void main(String args[]) {
-        new Panel_44();
-    }*/
 }
