@@ -13,7 +13,7 @@
 			createPanel();
 		}
 		public void createPanel() {	
-			JLabel name = new JLabel(“Vijaya Mounika Gadde”);
+			JLabel name = new JLabel("Vijaya Mounika Gadde");
 			name.setFont(new Font("Arial", Font.BOLD, 20));
 			this.add(name);
 			this.setBackground(Color.CYAN);
