@@ -15,6 +15,6 @@ class Panel_11 extends JPanel {
         /* SET THE FONT STYLE AND SIZE FOR THE GIVEN TEXT IN THE PANEL */
         label.setFont(new Font("TimesRoman",Font.BOLD,16));
         add(label);
-        setBackground(Color.Blue);
+        setBackground(Color.BLUE);
     }
 }
