@@ -13,8 +13,10 @@ class Panel_11 extends JPanel {
         JLabel label = new JLabel("Vaibhav Bhasin");
 
         /* SET THE FONT STYLE AND SIZE FOR THE GIVEN TEXT IN THE PANEL */
-        label.setFont(new Font("TimesRoman",Font.BOLD,16));
+        label.setFont(new Font("Verdana",Font.BOLD,20));
         add(label);
-        setBackground(Color.BLUE);
+        setBackground(Color.GRAY);
+        label.setForeground(Color.WHITE);
+        setLayout(new GridBagLayout());
     }
 }
