@@ -29,15 +29,5 @@ public class Panel_18 extends JPanel{
                
     }  
 	
-    /*public static void main(String args[])  
-    {  JFrame frame= new JFrame();
-       Panel_18 panel = new Panel_18();
-        frame.add(panel);
-        frame.setSize(400,400);    
-        frame.setLayout(null);    
-        frame.setVisible(true); 
-    
-    }  */
-
 }
 

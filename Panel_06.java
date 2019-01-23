@@ -18,17 +18,12 @@ public class Panel_06 extends JPanel{
 	public void init() {
 		this.setBackground(Color.PINK);
 		this.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
-		//this.setBounds(40,80,200,200);  
-		
-		JLabel label1 = new JLabel("Shefali", JLabel.CENTER);
+ 		
+		JLabel label1 = new JLabel("Shefali Anand", JLabel.CENTER);
 		label1.setFont(new Font("Comic Sans MS", Font.BOLD,30));
 		label1.setForeground(Color.BLUE);
-		this.add(label1);
 		
-		JLabel label2 = new JLabel("Anand", JLabel.CENTER);
-		label2.setFont(new Font("Comic Sans MS", Font.BOLD,30));
-		label2.setForeground(Color.BLUE);
-		this.add(label2);
+		this.add(label1);
 		
 	}
 	
