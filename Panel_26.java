@@ -5,23 +5,16 @@ Description: Created panel 26 which displays name of student for SER516 Project1
 import javax.swing.*;
 import java.awt.*;
 public class Panel_26 extends JPanel 
-{
-public Font font1;   
+{   
 	public Panel_26()
 	{
-    	createPanel();
-	}
-	//Initialize the panel by adding label.
-	public void createPanel()
-	{
-		//Creating a new label
+    	        //Creating a new label for Panel_26
 		JLabel newLabel= new JLabel("Sakshi Gautam",JLabel.CENTER); 
 		//Label Design
-		font1= new Font("Cooper black", Font.BOLD, 25);
-		newLabel.setFont(font1);
+		newLabel.setFont(new Font("Cooper black", Font.BOLD, 25));
 		newLabel.setForeground(Color.black); 
 		//add the label to a Panel
 		this.add(newLabel);
 		this.setBackground(Color.red);
 	}
-}
+} 
