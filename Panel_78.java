@@ -9,26 +9,28 @@ import javax.swing.border.LineBorder;
 
 public class Panel_78 extends JPanel implements PanelInterface
 {
-	String panelName = "Viraj Talaty";
+	
 	Panel_78()  
-    {  
-	    JLabel jlabel = new JLabel(panelName);
-	    jlabel.setFont(new Font("Verdana",1,20));
-        setBackground(Color.LIGHT_GRAY);
-        setBorder(new LineBorder(Color.yellow));
-        setVisible(true);
-        add(jlabel);	    
-    }
+    	{
+		JLabel lblName = new JLabel();
+		lblName.setText("Viraj Talaty");
+		lblName.setFont(new Font("Verdana",1,20));
+	        setBackground(Color.LIGHT_GRAY);
+        	setBorder(new LineBorder(Color.yellow));
+	        setVisible(true);
+        	add(lblName);	   	 
+	}
 	
 	@Override
 	public void sayHi(boolean flag) {
+		JLabel lblName = (JLabel)getComponent(0);
 		if(flag)
 		{
-			panelName = "Viraj Talaty, Hi!!";
+			lblName.setText("Viraj Talaty Hi!!");
 		}
 		else
 		{
-			panelName = "Viraj Talaty";
+			lblName.setText("Viraj Talaty");
 		}
 	}
 }
