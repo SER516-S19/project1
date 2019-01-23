@@ -7,36 +7,48 @@ import java.awt.*;
 
 
 
-public class Tab_69 extends JPanel implements TabInterface {
+public class Tab_69 extends JPanel implements TabInterface{
+
+    private Thread t = new Thread();
 
     @Override
     public void startSayingHi() {
-        Thread t = new Thread() {
-                        @Override
-                        public void run() {
-                            Component[] components = fetchComponents();
-                            for(int i =0;i<components.length;i++) {
-                                try {
-                                    PanelInterface panelInterface = (PanelInterface) components[i];
-                                    panelInterface.sayHi(true);
-                                    sleep(500);
-                                    panelInterface.sayHi(false);
-//                                    ((JPanel)components[i]).add(new JLabel("Hii"));
-//                                    sleep(500);
-//                                    ((JPanel)components[i]).add(new JLabel("Hello"));
-                                } catch (Exception e) {
-                                    ((JPanel)components[i]).add(new JLabel("Hii"));
-                                }
-                            }
 
-            }
-        };
-        t.start();
 
     }
 
+
     @Override
     public void stopSayingHi() {
+
+    }
+
+    private void run() {
+        Component[] components = fetchComponents();
+        int i =0;
+        for( i = i%20;i<components.length;i++) {
+            try {
+                PanelInterface panelInterface = (PanelInterface) components[i];
+                panelInterface.sayHi(true);
+                t.sleep(500);
+                panelInterface.sayHi(false);
+            } catch (Exception e) {
+                handleMissingMethodException(components[i]);
+            }
+        }
+
+    }
+
+    private void handleMissingMethodException(Component component){
+        try {
+              JLabel label = new JLabel("Hii");
+              ((JPanel) component).add(label);
+              t.sleep(500);
+              ((JPanel) component).remove(label);
+
+        }catch (Exception e){
+
+        }
 
     }
 
@@ -65,7 +77,6 @@ public class Tab_69 extends JPanel implements TabInterface {
 
 
    }
-
     //Method to check for existing class panels and add them
     private void addPanel(){
         for(int i =0;i<panelNames.length;i++){
@@ -84,24 +95,8 @@ public class Tab_69 extends JPanel implements TabInterface {
     }
 
 
-    public Component[] fetchComponents(){
+    private Component[] fetchComponents(){
        return this.getComponents();
     }
-
-//    public static void main(String[] args) {
-//        JFrame f;
-//        f = new JFrame();
-//        JPanel tab1 = new Tab_69();
-//        JTabbedPane tp = new JTabbedPane();
-//        tp.addTab( tab1.getName(),tab1);
-//        f.getContentPane().add(tp);
-//        f.setSize(800, 800);
-//      //  f.setLayout(null);
-//        f.setVisible(true);
-//        ((Tab_69) tab1).startSayingHi();
-//    }
-
-
-
 
 }
