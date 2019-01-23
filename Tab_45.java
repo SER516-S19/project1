@@ -26,7 +26,7 @@ public class Tab_45 extends JPanel implements TabInterface{
                 this.panels[i] = panel;
                 this.add(panel);
             } catch (Exception e){
-                this.addError(panelNumber);
+                this.addError(panelNumbers[i]);
             }
         }
     }
@@ -47,7 +47,7 @@ public class Tab_45 extends JPanel implements TabInterface{
         //TODO: implement method
     }
 
-    public void sropSayingHi(){
+    public void stopSayingHi(){
         //TODO: implement method
     }
 
