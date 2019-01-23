@@ -4,9 +4,7 @@
 
 import javax.swing.*;
 import java.awt.*;
-import java.lang.reflect.Method;
-import java.util.Timer;
-import java.util.TimerTask;
+
 
 
 public class Tab_69 extends JPanel implements TabInterface {
@@ -16,21 +14,20 @@ public class Tab_69 extends JPanel implements TabInterface {
         Thread t = new Thread() {
                         @Override
                         public void run() {
-
-                            for(int i =0;i<panelNames.length;i++) {
+                            Component[] components = fetchComponents();
+                            for(int i =0;i<components.length;i++) {
                                 try {
-                                    Class<?> clazz = Class.forName(panelNames[i]);
-                                    Method method = clazz.getMethod("sayHi",boolean.class);
-                                    Object panel = clazz.newInstance();
-                                    method.invoke(panel,true);
-                                    sleep(1000);
-                                    method.invoke(panel,false);
-                                }
-                                catch (Exception e){
-
+                                    PanelInterface panelInterface = (PanelInterface) components[i];
+                                    panelInterface.sayHi(true);
+                                    sleep(500);
+                                    panelInterface.sayHi(false);
+//                                    ((JPanel)components[i]).add(new JLabel("Hii"));
+//                                    sleep(500);
+//                                    ((JPanel)components[i]).add(new JLabel("Hello"));
+                                } catch (Exception e) {
+                                    ((JPanel)components[i]).add(new JLabel("Hii"));
                                 }
                             }
-
 
             }
         };
@@ -66,6 +63,7 @@ public class Tab_69 extends JPanel implements TabInterface {
         this.setLayout(new GridLayout(5,4));
         addPanel();
 
+
    }
 
     //Method to check for existing class panels and add them
@@ -84,6 +82,24 @@ public class Tab_69 extends JPanel implements TabInterface {
 
         }
     }
+
+
+    public Component[] fetchComponents(){
+       return this.getComponents();
+    }
+
+//    public static void main(String[] args) {
+//        JFrame f;
+//        f = new JFrame();
+//        JPanel tab1 = new Tab_69();
+//        JTabbedPane tp = new JTabbedPane();
+//        tp.addTab( tab1.getName(),tab1);
+//        f.getContentPane().add(tp);
+//        f.setSize(800, 800);
+//      //  f.setLayout(null);
+//        f.setVisible(true);
+//        ((Tab_69) tab1).startSayingHi();
+//    }
 
 
 
