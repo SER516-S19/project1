@@ -13,7 +13,10 @@ import javax.swing.SwingConstants;
  */
 
 public class Panel_87 extends JPanel implements PanelInterface{
+	private JLabel Hi;
+	
 	public Panel_87() {
+		//name label
 		JLabel name = new JLabel("Jiayan Wang");
 		name.setFont(new Font("Rage Italic",Font.BOLD, 30));
 		name.setForeground(Color.white);
@@ -21,24 +24,24 @@ public class Panel_87 extends JPanel implements PanelInterface{
 		this.setBackground(Color.BLACK);
 		this.setLayout(new BorderLayout());
 		this.add(name,BorderLayout.CENTER);
-	}
-	
-	public void sayHi(boolean hi) {
-		JLabel Hi = new JLabel("Hi!");
+		//Hi label
+		Hi = new JLabel("Hi!");
 		Hi.setFont(new Font("Rage Italic",Font.BOLD, 30));
 		Hi.setForeground(Color.white);
 		Hi.setHorizontalAlignment(SwingConstants.CENTER);	
 		Hi.setVisible(false);
 		this.add(Hi,BorderLayout.SOUTH);
-		
+	}
+	
+	public void sayHi(boolean hi) {
 		if(hi) {
 			Hi.setVisible(true);
-			this.validate();
+			this.repaint();
 		} else {
 			Hi.setVisible(false);
-			this.validate();
+			this.repaint();
 		}
 			
 	}
-
+	
 }
