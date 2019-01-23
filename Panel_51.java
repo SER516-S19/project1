@@ -10,8 +10,9 @@ import javax.swing.border.LineBorder;
  */
 
 
-public class Panel_51 extends JPanel
+public class Panel_51 extends JPanel implements PanelInterface
 {
+    public String panelName = "Gangadhar Matti";
 
     Panel_51()
     {
@@ -23,5 +24,15 @@ public class Panel_51 extends JPanel
         setBorder(new LineBorder(Color.red));
         setVisible(true);
         add(jlabel);
+    }
+
+    @Override
+    public void sayHi(boolean flag) {
+        //displays Hi<User Name> if flag is true else hides it
+        if(flag){
+            panelName = "Hi! Gangadhar Matti";
+        }else{
+            panelName = "Gangadhar Matti";
+        }
     }
 }
