@@ -13,16 +13,6 @@ public class Tab_69 extends JPanel implements TabInterface {
 
     @Override
     public void startSayingHi() {
-//        Timer timer = new Timer();
-//        timer.schedule(new TimerTask() {
-//            @Override
-//            public void run() {
-//                // Your database code here
-//                Component panels =
-//
-//            }
-//        }, 2*60*1000);
-//
         Thread t = new Thread() {
                         @Override
                         public void run() {
