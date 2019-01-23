@@ -19,7 +19,7 @@ public class Tab_45 extends JPanel implements TabInterface{
     public Tab_45(){
         this.setLayout(new GridLayout(5, 4));
         //add panels
-        for (int i = 0; i < panelNumbers.length, ){
+        for (int i = 0; i < panelNumbers.length; i++ ){
             try{
                 Class<?> panelClass = Class.forName("Panel_" + panelNumbers[i]);
                 JPanel panel = (JPanel) panelClass.getDeclaredConstructor().newInstance();
