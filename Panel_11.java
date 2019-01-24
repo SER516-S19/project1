@@ -1,22 +1,35 @@
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 
-class Panel_11 extends JPanel {
+/**
+ * @author Vaibhav Bhasin
+ */
+
+class Panel_11 extends JPanel implements PanelInterface {
 
     public Panel_11() {
-        panel11();
+        JLabel panelLabel = new JLabel("Vaibhav Bhasin");
+        panelLabel.setFont(new Font("Verdana",0,20));
+        setBackground(Color.gray);
+        panelLabel.setForeground(Color.WHITE);
+        setLayout(new GridBagLayout());
+        setVisible(true);
+        add(panelLabel);
     }
 
-    private void panel11() {
-    	
-       // JFrame jFrame = new JFrame();
-        JLabel label = new JLabel("Vaibhav Bhasin");
-
-        /* SET THE FONT STYLE AND SIZE FOR THE GIVEN TEXT IN THE PANEL */
-        label.setFont(new Font("Verdana",Font.BOLD,20));
-        add(label);
-        setBackground(Color.GRAY);
-        label.setForeground(Color.WHITE);
-        setLayout(new GridBagLayout());
+    @Override
+    public void sayHi(boolean flag) {
+        JLabel labelForHi = (JLabel)getComponent(0);
+        if(flag){
+            labelForHi.setText("Hi");
+            labelForHi.setFont(new Font("Verdana", 0, 35));
+           
+        }
+        else{
+            labelForHi.setText("Vaibhav Bhasin");
+            labelForHi.setFont(new Font("Verdana", 0, 20));
+        }
     }
 }
+
