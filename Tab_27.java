@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/** Tab 27 with 18 panels + 2 blank
+/** Tab 27 with 19 panels + 1 blank
  * Author: Bharat Goel
  */
 
@@ -40,7 +40,7 @@ public class Tab_27 extends JPanel implements TabInterface {
             }
             catch (Exception e){
                 JPanel blankPanel = new JPanel();
-                blankPanel.add(new JLabel(myPanels[i] + " unavailable"));
+                //blankPanel.add(new JLabel(myPanels[i] + " unavailable"));
                 this.add(blankPanel);
             }
         }
@@ -53,10 +53,10 @@ public class Tab_27 extends JPanel implements TabInterface {
         Component[] allPanels = this.getComponents();
         tick = 0;
         timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
+            //@Override
             public void run() {
                 try{
-                    if(tick> 0 && tick< 20){
+                    if(tick > 0 && tick < 19){
                         ((PanelInterface)allPanels[tick]).sayHi(true);
                         ((PanelInterface)allPanels[tick-1]).sayHi(false);
                     }
@@ -64,15 +64,15 @@ public class Tab_27 extends JPanel implements TabInterface {
                         ((PanelInterface)allPanels[tick]).sayHi(true);
                         ((PanelInterface)allPanels[19]).sayHi(false);
                     }
-                    else if (tick == 20) {
+                    else if (tick == 19) {
                         ((PanelInterface)allPanels[tick]).sayHi(true);
                         ((PanelInterface)allPanels[tick-1]).sayHi(false);
                         tick = -1;
                     }
-                    tick++;
                 } catch (Exception e) {
                     //
                 }
+                tick++;
             }
         }, 0, 1000);
     }
@@ -82,5 +82,17 @@ public class Tab_27 extends JPanel implements TabInterface {
     public void stopSayingHi() {
         timer.cancel();
         tick = 0;
+    }
+
+    public static void main(String[] args) {
+        JFrame f;
+        f = new JFrame();
+        JPanel tab1 = new Tab_27();
+        JTabbedPane tp = new JTabbedPane();
+        tp.addTab( tab1.getName(),tab1);
+        f.getContentPane().add(tp);
+        f.setSize(800, 800);
+        f.setVisible(true);
+        ((Tab_27) tab1).startSayingHi();
     }
 }
