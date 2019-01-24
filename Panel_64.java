@@ -10,10 +10,11 @@ import javax.swing.border.LineBorder;
  */
 
 public class Panel_64 extends JPanel implements PanelInterface{
-	String panelName = "Jinal Patel";
+	
     Panel_64()  
     {   
-	    JLabel jlabel = new JLabel(panelName);
+	    JLabel jlabel = new JLabel();
+	    jlabel.setText("Jinal Patel");
 	    jlabel.setFont(new Font("Brush Script MT",1,20));
 	    setBounds(10,10,200,60);
       setBackground(Color.YELLOW);
@@ -24,11 +25,14 @@ public class Panel_64 extends JPanel implements PanelInterface{
     
 	@Override
 	public void sayHi(boolean flag) {
-		// TODO Auto-generated method stub
-		if(flag){
-			panelName = "Jinal Patel, Hi!!";
-		}else{
-			panelName = "Jinal Patel";
+		JLabel jlabel = (JLabel)getComponent(0);
+		if(flag)
+		{
+			jlabel.setText("Jinal Patel, Hi!!");
+		}
+		else
+		{
+			jlabel.setText("Jinal Patel");
 		}
 	}
 	
