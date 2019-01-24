@@ -7,33 +7,31 @@ import java.awt.*;
 public class Panel_65 extends JPanel implements PanelInterface {
 
     private Container container;
+    private JLabel myNameJLabel;
+    private JLabel myHiJLabel;
 
     public Panel_65() {
+        myNameJLabel = new JLabel("Lakshmi Kala Pedarla");
+        myNameJLabel.setFont(new Font("monaco", Font.BOLD, 24));
+
+        myHiJLabel = new JLabel("     Hi");
+        myHiJLabel.setForeground(Color.BLUE);
+        myHiJLabel.setFont(new Font("monaco", Font.BOLD, 40));
+        myHiJLabel.setVisible(false);
+
         container = Box.createVerticalBox();
         container.setBackground(Color.lightGray);
-        container.add(createJLabel());
+        container.add(myNameJLabel);
+        container.add(myHiJLabel);
         this.add(container);
-    }
-
-    private JLabel createJLabel() {
-        JLabel myJLabel = new JLabel();
-        myJLabel.setText("Lakshmi Kala Pedarla");
-        myJLabel.setFont(new Font("monaco", Font.BOLD, 24));
-        return myJLabel;
     }
 
     @Override
     public void sayHi(boolean flag) {
-        JLabel myJLabel = new JLabel();
-        myJLabel.setText("         Hi");
-        myJLabel.setForeground(Color.BLUE);
-        myJLabel.setFont(new Font("monaco", Font.BOLD, 24));
-        myJLabel.setVisible(true);
-
         if (flag) {
-            myJLabel.setVisible(true);
-            container.add(myJLabel);
-            container.setBackground(Color.lightGray);
+            myHiJLabel.setVisible(true);
+        } else {
+            myHiJLabel.setVisible(false);
         }
     }
 }
