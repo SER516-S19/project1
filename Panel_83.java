@@ -3,11 +3,11 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.BorderFactory;
 public class Panel_83 extends JPanel implements PanelInterface{
-   
+   JLabel jl ;
      public Panel_83(){
 
     
-     JLabel jl = new JLabel("Bhavana");
+      jl = new JLabel("Bhavana");
      Border bdr = BorderFactory.createLineBorder(Color.BLUE); 
       jl.setBorder(bdr);
 	  this.setLayout(new GridBagLayout());
