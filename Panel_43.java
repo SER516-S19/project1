@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JLabel;
@@ -13,17 +14,27 @@ import javax.swing.JPanel;
  * @author Aravinda Sai Kondamari
  * @GitId 43
  */
-public class Panel_43 extends JPanel {
+public class Panel_43 extends JPanel implements PanelInterface{
 
-    Panel_43() {
-        createPanel();
-    }
-
-    public void createPanel() {
+    public Panel_43() {
         JLabel labelName = new JLabel("Aravinda Sai Kondamari_43");
-        labelName.setFont(new Font("Monotype Corsiva", Font.BOLD, 12));
+        labelName.setFont(new Font("TimesRoman", Font.ITALIC, 14));
+        labelName.setHorizontalAlignment(JLabel.CENTER);
+        setLayout(new BorderLayout());
         add(labelName);
         setBackground(Color.GREEN);
-        setForeground(Color.ORANGE);
+    }
+
+    @Override
+    public void sayHi(boolean showHi) {
+        JLabel labelHi = new JLabel("Hi");
+        labelHi.setFont(new Font("TimesRoman", Font.BOLD, 16));
+        labelHi.setHorizontalAlignment(JLabel.CENTER);
+          if (showHi) {
+            add(labelHi, BorderLayout.SOUTH);
+        } else {
+            remove(labelHi);
+        }
+        validate();
     }
 }
