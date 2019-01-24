@@ -6,7 +6,7 @@ import java.awt.*;
  * GitID: 70
 */
 
-public class Panel_70 extends JPanel {
+public class Panel_70 extends JPanel implements PanelInterface{
 
     JLabel labelName;
     JLabel labelMessage = new JLabel("Hi");
