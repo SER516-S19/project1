@@ -1,18 +1,17 @@
-/* Author : Narendra Mohan M
-*/
-
 import javax.swing.*;
 import java.awt.*;
 
 public class Panel_55 extends JPanel implements PanelInterface{
-	JLabel hiLabel = new JLabel("Hi");
 	public Panel_55() {
 		initComponents();
 	}
+	private JLabel hiLabel;
 private void initComponents() {
 	
 	
 	JLabel label = new JLabel("Narendra Mohan");
+	hiLabel = new JLabel("Hi");
+	hiLabel.setFont(new Font("Calibri",10,50));
 	hiLabel.setVisible(false);
 	
 	label.setFont(new Font("Calibri",10,50));
@@ -28,9 +27,6 @@ private void initComponents() {
 
 public void sayHi(boolean flag) 
 
-{ 
-	
-	this.setVisible(flag);
-	
+{ 	this.hiLabel.setVisible(flag);
 }
 }
