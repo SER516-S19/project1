@@ -5,10 +5,10 @@ import javax.swing.*;
  * Panel_44 describes the panel in a certain tab in the application.
  * The panel consists of FirstName and LastName of the author.
  * @author Koushik Kotamraju
- * @version 1.0
+ * @version 2.0
  */
 
-class Panel_44 extends JPanel {
+class Panel_44 extends JPanel implements PanelInterface{
 
     /**
     * Class constructor.
@@ -29,5 +29,20 @@ class Panel_44 extends JPanel {
         this.setVisible(true);
         this.setBackground(Color.LIGHT_GRAY);
         this.add(label);       
+    }
+    
+    /**
+    * This method toggles the text on the panel to show Hi when the flag is true.
+     */
+    @Override
+    public void sayHi(boolean flag)
+    {
+        if(flag){
+            this.label.setText("Hi!");
+        }
+        else{
+            this.label.setText("Koushik Kotamraju");
+        }
+            
     }
 }
