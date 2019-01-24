@@ -19,12 +19,12 @@ public class Panel_54 extends JPanel implements PanelInterface {
 	private static final long serialVersionUID = 1L;
 
 	public Panel_54() {
-		nameLabel = new JLabel("Sabyasachi Mohanty");
-		nameWithHiLabel = new JLabel("Sabyasachi Mohanty Hi");
+		nameLabel = new JLabel("Sabyasachi");
+		nameWithHiLabel = new JLabel("Sabyasachi  Hi");
 		this.setLayout(new GridBagLayout());
 		this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		nameLabel.setFont(new Font("Arial", Font.BOLD, 30));
-		nameWithHiLabel.setFont(new Font("Arial", Font.BOLD, 30));
+		nameLabel.setFont(new Font("Arial", Font.BOLD, 14));
+		nameWithHiLabel.setFont(new Font("Arial", Font.BOLD, 14));
 		this.add(nameLabel);
 		this.setBackground(Color.gray);
 		this.setVisible(true);
@@ -40,9 +40,6 @@ public class Panel_54 extends JPanel implements PanelInterface {
 			this.remove(nameWithHiLabel);
 			this.add(nameLabel);
 		}
-		
-
-		
 		
 		this.validate();
 		this.repaint();
