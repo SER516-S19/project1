@@ -6,12 +6,14 @@ import java.awt.*;
  * Created: 1/18/2019
  */
 public class Panel_53 extends JPanel implements PanelInterface{
+    JLabel displayLabel;
     public Panel_53() {
         this.setLayout(new GridBagLayout());
         this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        JLabel nameLabel = new JLabel("Abhinab Mohanty");
-        nameLabel.setFont(new Font("Arial", Font.BOLD,20));
-        this.add(nameLabel);
+        displayLabel = new JLabel();
+        displayLabel.setText("Abhinab Mohanty");
+        displayLabel.setFont(new Font("Arial", Font.BOLD,20));
+        this.add(displayLabel);
         this.setBackground(Color.cyan);
         this.setVisible(true);
     }
@@ -22,12 +24,10 @@ public class Panel_53 extends JPanel implements PanelInterface{
 
      @Override
         public void sayHi(boolean flag) {
-        JLabel greetingLabel  = new JLabel("...HI");
-        greetingLabel.setFont(new Font("Arial",Font.BOLD,25));
         if(flag) {
-            this.add(greetingLabel);
+            this.displayLabel.setText("HI");
         }else {
-            this.remove(greetingLabel);
+            this.displayLabel.setText("Abhinab Mohanty");
         }
     }
 
