@@ -28,7 +28,7 @@ public class Panel_58 extends JPanel implements PanelInterface
 		JLabel label = (JLabel)getComponent(0);
 		if(flag)
 		{
-			label.setText("<html>Prashansa <br/> <p 'text-align:center;'>Hi!</p>/html>");
+			label.setText("<html>Prashansa<br/><center/>Hi!</html>");
 		}
 		else
 		{
