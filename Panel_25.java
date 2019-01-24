@@ -28,8 +28,8 @@ public class Panel_25 extends JPanel implements PanelInterface{
      		l25.setText("SAI VINAY. G");
      	}
      }
-       public static void main(String args[])  
+   /*    public static void main(String args[])  
         {  
         new Panel_25();  
-        }  
+        }  */
     }
