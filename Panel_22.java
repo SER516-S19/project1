@@ -25,13 +25,11 @@ public class Panel_22 extends JPanel implements PanelInterface{
     public void sayHi(boolean flag) {
 
     if(flag) {
+this.label.setText("<html>"+Name+"<br>"+"HI"+"</html>");
+    }
+	else {
 
-        this.label.setText(Name);
-
-    }else {
-
-        this.label.setText("<html>"+Name+"<br>"+"HI"+"</html>");
-
+        this.label.setText(Name); 
     }
 
 }
