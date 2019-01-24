@@ -23,6 +23,6 @@ public class Panel_70 extends JPanel {
     }
 
     public void sayHi(boolean flag){
-            labelMessage.setVisible(flag);
+            this.labelMessage.setVisible(flag);
     }
 }
