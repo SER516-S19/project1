@@ -6,7 +6,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel_85 extends JPanel {
+public class Panel_85 extends JPanel implements PanelInterface {
 
 	public Panel_85() {
 		initPanel();
@@ -17,4 +17,9 @@ public class Panel_85 extends JPanel {
         this.setBackground(Color.LIGHT_GRAY);	
         this.add(label);
     }
+
+    @Override
+	public void sayHi(boolean flag) {
+		this.timerLabel.setVisible(flag);
+	}
 }
