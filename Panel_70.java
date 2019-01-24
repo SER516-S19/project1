@@ -17,9 +17,8 @@ public class Panel_70 extends JPanel {
 	    this.setBackground(Color.CYAN);
         this.add(labelName);
 
-        
-        labelMessage.setFont(new Font("Algerian", Font.BOLD, 24));
         this.add(labelMessage);
+        labelMessage.setFont(new Font("Algerian", Font.BOLD, 20));
         labelMessage.setVisible(false);
     }
 
