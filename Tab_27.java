@@ -53,7 +53,7 @@ public class Tab_27 extends JPanel implements TabInterface {
         Component[] allPanels = this.getComponents();
         tick = 0;
         timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
+            //@Override
             public void run() {
                 try{
                     if(tick > 0 && tick < 19){
@@ -69,10 +69,11 @@ public class Tab_27 extends JPanel implements TabInterface {
                         ((PanelInterface)allPanels[tick-1]).sayHi(false);
                         tick = -1;
                     }
-                    tick++;
+
                 } catch (Exception e) {
                     //
                 }
+                tick++;
             }
         }, 0, 1000);
     }
@@ -82,5 +83,17 @@ public class Tab_27 extends JPanel implements TabInterface {
     public void stopSayingHi() {
         timer.cancel();
         tick = 0;
+    }
+
+    public static void main(String[] args) {
+        JFrame f;
+        f = new JFrame();
+        JPanel tab1 = new Tab_27();
+        JTabbedPane tp = new JTabbedPane();
+        tp.addTab( tab1.getName(),tab1);
+        f.getContentPane().add(tp);
+        f.setSize(800, 800);
+        f.setVisible(true);
+        ((Tab_27) tab1).startSayingHi();
     }
 }
