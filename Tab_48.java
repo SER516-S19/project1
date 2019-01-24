@@ -42,6 +42,12 @@ public class Tab_48 extends JPanel implements TabInterface {
                     previousPanelIndex = (PanelInterface) getComponent(index-1);
                     previousPanelIndex.sayHi(false);
                 }
+                //used to fix last hi do not update 
+                 if(timeTicker > 13&&index == 0) {
+           		 previousPanelIndex = (PanelInterface) getComponent(index+13);
+                    previousPanelIndex.sayHi(false);
+           		
+           	}
             } catch (Exception e){
                 e.printStackTrace();
             }
