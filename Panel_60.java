@@ -4,7 +4,8 @@
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-public class Panel_60 extends JPanel{
+public class Panel_60 extends JPanel implements PanelInterface{
+	JLabel lm=new JLabel("HI :D",JLabel.CENTER);
 	Panel_60()
 	{	JPanel p= new JPanel();
 		JLabel l=new JLabel("Amit Pandey",JLabel.CENTER);
@@ -19,6 +20,10 @@ public class Panel_60 extends JPanel{
 		this.setBounds(40,80,160,50);
 		this.add(l);
 		this.setBorder(new LineBorder(Color.BLACK));
+	}
+	public void sayHi(boolean flag)
+	{
+		this.lm.setVisible(flag);
 	}
 	/*public static void main(String args[])	for testing
 	{

@@ -13,7 +13,7 @@ import javax.swing.border.LineBorder;
  * @author $Darshan Prakash
  */
 
-public class Panel_66 extends JPanel {
+public class Panel_66 extends JPanel implements PanelInterface {
 	
 	public Panel_66() {
 		
@@ -30,6 +30,19 @@ public class Panel_66 extends JPanel {
 	setVisible(true);
         add(label);
 
+	}
+	
+	@Override
+	public void sayHi(boolean flag) {
+		JLabel label = (JLabel)getComponent(0);
+		if(flag)
+		{
+			label.setText("<html>Darshan Prakash<br/>Hi!</html>");
+		}
+		else
+		{
+			label.setText("Darshan Prakash");
+		}
 	}
 
 }

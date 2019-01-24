@@ -32,7 +32,7 @@ public class Tab_69 extends JPanel implements TabInterface{
                     }
                     catch(Exception e)
                     {
-                       handleMissingMethodException(getComponent(i));
+
                     }
                     i++;
                 }
@@ -53,21 +53,6 @@ public class Tab_69 extends JPanel implements TabInterface{
     }
 
 
-  //still working on it..
-    private void handleMissingMethodException(Component component){
-        try {
-//              JLabel label = new JLabel("Hii");
-//              ((JPanel) component).add(label);
-//              this.setVisible(true);
-//              t.sleep(2000);
-//              ((JPanel) component).remove(label);
-
-        }catch (Exception e){
-
-       }
-
-    }
-
     //Method called from the main frame to access the tab name
     public String getName() {
         return tabName;
@@ -83,8 +68,6 @@ public class Tab_69 extends JPanel implements TabInterface{
     private String[] panelNames = {"Panel_01","Panel_12","Panel_14","Panel_19","Panel_51","Panel_78",
             "Panel_89","Panel_62","Panel_37","Panel_66","Panel_72","Panel_67","Panel_64","Panel_75",
             "Panel_50", "Panel_XX","Panel_XX","Panel_XX","Panel_XX","Panel_XX"};
-
-    JPanel panel = new JPanel();
 
     // Default constructor
     Tab_69() {
@@ -103,7 +86,6 @@ public class Tab_69 extends JPanel implements TabInterface{
             }
             catch (Exception e){
                 JPanel newPanel = new JPanel();
-                newPanel.add(new JLabel("Panel Missing " + panelNames[i]));
                 this.add(newPanel);
             }
 
