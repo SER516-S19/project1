@@ -6,14 +6,21 @@ import java.awt.*;
  * Created: 1/18/2019
  */
 public class Panel_53 extends JPanel implements PanelInterface{
-    JLabel displayLabel;
+    JLabel nameLabel;
+    JLabel greetingLabel;
     public Panel_53() {
-        this.setLayout(new GridBagLayout());
+        this.setLayout(new FlowLayout( FlowLayout.CENTER));
         this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        displayLabel = new JLabel();
-        displayLabel.setText("Abhinab Mohanty");
-        displayLabel.setFont(new Font("Arial", Font.BOLD,20));
-        this.add(displayLabel);
+        JPanel labelPanel = new JPanel();
+        labelPanel.setLayout( new GridLayout( 2 , 1 ) );
+        nameLabel = new JLabel();
+        greetingLabel = new JLabel("");
+        nameLabel.setText("Abhinab Mohanty");
+        nameLabel.setFont(new Font("Arial", Font.BOLD,20));
+        labelPanel.add(nameLabel);
+        labelPanel.add(greetingLabel);
+        labelPanel.setBackground(Color.cyan);
+        this.add(labelPanel);
         this.setBackground(Color.cyan);
         this.setVisible(true);
     }
@@ -25,9 +32,9 @@ public class Panel_53 extends JPanel implements PanelInterface{
      @Override
         public void sayHi(boolean flag) {
         if(flag) {
-            this.displayLabel.setText("HI");
+            this.greetingLabel.setText("\t"+"HI");
         }else {
-            this.displayLabel.setText("Abhinab Mohanty");
+            this.greetingLabel.setText("");
         }
     }
 
