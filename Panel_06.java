@@ -9,7 +9,7 @@ import javax.swing.border.BevelBorder;
  * Date: 19 Jan 2019
  */
 
-public class Panel_06 extends JPanel{
+public class Panel_06 extends JPanel implements PanelInterface{
 	
 	JLabel label_name;
 	JLabel label_hi;
