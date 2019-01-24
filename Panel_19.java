@@ -27,6 +27,19 @@ public class Panel_19 extends JPanel
 
     }
 
+     @Override
+    public void sayHi(boolean flag) {
+        JLabel labelName = (JLabel)getComponent(0);
+        if(flag)
+        {
+            labelName.setText("<html>Aneesh Dalvi</br>Hi!</html>");
+        }
+        else
+        {
+            labelName.setText("Aneesh Dalvi");
+        }
+    }
+
 
 
 }
