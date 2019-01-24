@@ -28,7 +28,7 @@ public class Panel_64 extends JPanel implements PanelInterface{
 		JLabel jlabel = (JLabel)getComponent(0);
 		if(flag)
 		{
-			jlabel.setText("Jinal Patel, Hi!!");
+			jlabel.setText("<html>Jinal Patel<br/>Hi!</html>");
 		}
 		else
 		{

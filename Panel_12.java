@@ -26,7 +26,7 @@ public class Panel_12 extends JPanel implements PanelInterface
 		JLabel lblName = (JLabel)getComponent(0);
 		if(flag)
 		{
-			lblName.setText("<html>Lehar Bhatt<br/>Hi.</html>");
+			lblName.setText("<html>Lehar Bhatt<br/>Hi!</html>");
 		}
 		else
 		{
