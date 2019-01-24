@@ -28,7 +28,8 @@ public class Panel_82 extends JPanel implements PanelInterface {
 	@Override
 	public void sayHi(boolean flag) {
 		if (flag == true) {
-			this.label.setText("HI");
+			this.label.setText(myName + " HI!");
+//			this.label.setText("<html>" + myName + "<br/>HI</html>");
 		} else {
 			this.label.setText(myName);
 		}
