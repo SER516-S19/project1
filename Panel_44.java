@@ -13,6 +13,7 @@ class Panel_44 extends JPanel implements PanelInterface{
     /**
     * Class constructor.
     */
+    JLabel nameLabel;
     public Panel_44() {
         init();
     }
@@ -22,26 +23,27 @@ class Panel_44 extends JPanel implements PanelInterface{
      */
     private void init() {
         
-        JLabel label = new JLabel("Koushik Kotamraju");
-        label.setFont(new Font("Papyrus",Font.PLAIN,15));
+        nameLabel = new JLabel();
+        nameLabel.setText("Koushik Kotamraju");
+        nameLabel.setFont(new Font("Papyrus",Font.PLAIN,15));
         this.setLayout(new GridBagLayout());
         this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         this.setVisible(true);
         this.setBackground(Color.LIGHT_GRAY);
-        this.add(label);       
+        this.add(nameLabel);       
     }
     
     /**
-    * This method toggles the text on the panel to show Hi when the flag is true.
+    * This overridden method from the interface toggles the text on the panel to show Hi when the flag is true.
      */
     @Override
     public void sayHi(boolean flag)
     {
         if(flag){
-            //this.label.setText("Hi!");
+            this.nameLabel.setText("Hi!");
         }
         else{
-            //this.label.setText("Koushik Kotamraju");
+            this.nameLabel.setText("Koushik Kotamraju");
         }
             
     }
