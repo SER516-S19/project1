@@ -9,7 +9,7 @@ import java.awt.*;
 public class Panel_70 extends JPanel {
 
     JLabel labelName;
-    JLabel labelMessage;
+    JLabel labelMessage = new JLabel("Hi");
 
     public Panel_70() {
         labelName = new JLabel("Nikhila Saini");
@@ -17,7 +17,7 @@ public class Panel_70 extends JPanel {
 	    this.setBackground(Color.CYAN);
         this.add(labelName);
 
-        labelMessage = new JLabel("Hi");
+        
         labelMessage.setFont(new Font("Algerian", Font.BOLD, 24));
         this.add(labelMessage);
         labelMessage.setVisible(false);
