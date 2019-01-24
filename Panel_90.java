@@ -1,38 +1,45 @@
-import javax.swing.*;
 import java.awt.*;
+
+import javax.swing.*;
 
 /**
  * Panel_90 creation
- *
+ * 
  * @author Xiangwei Zheng
  * @version 1.0
  */
 
 public class Panel_90 extends JPanel implements PanelInterface{
+	
+    private JLabel hiLabel;
+    private JLabel nameLabel;
 
-	//constructor
-	public Panel_90() {
-		initialPanel();
-	}
+    /**
+     * Panel 90 Constructor
+        */
+    public Panel_90() {
+        
+        hiLabel = new JLabel("HI");
+        nameLabel = new JLabel("Xiangwei Zheng");
+        hiLabel.setHorizontalAlignment(JLabel.CENTER);
+        nameLabel.setHorizontalAlignment(JLabel.CENTER);
 
-	//panel init
-	private void initialPanel() {
+        setLayout(new BorderLayout());
 
-
-		this.setLayout(new GridBagLayout());
-                this.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-                JLabel nameLabel = new JLabel("Xiangwei Zheng");
-                nameLabel.setFont(new Font("Arial", Font.BOLD,20));
-                this.add(nameLabel);
-                this.setBackground(Color.cyan);
-                this.setVisible(true);
-
-
-
-	}
-
-	@Override
-	public void sayHi(boolean flag) {
-
-	}
+        add(nameLabel);
+        setBackground(Color.CYAN);
+    }
+    /**
+     * add and remove Hi
+        */
+    public void sayHi(boolean sayHi) {
+        if (sayHi) {
+            add(hiLabel, BorderLayout.SOUTH);
+        } else {
+            remove(hiLabel);
+        }
+        validate();
+    }
+	
+	
 }
