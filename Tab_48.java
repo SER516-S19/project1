@@ -2,8 +2,10 @@
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Tab_48 extends JPanel {
+public class Tab_48 extends JPanel implements TabInterface {
 
     private static String[] myTeamPanels = {"Panel_04", "Panel_10", "Panel_11",
             "Panel_23", "Panel_30", "Panel_35", "Panel_41", "Panel_43",
@@ -11,7 +13,34 @@ public class Tab_48 extends JPanel {
             "Panel_90", "Panel_missing 1", "Panel_missing 2", "Panel_missing 3",
             "Panel_missing 4", "Panel_missing 5", "Panel_missing 6"};
 
-    String name = "Hsin-Jung Lee";
+    private String name = "Hsin-Jung Lee";
+    private int timer_tick_count = 0;
+    
+    private ActionListener taskPerformer = new ActionListener() {
+        public void actionPerformed(ActionEvent evt) {
+            //...Timer tick event...
+        	PanelInterface previousPanel, currentPanel;
+        	int currentIndex = 0;
+        	try {
+        		timer_tick_count += 1;
+        		currentIndex = (timer_tick_count - 1) % 20;
+        		
+        		//deselecting previously selected panel
+            	if (currentIndex - 1 >= 0) {
+            		previousPanel = (PanelInterface) getComponent(currentIndex - 1);
+            		previousPanel.sayHi(false);
+            	}
+            	
+            	//selecting current panel
+            	currentPanel = (PanelInterface) getComponent(currentIndex);
+            	currentPanel.sayHi(true);
+        	}
+        	catch (Exception e) {
+        		System.out.println("Panel at index "+ currentIndex + " has not implemented the PanelInterface");
+        	}
+        }
+    };
+    private Timer timer = new Timer(1000 ,taskPerformer);
 
     // constructor
     public Tab_48() {
@@ -36,6 +65,18 @@ public class Tab_48 extends JPanel {
             }
         }
     }
+    
+    
+	@Override
+	public void startSayingHi() {
+		timer.setRepeats(true);
+	    timer.start();
+	}
+
+	@Override
+	public void stopSayingHi() {
+		timer.stop();
+	}
 }
 
 
