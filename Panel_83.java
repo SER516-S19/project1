@@ -18,10 +18,10 @@ public class Panel_83 extends JPanel implements PanelInterface{
     }
 	 public void sayHi(boolean flag) {
      if(flag){
-       jl.setText(myName+" Hi");
+       jl.setText("Bhavana"+" Hi");
      }
      else {
-       jl.setText(myName);
+       jl.setText("Bhavana");
      }
    }
    
