@@ -3,7 +3,15 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Tab_48 extends JPanel {
+public class Tab_48 extends JPanel implements TabInterface {
+
+    public void startSayingHi(){
+
+    }
+
+    public void stopSayingHi(){
+        
+    }
 
     private static String[] myTeamPanels = {"Panel_04", "Panel_10", "Panel_11",
             "Panel_23", "Panel_30", "Panel_35", "Panel_41", "Panel_43",
