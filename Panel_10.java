@@ -9,7 +9,7 @@ public class Panel_10 extends JPanel implements PanelInterface {
 	/**
 	 * @author Ankita
 	 */
-	private String name = "Ankita Shivanand Bhandari";
+	private String name = "Ankita Shivanand";
 	private JLabel jlabelObj = new JLabel();
 	
 
