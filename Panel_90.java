@@ -9,7 +9,7 @@ import javax.swing.*;
  * @version 1.0
  */
 
-public class Panel_90 extends JPanel implements PanelInterface{
+public class Panel_90 extends JPanel /*implements PanelInterface*/{
 	
 	//constructor
 	public Panel_90() {
