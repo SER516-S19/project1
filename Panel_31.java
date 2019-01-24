@@ -11,10 +11,9 @@ public class Panel_31 extends JPanel implements PanelInterface
 	public Panel_31()
 	{
 
-
-	this.add(j_label);
-	this.add(j_labelHi);			
-	
+	JLabel j_label = new JLabel();
+	JLabel j_labelHi = new JLabel();
+				
 	this.setBackground(Color.RED);		
 	
 	j_label.setFont(new Font("Arial",1,40));
@@ -23,8 +22,9 @@ public class Panel_31 extends JPanel implements PanelInterface
 	j_labelHi.setFont(new Font("Arial",1,40));
 	j_labelHi.setText("Hi");
 
-	JLabel j_label = new JLabel();
-	JLabel j_labelHi = new JLabel();
+	this.add(j_label);
+	this.add(j_labelHi);
+
 
 	j_labelHi.setVisible(false);
 	
