@@ -5,25 +5,30 @@ import javax.swing.*;
 /**
  * Panel 61
  * @author Yuvan Pradeep
- * @version 1.0
+ * @version 2.0
  */
 
-public class Panel_61 extends  JPanel{
+public class Panel_61 extends JPanel implements PanelInterface{
+    
+    private JLabel label = new JLabel();
+    private String user_name = "Yuvan Pradeep";
     
     public Panel_61()
     {
-        create_Panel_61();
-    }
-
-    private void create_Panel_61()
-    {
-        String user_name = "Yuvan Pradeep";
-        
-        JLabel label = new JLabel(user_name);
-        label.setFont(new Font("Calibri",Font.PLAIN,12));
-        // Panel styling
+        label.setText(user_name);
+        label.setFont(new Font("Calibri",Font.PLAIN,20));
         add(label);
-        setBackground(Color.gray);
-
+        setBackground(Color.LIGHT_GRAY);
     }
+    
+    @Override
+	public void sayHi(boolean flag) {
+		if(flag) {
+			label.setText(user_name + " " + "HI");
+        } 
+        else {
+			label.setText(user_name);
+		}
+	}
+
 }
