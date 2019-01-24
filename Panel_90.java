@@ -1,38 +1,45 @@
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.border.LineBorder;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 /**
  * Panel_90 creation
  * 
  * @author Xiangwei Zheng
- * @version 1.2
+ * @version 1.0
  */
 
 
+public class Panel_90 extends JPanel implements PanelInterface{
 
-class Panel_90 extends JPanel implements PanelInterface {
+    JLabel labelHi;
 
     public Panel_90() {
-        JLabel panelLabel = new JLabel("Xiangwei Zheng");
-        panelLabel.setFont(new Font("Verdana",0,20));
-        setBackground(Color.gray);
-        panelLabel.setForeground(Color.BLUE);
-        setLayout(new GridBagLayout());
-        setVisible(true);
-        add(panelLabel);
+        JLabel nameLabel = new JLabel("Xiangwei Zheng");
+        nameLabel.setFont(new Font("Verdana", Font.BOLD,20));
+        this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        this.add(nameLabel);
+        this.setBackground(Color.cyan);
+        this.setVisible(true);
     }
 
     @Override
-    public void sayHi(boolean flag) {
-        JLabel labelForHi = (JLabel)getComponent(0);
-        if(flag){
-            labelForHi.setText("Xiangwei Zheng Hi");
-            labelForHi.setFont(new Font("Verdana", 0, 35));
-           
-        }
-        else{
-            labelForHi.setText("Xiangwei Zheng");
-            labelForHi.setFont(new Font("Verdana", 0, 20));
-        }
-    }
+	public void sayHi(boolean flag)
+	{
+		JLabel hiLabel=(JLabel)getComponent(0);
+		if(flag) {
+			hiLabel.setText("<html>Xiangwei Zheng<br/>Hi</html>");
+		    }
+		else {
+			hiLabel.setText("Xiangwei Zheng");
+		    }
+
+
+      }
+
+
 }
