@@ -4,26 +4,34 @@ import java.awt.*;
 /**
  * Panel class for GIT ID - 65
  */
-public class Panel_65 extends JPanel {
+public class Panel_65 extends JPanel implements PanelInterface {
 
+    private Container container;
+    private JLabel myNameJLabel;
+    private JLabel myHiJLabel;
 
-    public Panel_65(){
-        createPanel();
+    public Panel_65() {
+        myNameJLabel = new JLabel("Lakshmi Kala Pedarla");
+        myNameJLabel.setFont(new Font("monaco", Font.BOLD, 24));
+
+        myHiJLabel = new JLabel("     Hi");
+        myHiJLabel.setForeground(Color.BLUE);
+        myHiJLabel.setFont(new Font("monaco", Font.BOLD, 40));
+        myHiJLabel.setVisible(false);
+
+        container = Box.createVerticalBox();
+        container.setBackground(Color.lightGray);
+        container.add(myNameJLabel);
+        container.add(myHiJLabel);
+        this.add(container);
     }
 
-
-    public void createPanel(){
-        this.setBackground(Color.lightGray);
-        this.add(createJLabel());
+    @Override
+    public void sayHi(boolean flag) {
+        if (flag) {
+            myHiJLabel.setVisible(true);
+        } else {
+            myHiJLabel.setVisible(false);
+        }
     }
-
-
-    private JLabel createJLabel(){
-        JLabel jLabel = new JLabel();
-        jLabel.setText("Lakshmi Kala Pedarla");
-        jLabel.setFont(new Font("monaco", Font.BOLD, 24));
-        return jLabel;
-    }
-
-
 }

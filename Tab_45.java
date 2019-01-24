@@ -56,6 +56,13 @@ public class Tab_45 extends JPanel implements TabInterface {
     
     public void startSayingHi() {
         hiDisplayIndex = 0;
+        try {
+            hiTimer.cancel();
+        }catch(IllegalStateException e){
+            //timer was already cancelled; this is good
+        }catch(NullPointerException npe){
+            //first time timer was initialized. No sweat
+        }
         hiTimer = new Timer();
         hiTimer.scheduleAtFixedRate(new HiWave(), 0, 1000);
     }

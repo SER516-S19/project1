@@ -61,7 +61,6 @@ public class Frame_81 extends JFrame {
                         tabbedPane.getComponentAt(currentTabIndex)
                                                         .getName()
                         + " " + e.toString());
-                    e.printStackTrace();
                 }
                 finally{
                     previousTabIndex = currentTabIndex;
