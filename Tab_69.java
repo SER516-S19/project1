@@ -6,7 +6,67 @@ import javax.swing.*;
 import java.awt.*;
 
 
-public class Tab_69 extends JPanel {
+public class Tab_69 extends JPanel implements TabInterface{
+
+    private Thread t;
+    private Boolean flag = true;
+
+    @Override
+    public void startSayingHi() {
+        flag = true;
+        t = new Thread() {
+            @Override
+            public void run() {
+
+                int i=0;
+                while(flag)
+                {
+                    i=i%20;
+                    try
+                    {
+                        PanelInterface panelInterface = (PanelInterface) getComponent(i);
+                        panelInterface.sayHi(true);
+                        sleep(2000);
+                        panelInterface.sayHi(false);
+
+                    }
+                    catch(Exception e)
+                    {
+                       handleMissingMethodException(getComponent(i));
+                    }
+                    i++;
+                }
+                t.interrupt();
+
+            }
+        };
+        t.start();
+
+    }
+
+    @Override
+    public void stopSayingHi() {
+        if (t != null) {
+            flag=false;
+
+        }
+    }
+
+
+  //still working on it..
+    private void handleMissingMethodException(Component component){
+        try {
+//              JLabel label = new JLabel("Hii");
+//              ((JPanel) component).add(label);
+//              this.setVisible(true);
+//              t.sleep(2000);
+//              ((JPanel) component).remove(label);
+
+        }catch (Exception e){
+
+       }
+
+    }
 
     //Method called from the main frame to access the tab name
     public String getName() {
@@ -24,11 +84,13 @@ public class Tab_69 extends JPanel {
             "Panel_89","Panel_62","Panel_37","Panel_66","Panel_72","Panel_67","Panel_64","Panel_75",
             "Panel_50", "Panel_XX","Panel_XX","Panel_XX","Panel_XX","Panel_XX"};
 
+    JPanel panel = new JPanel();
 
     // Default constructor
     Tab_69() {
         this.setLayout(new GridLayout(5,4));
         addPanel();
+
 
    }
     //Method to check for existing class panels and add them
@@ -44,8 +106,8 @@ public class Tab_69 extends JPanel {
                 newPanel.add(new JLabel("Panel Missing " + panelNames[i]));
                 this.add(newPanel);
             }
-        }
 
+        }
     }
 
 }
