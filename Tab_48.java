@@ -75,6 +75,7 @@ public class Tab_48 extends JPanel implements TabInterface {
 
 	@Override
 	public void stopSayingHi() {
+		timer_tick_count = 0;
 		timer.stop();
 	}
 }
