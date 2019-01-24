@@ -16,7 +16,6 @@ public class Panel_19 extends JPanel implements PanelInterface
     Panel_19()
     {
 
-
         JLabel jlabel = new JLabel("Aneesh Dalvi");
         jlabel.setFont(new Font("Verdana",1,20));
         setBorder(new LineBorder(Color.blue));
