@@ -23,9 +23,6 @@ public class Panel_70 extends JPanel {
     }
 
     public void sayHi(boolean flag){
-        if(flag)
-            labelMessage.setVisible(true);
-        else
-            labelMessage.setVisible(false);
+            labelMessage.setVisible(flag);
     }
 }
