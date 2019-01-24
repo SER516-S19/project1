@@ -12,7 +12,7 @@ import javax.swing.border.LineBorder;
 public class Panel_67 extends JPanel implements PanelInterface{
 	
 	Panel_67(){   	
-		JLabel jlabel = new JLabel();
+		JLabel jlabel = new JLabel("Bhawana Prasad");
 		jlabel.setFont(new Font("Algeria",1,20));
 		setBorder(new LineBorder(Color.BLACK));
 		setBackground(Color.GREEN);
