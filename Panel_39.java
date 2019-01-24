@@ -20,7 +20,7 @@ public class Panel_39 extends JPanel implements PanelInterface {
 
         this.nameLabel = this.createCustomLabel(nameLabelText, font, foreGround);
         this.greetingLabel = this.createCustomLabel(greetingLabelText, font, foreGround);
-        this.greetingLabel.setVisible(true);
+        this.greetingLabel.setVisible(false);
 
         this.setBackground(backGround);
 
