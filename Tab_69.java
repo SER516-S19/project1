@@ -3,11 +3,12 @@
  */
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
 
-public class Tab_69 extends MainTab {
 
+public class Tab_69 extends JPanel {
+
+    //Method called from the main frame to access the tab name
     public String getName() {
         return tabName;
     }
@@ -16,20 +17,35 @@ public class Tab_69 extends MainTab {
         this.tabName = tabName;
     }
 
-    String tabName = "Jahnvi";
+    private String tabName = "Jahnvi";
 
+    //List of panel classes to be added
+    private String[] panelNames = {"Panel_01","Panel_12","Panel_14","Panel_19","Panel_51","Panel_78",
+            "Panel_89","Panel_62","Panel_37","Panel_66","Panel_72","Panel_67","Panel_64","Panel_75",
+            "Panel_50", "Panel_XX","Panel_XX","Panel_XX","Panel_XX","Panel_XX"};
+
+
+    // Default constructor
     Tab_69() {
-        super("Jahnvi");
-        // Creating empty panels to check the creation of 20 panels as per the grid layout
-        // Will be adding the panel class object of the students.
-        for(int i=0;i<20;i++){
-            JPanel panel = new JPanel();
-            panel.setSize(50,50);
-            panel.setBackground(Color.LIGHT_GRAY);
-            panel.setBorder(new LineBorder(Color.yellow));
-            panel.setVisible(true);
-            this.add(panel);
+        this.setLayout(new GridLayout(5,4));
+        addPanel();
+
+   }
+    //Method to check for existing class panels and add them
+    private void addPanel(){
+        for(int i =0;i<panelNames.length;i++){
+            try{
+                Class<?> clazz = Class.forName(panelNames[i]);
+                Object newPanel = clazz.getDeclaredConstructor().newInstance();
+                this.add((JPanel)newPanel);
+            }
+            catch (Exception e){
+                JPanel newPanel = new JPanel();
+                newPanel.add(new JLabel("Panel Missing " + panelNames[i]));
+                this.add(newPanel);
+            }
         }
 
     }
+
 }
