@@ -19,16 +19,19 @@ public class Panel_75 extends JPanel implements PanelInterface{
 		setBackground(Color.LIGHT_GRAY);
 		setVisible(true);
 		add(jlabel);
+		sayHi(true);
+		sayHi(false);
+		
 	}
 
 	@Override
 	public void sayHi(boolean flag) {
-		JLabel greeting  = new JLabel("Hi!!");
-		greeting.setFont(new Font("Verdana",Font.BOLD,26));
 		if(flag) {
-			add(greeting);
+			JLabel greeting  = new JLabel("Hi!!");
+			greeting.setFont(new Font("Verdana",Font.BOLD,26));
+			add(greeting, 1);
 		}else {
-			remove(greeting);
+			remove(this.getComponent(1));
 		}
 	}
 }
