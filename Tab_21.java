@@ -105,6 +105,12 @@ public class Tab_21 extends JPanel implements TabInterface, Runnable
             {
                 ((PanelInterface) (this.getComponent(lastPanel))).sayHi(false);
             }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+                if(++hiPanel >= this.getComponentCount())
+                    hiPanel = 0;
+            }
         }
     }
     
