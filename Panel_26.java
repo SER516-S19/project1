@@ -21,6 +21,7 @@ public class Panel_26 extends JPanel implements PanelInterface
 		this.add(labelHi);
 		labelHi.setVisible(false);
 	}
+	//function to set visibility of "Hi" label
 	@Override
 	public void sayHi(boolean flag) 
 	{
