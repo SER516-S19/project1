@@ -33,6 +33,7 @@ public class Panel_87 extends JPanel implements PanelInterface{
 		this.add(Hi,BorderLayout.SOUTH);
 	}
 	
+	@Override
 	public void sayHi(boolean hi) {
 		if(hi) {
 			Hi.setVisible(true);

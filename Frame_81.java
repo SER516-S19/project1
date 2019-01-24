@@ -20,7 +20,7 @@ public class Frame_81 extends JFrame {
                                     "Tab_48", "Tab_69"};
 
     //tabIndex of the previously selected tab
-    private int previousTabIndex = 0;
+    private int previousTabIndex = -1;
 
     Frame_81(){
         
@@ -45,9 +45,10 @@ public class Frame_81 extends JFrame {
 
                     if(previousTabIndex != currentTabIndex){
                         //stop timer on previous tab
-                        ((TabInterface)tabbedPane
-                            .getComponentAt(previousTabIndex))
-                            .stopSayingHi();
+                        if(previousTabIndex != -1)
+                            ((TabInterface)tabbedPane
+                                .getComponentAt(previousTabIndex))
+                                .stopSayingHi();
 
                         //start timer on selected tab
                         ((TabInterface)tabbedPane
@@ -60,6 +61,7 @@ public class Frame_81 extends JFrame {
                         tabbedPane.getComponentAt(currentTabIndex)
                                                         .getName()
                         + " " + e.toString());
+                    e.printStackTrace();
                 }
                 finally{
                     previousTabIndex = currentTabIndex;

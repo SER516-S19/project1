@@ -7,17 +7,13 @@ Author: KRISHNA CHANDU AKULA
 ----------------------------*/
 
 @SuppressWarnings("serial")
-public class Panel_02 extends JPanel {
-
+public class Panel_02 extends JPanel implements PanelInterface{
+	 JLabel lbl ;
+	 String myName = "KRISHNA CHANDU AKULA";
     public Panel_02() {
-       addLabelToPanel();
-   }
-    
-    //This Methods Adds Label to Panel which gets added to Tab_21 
-    private void addLabelToPanel() {
-        
+     
        this.setLayout(new GridBagLayout());
-        JLabel lbl = new JLabel("KRISHNA CHANDU AKULA");
+        lbl = new JLabel(myName);
         lbl.setAlignmentX(CENTER_ALIGNMENT);
         lbl.setFont(new Font("ChandusFont", Font.ITALIC, 19));
         lbl.setForeground(Color.decode("#A7D7C5"));//a7d7c5
@@ -26,4 +22,19 @@ public class Panel_02 extends JPanel {
         this.setAlignmentX(CENTER_ALIGNMENT);
 
 }
+
+	@Override
+	public void sayHi(boolean flag) {
+		// TODO Auto-generated method stub
+		if(flag) {
+		//  Aligning "HI" to center by styling with div tag in html
+		String alignment=	"<div style = 'text-align: center;'>";
+        lbl.setText("<html>"+myName+"<br>"+alignment+ "HI"+"</div>"+"</html>");
+
+		}
+		else {
+			lbl.setText(myName);
+
+		}
+	}
 }
