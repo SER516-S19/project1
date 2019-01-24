@@ -19,14 +19,15 @@ public class Panel_60 extends JPanel implements PanelInterface{
 		//panel
 		this.setBounds(40,80,160,50);
 		this.add(l);
+		this.add(lm);
 		this.setBorder(new LineBorder(Color.BLACK));
 	}
 	public void sayHi(boolean flag)
 	{
 		this.lm.setVisible(flag);
 	}
-	/*public static void main(String args[])	for testing
+	/*public static void main(String args[])
 	{
 		new Panel_60();
-	}*/ 
+	}*/
 }	
