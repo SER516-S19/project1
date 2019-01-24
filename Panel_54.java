@@ -48,9 +48,5 @@ public class Panel_54 extends JPanel implements PanelInterface {
 		this.repaint();
 	}
 	
-	public static void main(String...args){
-		Panel_54 ob = new Panel_54();
-	}
-
 }
 
