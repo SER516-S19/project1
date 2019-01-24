@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel_80 extends JPanel implements TabInterface
+public class Panel_80 extends JPanel implements PanelInterface
 {
     public Panel_80()
 	{
