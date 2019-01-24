@@ -2,10 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Panel_28 extends JPanel implements PanelInterface {
+    
+    JLabel nameLabel;
+	String panelText;
     public Panel_28() {
         
         this.setLayout(new GridBagLayout());
-        JLabel nameLabel = new JLabel("Raju Koushik Gorantla");
+        nameLabel = new JLabel("Raju Koushik Gorantla");
         nameLabel.setFont(new Font("Arial", Font.BOLD,25));
         this.add(nameLabel);
         this.setBackground(Color.LIGHT_GRAY);
