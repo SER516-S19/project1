@@ -11,14 +11,11 @@ import javax.swing.*;
 
 public class Panel_90 extends JPanel implements PanelInterface{
 	
+	 private JLabel hiLabel;
+         private JLabel nameLabel;
+	
 	//constructor
 	public Panel_90() {
-		initialPanel();
-	}
-	
-	//panel init
-	private void initialPanel() {
-		
 		
 		this.setLayout(new GridBagLayout());
                 this.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
@@ -28,7 +25,8 @@ public class Panel_90 extends JPanel implements PanelInterface{
                 this.setBackground(Color.cyan);
                 this.setVisible(true);
 		
-
 		
 	}
+	
+	
 }
