@@ -11,24 +11,35 @@ import javax.swing.*;
 
 public class Panel_90 extends JPanel implements PanelInterface{
 	
-	//constructor
-	public Panel_90() {
-		initialPanel();
-	}
-	
-	//panel init
-	private void initialPanel() {
-		
-		
-		this.setLayout(new GridBagLayout());
-                this.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-                JLabel nameLabel = new JLabel("Xiangwei Zheng");
-                nameLabel.setFont(new Font("Arial", Font.BOLD,20));
-                this.add(nameLabel);
-                this.setBackground(Color.cyan);
-                this.setVisible(true);
-		
+    private JLabel hiLabel;
+    private JLabel nameLabel;
 
-		
-	}
+    /**
+     * Panel 90 Constructor
+        */
+    public Panel_90() {
+        
+        hiLabel = new JLabel("HI");
+        nameLabel = new JLabel("Xiangwei Zheng");
+        hiLabel.setHorizontalAlignment(JLabel.CENTER);
+        nameLabel.setHorizontalAlignment(JLabel.CENTER);
+
+        setLayout(new BorderLayout());
+
+        add(nameLabel);
+        setBackground(Color.CYAN);
+    }
+    /**
+     * add and remove Hi
+        */
+    public void sayHi(boolean sayHi) {
+        if (sayHi) {
+            add(hiLabel, BorderLayout.SOUTH);
+        } else {
+            remove(hiLabel);
+        }
+        validate();
+    }
+	
+	
 }

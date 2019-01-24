@@ -7,7 +7,7 @@ import javax.swing.border.LineBorder;
 
 public class Panel_05 extends JPanel implements PanelInterface
    {
-   	JLabel labelmsg = new JLabel("Hi");   //creating a label for Hi
+   	JLabel labelmsg = new JLabel("Hi", JLabel.CENTER);   //creating a label for Hi
 
 	public Panel_05() 
 	   {
@@ -26,9 +26,8 @@ public class Panel_05 extends JPanel implements PanelInterface
          labelmsg.setVisible(false); 
         }
 	  
-     public void sayHi(boolean flag)
-       {
-       labelmsg.setVisible(flag);
+     public void sayHi(boolean flag){
+       	labelmsg.setVisible(flag);
        }
 
 

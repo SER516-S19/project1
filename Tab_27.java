@@ -62,7 +62,7 @@ public class Tab_27 extends JPanel implements TabInterface {
                     }
                     else if (tick == 0) {
                         ((PanelInterface)allPanels[tick]).sayHi(true);
-                        ((PanelInterface)allPanels[19]).sayHi(false);
+                        ((PanelInterface)allPanels[18]).sayHi(false);
                     }
                     else if (tick == 18) {
                         ((PanelInterface)allPanels[tick]).sayHi(true);
