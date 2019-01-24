@@ -24,7 +24,7 @@ JLabel HiLabel = new JLabel("HI",JLabel.CENTER);
    
 }
 
-public void LabelHi(boolean flag){
+public void sayHi(boolean flag){
 HiLabel.setVisible(flag);
 }
 }
