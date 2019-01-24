@@ -10,27 +10,24 @@ import javax.swing.border.Border;
 * @version 1/20/2019
 * */
 
-public class Panel_35 extends JPanel {
-	JLabel label = null;
-	boolean testMode = false;
+public class Panel_35 extends JPanel implements PanelInterface {
+	private JLabel label = null;
 	public Panel_35() {
-		init();
-		stylize();
-		assemble();
-	}
-
-	private void init() {
-		if (testMode) System.out.println("initialize...");
+		//initialize
 		label = new JLabel("Hongfei Ju");
-    }
-
-    private void stylize() {
-		if (testMode) System.out.println("stylize...");
+		//sylize
 		setBackground(Color.orange);
+		label.setFont(new Font("Arial", Font.PLAIN, 18));
+		//assemble
+		add(label);
 	}
 
-    private void assemble() {
-		if (testMode) System.out.println("assemble...");
-		add(new JLabel("Hongfei Ju"));
+	@Override
+	public void sayHi(boolean flag) {
+		if(flag) {
+			label.setText("Hongfei Ju Hi");
+		} else {
+			label.setText("Hongfei Ju");
+		}
 	}
 }
