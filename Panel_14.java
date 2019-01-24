@@ -20,7 +20,7 @@ public class Panel_14 extends JPanel implements PanelInterface
      add(mylabel);	    
     }
 
-   @override
+   @Override
    public void sayHi(boolean flag)
    { 
      JLabel mylabel = (JLabel)getComponent(0);
