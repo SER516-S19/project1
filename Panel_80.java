@@ -12,12 +12,14 @@ public class Panel_80 extends JPanel implements PanelInterface
 		jLabel1 = new JLabel("Sajith Thattazhi", JLabel.CENTER);
         jLabel1.setFont(new java.awt.Font("Algerian", 0, 24));
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+		jLabel1.setBounds(5, 20, 300, 30);
 		
 		this.add(jLabel1);
 		
 		jLabel2 = new JLabel("Hi", JLabel.CENTER);
         jLabel2.setFont(new java.awt.Font("Algerian", 0, 48));
         jLabel2.setForeground(new java.awt.Color(204, 0, 0));
+		jLabel2.setBounds(5, 60, 300, 30);
 		
 		this.add(jLabel2);
 		
