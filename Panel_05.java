@@ -26,7 +26,7 @@ public class Panel_05 extends JPanel implements PanelInterface
          labelmsg.setVisible(false); 
         }
 	  
-     public sayHi(boolean flag)
+     public void sayHi(boolean flag)
        {
        	if(flag) 
        		labelmsg.setVisible(true);
