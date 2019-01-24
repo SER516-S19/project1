@@ -8,23 +8,23 @@ import javax.swing.*;
  
 public class Panel_31 extends JPanel implements PanelInterface
 {
+	
+  	private JLabel j_label;
+	private JLabel j_labelHi;
+
 	public Panel_31()
 	{
 
-	JLabel j_label = new JLabel();
-	JLabel j_labelHi = new JLabel();
-				
+	j_label = new JLabel();
 	this.setBackground(Color.RED);		
-	
 	j_label.setFont(new Font("Arial",1,40));
-	j_label.setText("Srivan Reddy");	
+	j_label.setText("Srivan Reddy");
+	this.add(j_label);	
 	
+	j_labelHi = new JLabel();
 	j_labelHi.setFont(new Font("Arial",1,40));
 	j_labelHi.setText("Hi");
-
-	this.add(j_label);
 	this.add(j_labelHi);
-
 
 	j_labelHi.setVisible(false);
 	
@@ -34,6 +34,5 @@ public class Panel_31 extends JPanel implements PanelInterface
         this.j_labelHi.setVisible(flag);
     }
 
-	private JLabel j_labelHi;
 
 }
