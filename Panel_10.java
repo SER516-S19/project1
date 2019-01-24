@@ -23,7 +23,7 @@ public class Panel_10 extends JPanel implements PanelInterface {
 		
 	}
 
-
+	/* Implementing the method from PaneInterface */
 	 @Override
 		public void sayHi(boolean flag) {
 			if(flag) {
@@ -33,8 +33,6 @@ public class Panel_10 extends JPanel implements PanelInterface {
 	        	jlabelObj.setText(name);
 			}
 		}
-		
-		
+				
 	
-
 }
