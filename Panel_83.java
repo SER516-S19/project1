@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.BorderFactory;
-public class Panel_83 extends JPanel implements Panelinterface{
+public class Panel_83 extends JPanel implements PanelInterface{
    
      public Panel_83(){
 
