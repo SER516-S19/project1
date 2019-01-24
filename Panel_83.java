@@ -19,7 +19,7 @@ public class Panel_83 extends JPanel implements PanelInterface{
 	@Override
 	 public void sayHi(boolean flag) {
      if(flag){
-       jl.setText("Bhavana" +" Hi");
+       jl.setText("Bhavana" + " Hi");
      }
      else {
        jl.setText("Bhavana");
