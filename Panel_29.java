@@ -6,12 +6,14 @@ import java.awt.*;
  * Created: 1/19/2019
  */
 public class Panel_29 extends JPanel implements PanelInterface {
+    private JLabel label = new JLabel();
+    private String name = "Abhishek Gupta";
     public Panel_29() {
-        this.setLayout(new GridBagLayout());
-        JLabel nameLabel = new JLabel("Abhishek Gupta");
-        this.add(nameLabel);
-        this.setBackground(Color.lightGray);
-        this.setVisible(true);
+        setLayout(new GridBagLayout());
+        label.setText(name);
+        add(label);
+        setBackground(Color.lightGray);
+        setVisible(true);
     }
     
     @Override
