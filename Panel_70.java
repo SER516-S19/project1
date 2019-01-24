@@ -8,11 +8,25 @@ import java.awt.*;
 
 public class Panel_70 extends JPanel {
 
+    JLabel labelName;
+    JLabel labelMessage;
+
     public Panel_70() {
-        JLabel jLabel = new JLabel("Nikhila Saini");
-   	    jLabel.setFont(new Font("Algerian", Font.BOLD, 24));
+        labelName = new JLabel("Nikhila Saini");
+        labelName.setFont(new Font("Algerian", Font.BOLD, 24));
 	    this.setBackground(Color.CYAN);
-        this.add(jLabel);
+        this.add(labelName);
+
+        labelMessage = new JLabel("Hi");
+        labelMessage.setFont(new Font("Algerian", Font.BOLD, 24));
+        this.add(labelMessage);
+        labelMessage.setVisible(false);
     }
 
+    public void sayHi(boolean flag){
+        if(flag)
+            labelMessage.setVisible(true);
+        else
+            labelMessage.setVisible(false);
+    }
 }
