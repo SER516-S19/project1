@@ -11,7 +11,7 @@ import javax.swing.text.JTextComponent;
 
 
 public class Panel_75 extends JPanel implements PanelInterface{
-	
+
 	Panel_75(){
 		JLabel jlabel = new JLabel("Sourabh Siddharth");
 		jlabel.setFont(new Font("Verdana",Font.PLAIN,15));
@@ -23,12 +23,12 @@ public class Panel_75 extends JPanel implements PanelInterface{
 
 	@Override
 	public void sayHi(boolean flag) {
-		JLabel greeting  = new JLabel("Hi!!");
-		greeting.setFont(new Font("Verdana",Font.BOLD,26));
+		JLabel jlabel  = (JLabel)this.getComponent(0);
 		if(flag) {
-			add(greeting);
+			jlabel.setText("<html>Sourabh Siddharth<br><br>"
+					+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi!</html>");
 		}else {
-			remove(greeting);
+			jlabel.setText("Sourabh Siddharth");
 		}
 	}
 }
