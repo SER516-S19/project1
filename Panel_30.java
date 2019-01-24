@@ -21,6 +21,9 @@ Label contains First name & Last name of the student */
      if(flag){
        nameLabel.setText(myName+" Hi");
      }
+     else {
+       nameLabel.setText(myName);
+     }
    }
 
    public void createPanel() {
