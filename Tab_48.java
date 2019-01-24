@@ -14,6 +14,8 @@ public class Tab_48 extends JPanel implements TabInterface {
 
     String name = "Hsin-Jung Lee";
 
+    int timeTicker = 0;
+
     // constructor
     public Tab_48() {
         this.setLayout(new GridLayout(5, 4, 4, 4));
@@ -23,84 +25,6 @@ public class Tab_48 extends JPanel implements TabInterface {
     public String getName() {
         return name;
     }
-
-
-/*
-    Thread myThread;
-    Boolean myFlag = true;
-
-    @Override
-    public void startSayingHi() {
-        myFlag = true;
-        myThread = new Thread(){
-            @Override
-            public void run() {
-                super.run();
-                int index = 0;
-                while (myFlag = true){
-                    index = index % 14;
-                    try {
-                        PanelInterface myTeamPanelInterface = (PanelInterface) getComponent(index);
-                        myTeamPanelInterface.sayHi(true);
-                        Thread.sleep(1000);
-                        myTeamPanelInterface.sayHi(false);
-                    } catch (InterruptedException e){
-                        e.printStackTrace();
-                    }
-                    index ++;
-
-                }
-                myThread.interrupt();
-            }
-        };
-
-        myThread.start();
-    }
-
-    @Override
-    public void stopSayingHi() {
-        if (myThread != null){
-            myFlag = false;
-        }
-    }
-*/
-    /*Thread myThread ;
-    Boolean myFlag = true;
-
-            @Override
-            public void startSayingHi() {
-                if (myThread != null){
-                    myFlag = true;
-                }
-            }
-
-            @Override
-            public void stopSayingHi() {
-                myFlag = true;
-                myThread = new Thread (){
-                    public  void run (){
-                        int index = 0;
-                        while (myFlag = true){
-                            index = index % 14;
-                            try {
-                                PanelInterface myTeamPanelInterface = (PanelInterface) getComponent(index);
-                                myTeamPanelInterface.sayHi(true);
-                                sleep(500);
-                                myTeamPanelInterface.sayHi(false);
-                            } catch (Exception e){
-                                e.printStackTrace();
-                            }
-                            index ++;
-                        }
-                        myThread.interrupt();
-                    }
-                };
-                myThread.start();
-            }
-*/
-
-
-   int timeTicker = 0;
 
    ActionListener myTask = new ActionListener() {
         //@Override
@@ -123,6 +47,7 @@ public class Tab_48 extends JPanel implements TabInterface {
             }
         }
     };
+
     Timer myTimer = new Timer(1000,myTask);
 
     public void startSayingHi() {
@@ -148,8 +73,6 @@ public class Tab_48 extends JPanel implements TabInterface {
             }
         }
     }
-
-
 }
 
 
