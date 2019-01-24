@@ -22,7 +22,7 @@ public class Panel_53 extends JPanel implements PanelInterface{
 
      @Override
         public void sayHi(boolean flag) {
-        JLabel greetingLabel  = new JLabel("HI");
+        JLabel greetingLabel  = new JLabel("...HI");
         greetingLabel.setFont(new Font("Arial",Font.BOLD,25));
         if(flag) {
             this.add(greetingLabel);
