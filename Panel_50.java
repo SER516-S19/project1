@@ -8,13 +8,27 @@ import java.awt.*;
 public class Panel_50 extends JPanel {
     public Panel_50() {
 
-        JLabel name = new JLabel("Siva Pranav Mandadi");
-        name.setFont(new Font("Verdana", Font.BOLD,20));
+        JLabel nameLabel = new JLabel("Siva Pranav Mandadi");
+        nameLabel.setFont(new Font("Verdana", Font.BOLD,20));
         this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        this.add(name);
+        this.add(nameLabel);
         this.setBackground(Color.cyan);
         this.setVisible(true);
     }
+
+    @Override
+	public void sayHi(boolean flag)
+	{
+		JLabel hiLabel=(JLabel)getComponent(0);
+		if(flag) {
+			hiLabel.setText("<html>Siva Pranav Mandadi<br/>Hi!</html>");
+		    }
+		else {
+			hiLabel.setText("Siva Pranav Mandadi");
+		    }
+
+
+      }
 
 
 }
