@@ -14,12 +14,15 @@ public class Panel_85 extends JPanel implements PanelInterface {
     
 	private void initPanel() {
         JLabel label = new JLabel("Shivam Verma");
+        JLabel tLabel = new JLabel("Hi");
         this.setBackground(Color.LIGHT_GRAY);	
         this.add(label);
+        this.add(tLabel);
+        tLabel.setVisible(false);
     }
 
     @Override
 	public void sayHi(boolean flag) {
-		this.timerLabel.setVisible(flag);
+		this.tLabel.setVisible(flag);
 	}
 }
