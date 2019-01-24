@@ -12,11 +12,11 @@ public class Panel_05 extends JPanel implements PanelInterface
 	public Panel_05() 
 	   {
          //creating a label for name display                              
-         JLabel jlabel = new JLabel("JANANI ANAND_05",JLabel.CENTER);
-	     jlabel.setForeground(Color.white);
-	     jlabel.setFont(new Font("Berlin Sanas FB",Font.BOLD,30));
+         JLabel jlabel_name = new JLabel("JANANI ANAND_05",JLabel.CENTER);
+	     jlabel_name.setForeground(Color.white);
+	     jlabel_anme.setFont(new Font("Berlin Sanas FB",Font.BOLD,30));
 	     
-	     this.add(jlabel);
+	     this.add(jlabel_name);
 	     this.setBackground(Color.blue);
  	     this.setBorder(new LineBorder(Color.BLACK));
 
@@ -28,7 +28,7 @@ public class Panel_05 extends JPanel implements PanelInterface
 	  
      public void sayHi(boolean flag)
        {
-       	labelmsg.setVisible(flag);
+       	this.labelmsg.setVisible(flag);
        }
 
 
