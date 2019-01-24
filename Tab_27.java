@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /** Tab 27 with 18 panels + 2 blank
  * Author: Bharat Goel
@@ -18,6 +20,10 @@ public class Tab_27 extends JPanel implements TabInterface {
     }
 
     public String[] myPanels;
+
+    private int tick = 0;
+
+    private static Timer timer;
 
     Tab_27() {
         this.setLayout(new GridLayout(5,4));
@@ -43,11 +49,38 @@ public class Tab_27 extends JPanel implements TabInterface {
 
     @Override
     public void startSayingHi() {
-
+        timer = new Timer();
+        Component[] allPanels = this.getComponents();
+        tick = 0;
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                try{
+                    if(tick> 0 && tick< 20){
+                        ((PanelInterface)allPanels[tick]).sayHi(true);
+                        ((PanelInterface)allPanels[tick-1]).sayHi(false);
+                    }
+                    else if (tick == 0) {
+                        ((PanelInterface)allPanels[tick]).sayHi(true);
+                        ((PanelInterface)allPanels[19]).sayHi(false);
+                    }
+                    else if (tick == 20) {
+                        ((PanelInterface)allPanels[tick]).sayHi(true);
+                        ((PanelInterface)allPanels[tick-1]).sayHi(false);
+                        tick = -1;
+                    }
+                    tick++;
+                } catch (Exception e) {
+                    //
+                }
+            }
+        }, 0, 1000);
     }
+
 
     @Override
     public void stopSayingHi() {
-
+        timer.cancel();
+        tick = 0;
     }
 }
