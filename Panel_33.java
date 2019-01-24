@@ -9,16 +9,23 @@ import javax.swing.*;
  *        Date: 1/22/19
  *     Project: 1
 **/
-public class Panel_33 extends JPanel {
+public class Panel_33 extends JPanel implements PanelInterface{
   public Panel_33() {
-    init();
-  }
-
-  private void init() {
     this.setLayout(new GridBagLayout());
-    JLabel label = new JLabel("<html> P<sub>a</sub>u<sup>l</sup> H<sub>o</sub>r<sup>t</sup>o<sub>n</sub> </html>");
+    JLabel label = new JLabel("<html><center>P<sub>a</sub>u<sup>l</sup> H<sub>o</sub>r<sup>t</sup>o<sub>n</sub></center></html>");
     label.setFont(new Font("Monospaced",Font.BOLD,32));
     this.add(label);
+  }
+
+
+  public void sayHi(boolean flag) {
+    JLabel label = (JLabel)getComponent(0);
+    if(flag) {
+      label.setText("<html><center>P<sub>a</sub>u<sup>l</sup> H<sub>o</sub>r<sup>t</sup>o<sub>n</sub><br />Hi!</center></html>");
+    }
+    else {
+      label.setText("<html><center>P<sub>a</sub>u<sup>l</sup> H<sub>o</sub>r<sup>t</sup>o<sub>n</sub></center></html>");
+    }
   }
 
   /**

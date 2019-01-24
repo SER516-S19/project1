@@ -6,12 +6,12 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel_86 extends JPanel {
+public class Panel_86 extends JPanel implements PanelInterface{
 	
 	/*
 	 Class Constructor
 	 */
-	
+	private JLabel timerLabel;
 	public Panel_86() {
 		initPanel();
 	}
@@ -22,16 +22,23 @@ public class Panel_86 extends JPanel {
 	
 	private void initPanel() {
 		String name = "Aditya Vikram";
+		String message = "Hi";
 		
 		//JFrame frame = new JFrame(); //To test the panel
 		//JPanel panel = new JPanel(); //To test the panel
 
 		JLabel label = new JLabel(name);
+		timerLabel = new JLabel(message);
 		
 		this.add(label);
+		this.add(timerLabel);
 		this.setBackground(Color.CYAN);
 
-		label.setFont(new Font("Papyrus", Font.BOLD, 20));
+		label.setFont(new Font("Papyrus", Font.BOLD, 30));
+		timerLabel.setFont(new Font("Papyrus", Font.BOLD, 30));
+		
+		label.setVisible(true);
+		timerLabel.setVisible(false);
 				
 		/* To test the panel
 		 frame.add(panel);
@@ -39,6 +46,11 @@ public class Panel_86 extends JPanel {
          	 frame.setVisible(true);
 		 */
 		
+	}
+	
+	@Override
+	public void sayHi(boolean flag) {
+		this.timerLabel.setVisible(flag);
 	}
 	
 	/*
