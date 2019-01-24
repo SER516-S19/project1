@@ -9,7 +9,7 @@ import javax.swing.border.LineBorder;
  */
 
 
-public class Panel_19 extends JPanel
+public class Panel_19 extends JPanel implements PanelInterface
 {
 
 
@@ -32,7 +32,7 @@ public class Panel_19 extends JPanel
         JLabel labelName = (JLabel)getComponent(0);
         if(flag)
         {
-            labelName.setText("<html>Aneesh Dalvi</br>Hi!</html>");
+            labelName.setText("<html>Aneesh Dalvi<br/>Hi!</html>");
         }
         else
         {
