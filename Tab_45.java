@@ -81,7 +81,11 @@ public class Tab_45 extends JPanel implements TabInterface {
         }
         for (JPanel p : panels) {
             if (p instanceof PanelInterface) {
-                ((PanelInterface) p).sayHi(false);
+                try {
+                    ((PanelInterface) p).sayHi(false);
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
             } else {
                 System.out.println("Panel does not implement panelInterface");
             }
@@ -104,13 +108,21 @@ public class Tab_45 extends JPanel implements TabInterface {
             try {
                 int prev = previousHiDisplayIndex();
                 if (panels[prev] instanceof PanelInterface) {
-                    ((PanelInterface) panels[prev]).sayHi(false);
+                    try {
+                        ((PanelInterface) panels[prev]).sayHi(false);
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
                 } else {
                     System.out.println("Panel_" + panelNumbers[prev] + " does not implement PanelInterface");
                 }
                 
                 if (panels[hiDisplayIndex] instanceof PanelInterface) {
-                    ((PanelInterface) panels[hiDisplayIndex]).sayHi(true);
+                    try {
+                        ((PanelInterface) panels[hiDisplayIndex]).sayHi(true);
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
                 } else {
                     System.out.println("Panel_" + panelNumbers[hiDisplayIndex] + 
                         " does not implement PanelInterface");

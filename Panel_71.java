@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.JPanel;
+import javax.swing.Box;
 import javax.swing.JLabel;
 
 
@@ -18,18 +19,28 @@ import javax.swing.JLabel;
 public class Panel_71 extends JPanel implements PanelInterface
 {
     private JLabel label = new JLabel();
+    private JLabel hiLabel = new JLabel(); //Modification Hi Label needs to be on the next line 
     //Constructor
     public Panel_71()
     {
-        setBackground(Color.gray);
+        this.setBackground(Color.gray);
+        //Create a vertical Box in the Panel
+        Box box = Box.createVerticalBox();
         //Initial Value of Label
         label.setText("Aditya Samant");
+        hiLabel.setText("Hi");
         //Alignment should be center
-        label.setHorizontalAlignment(JLabel.CENTER);
-        label.setVerticalAlignment(JLabel.CENTER);
+        label.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+        label.setAlignmentY(JLabel.CENTER_ALIGNMENT);
         label.setFont(new Font(Font.SERIF, Font.BOLD, 18));
-        this.setVisible(true); 
-        this.add(label);  
+        box.add(label);
+        //Hi Label needs to be on a new line
+        hiLabel.setFont(new Font(Font.SERIF, Font.BOLD, 18));
+        hiLabel.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+        hiLabel.setVisible(false);
+        box.add(hiLabel);
+        //This will always be there
+        this.add(box); 
     }
     /**
      *  Depending on whether value is true or false Hi will show on Bottom or not
@@ -37,10 +48,7 @@ public class Panel_71 extends JPanel implements PanelInterface
      * */
     @Override
     public void sayHi(boolean flag){
-        if (flag == true){
-           label.setText("Aditya Samant\nHI");
-        }else if(flag== false){
-            label.setText("Aditya Samant");
-        }
+       
+       this.hiLabel.setVisible(flag);
     }
 }
