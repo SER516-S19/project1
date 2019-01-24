@@ -19,7 +19,7 @@ public class Panel_84 extends JPanel implements PanelInterface {
     	
     	label_Hi = new JLabel("<html><br>Hi</html>",JLabel.CENTER); 
     	 this.add(label_Hi);
-    	 label_Hi.setVisible(true);
+    	 label_Hi.setVisible(false);
     	 label_Hi.setFont(font_setter);
         this.setBackground(color);
         this.setForeground(Color.BLACK); 
