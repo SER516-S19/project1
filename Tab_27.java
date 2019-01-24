@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/** Tab 27 with 18 panels + 2 blank
+/** Tab 27 with 19 panels + 1 blank
  * Author: Bharat Goel
  */
 
@@ -56,7 +56,7 @@ public class Tab_27 extends JPanel implements TabInterface {
             @Override
             public void run() {
                 try{
-                    if(tick> 0 && tick< 20){
+                    if(tick > 0 && tick < 19){
                         ((PanelInterface)allPanels[tick]).sayHi(true);
                         ((PanelInterface)allPanels[tick-1]).sayHi(false);
                     }
@@ -64,7 +64,7 @@ public class Tab_27 extends JPanel implements TabInterface {
                         ((PanelInterface)allPanels[tick]).sayHi(true);
                         ((PanelInterface)allPanels[19]).sayHi(false);
                     }
-                    else if (tick == 20) {
+                    else if (tick == 19) {
                         ((PanelInterface)allPanels[tick]).sayHi(true);
                         ((PanelInterface)allPanels[tick-1]).sayHi(false);
                         tick = -1;
@@ -74,7 +74,7 @@ public class Tab_27 extends JPanel implements TabInterface {
                     //
                 }
             }
-        }, 1000, 1000);
+        }, 0, 1000);
     }
 
 
