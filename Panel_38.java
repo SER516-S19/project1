@@ -15,7 +15,7 @@ public class Panel_38 extends JPanel implements PanelInterface {
 
 	private static final long serialVersionUID = 1L;
 	private JLabel nameLabel;
-	JLabel nameOnSwitchLabel;
+	private JLabel nameOnSwitchLabel;
 
 	Panel_38() {
 
