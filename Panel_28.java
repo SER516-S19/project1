@@ -1,17 +1,28 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel_28 extends JPanel {
-    public Panel_28() {
-        init();
-    }
+public class Panel_28 extends JPanel implements PanelInterface {
     
-    private void init() {
+    JLabel nameLabel;
+	String panelText;
+    public Panel_28() {
+        
         this.setLayout(new GridBagLayout());
-        JLabel nameLabel = new JLabel("Raju Koushik Gorantla");
+        nameLabel = new JLabel("Raju Koushik Gorantla");
+        nameLabel.setFont(new Font("Arial", Font.BOLD,25));
         this.add(nameLabel);
         this.setBackground(Color.LIGHT_GRAY);
         this.setVisible(true);
+        
+    }
+    
+    @Override
+    public void sayHi(boolean flag)
+    {
+        if(flag)
+            this.nameLabel.setText("<html><center>Raju Koushik Gorantla<br>HI</center></html>");
+        else
+            this.nameLabel.setText("Raju Koushik Gorantla");
     }
     
    
