@@ -10,13 +10,15 @@ import javax.swing.border.LineBorder;
  */
 
 
-public class Panel_51 extends JPanel
+public class Panel_51 extends JPanel implements PanelInterface
 {
+    public String panelName = "Gangadhar Matti";
 
     Panel_51()
     {
 
-        JLabel jlabel = new JLabel("Gangadhara Matti");
+        JLabel jlabel = new JLabel();
+        jlabel.setText("Gangadhar Matti");
         jlabel.setFont(new Font("Verdana",1,20));
 
         setBackground(Color.LIGHT_GRAY);
@@ -24,4 +26,15 @@ public class Panel_51 extends JPanel
         setVisible(true);
         add(jlabel);
     }
+
+    @Override
+    public void sayHi(boolean flag) {
+        JLabel jLabel = (JLabel)getComponent(0);
+        if(flag)
+            jLabel.setText("<html>Gangadhar Matti<br/> Hi!</html>");
+        else
+            jLabel.setText("Gangadhar Matti");
+    }
+
+
 }

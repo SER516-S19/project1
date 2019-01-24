@@ -2,16 +2,18 @@
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Tab_48 extends JPanel {
+public class Tab_48 extends JPanel implements TabInterface {
 
     private static String[] myTeamPanels = {"Panel_04", "Panel_10", "Panel_11",
             "Panel_23", "Panel_30", "Panel_35", "Panel_41", "Panel_43",
             "Panel_46", "Panel_56", "Panel_61", "Panel_63", "Panel_79",
-            "Panel_90", "Panel_missing 1", "Panel_missing 2", "Panel_missing 3",
-            "Panel_missing 4", "Panel_missing 5", "Panel_missing 6"};
+            "Panel_90", "", "", "", "", "", "",};
 
     String name = "Hsin-Jung Lee";
+    int timerCount = 0;
 
     // constructor
     public Tab_48() {
@@ -23,6 +25,38 @@ public class Tab_48 extends JPanel {
         return name;
     }
 
+    ActionListener myTask = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            //timer
+            PanelInterface currentPanel, previousPanel;
+            int index = 0;
+            try{
+                timerCount += 1;
+                index = (timerCount - 1 ) % 20;
+                currentPanel = (PanelInterface) getComponent(index);
+                currentPanel.sayHi(true);
+
+                if (index - 1 >= 0){
+                    previousPanel = (PanelInterface) getComponent(index-1);
+                    previousPanel.sayHi(false);
+                }
+            } catch (Exception e1){
+                System.out.println("Panel"+ index + "not implements PanelInterface");
+            }
+        }
+    };
+    Timer myTimer = new Timer(1000,myTask);
+    public void startSayingHi() {
+        myTimer.setRepeats(true);
+        myTimer.start();
+    }
+
+    public void stopSayingHi() {
+        timerCount = 0;
+        myTimer.stop();
+    }
+
     private void addMyTeamPanels() {
         for (int k = 0; k < myTeamPanels.length; k++) {
             try {
@@ -31,11 +65,13 @@ public class Tab_48 extends JPanel {
                 this.add((JPanel) myPanel);
             } catch (Exception e) {
                 JPanel myNewPanels = new JPanel();
-                myNewPanels.add(new JLabel("Panel is missing: " + myTeamPanels[k]));
+                myNewPanels.add(new JLabel("" + myTeamPanels[k]));
                 this.add(myNewPanels);
             }
         }
     }
+
+
 }
 
 
