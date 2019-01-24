@@ -15,7 +15,7 @@ public class Panel_17 extends JPanel implements PanelInterface {
 	message_label.setFont(new Font("TimesRoman", Font.BOLD ,15));
 	this.add(message_label);
 	this.setBackground(Color.GRAY);
-	message_label.setVisible(true);
+	message_label.setVisible(false);
 	}
 	public void sayHi(boolean flag){
 		this.message_label.setVisible(flag);
