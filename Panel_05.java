@@ -14,7 +14,7 @@ public class Panel_05 extends JPanel implements PanelInterface
          //creating a label for name display                              
          JLabel label_name = new JLabel("JANANI ANAND_05",JLabel.CENTER);
 	     label_name.setForeground(Color.white);
-	     label_anme.setFont(new Font("Berlin Sanas FB",Font.BOLD,30));
+	     label_name.setFont(new Font("Berlin Sanas FB",Font.BOLD,30));
 	     
 	     this.add(label_name);
 	     this.setBackground(Color.blue);
@@ -26,9 +26,8 @@ public class Panel_05 extends JPanel implements PanelInterface
          labelmsg.setVisible(false); 
         }
 	  
-     public void sayHi(boolean flag)
-       {
-       	this.labelmsg.setVisible(flag);
+     public void sayHi(boolean flag){
+       	labelmsg.setVisible(flag);
        }
 
 
