@@ -8,6 +8,7 @@ import java.awt.*;
 
 public class Panel_85 extends JPanel implements PanelInterface {
 
+    private JLabel tLabel;
 	public Panel_85() {
 		initPanel();
     }
