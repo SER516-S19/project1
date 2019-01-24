@@ -29,7 +29,7 @@ public class Panel_01 extends JPanel implements PanelInterface {
 		JLabel jlabel=(JLabel)getComponent(0);
 		if(flag)
 		{
-			jlabel.setText("<html>Janice Abraham<br/>Hi</html>");
+			jlabel.setText("<html>Janice Abraham<br/>Hi!</html>");
 		}
 		else
 		{
