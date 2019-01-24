@@ -2,21 +2,27 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Panel_34 extends JPanel {
-    public Panel_34() {
-        init();
-    }
-    
-    /**
-     * Method to Initialize components of the JPanel
-     */
-    private void init() {
+    JLabel jlabel;
+    public Panel_34()
+    {
+
         this.setLayout(new GridBagLayout());
-        JLabel j = new JLabel("Kirti Jha");
-        this.add(j);
+        jlabel = new JLabel("Kirti Jha");
+        jlabel.setFont(new Font("Arial", Font.BOLD,20));
+        this.add(jlabel );
         this.setBackground(Color.yellow);
         this.setVisible(true);
     }
     
+
+    @Override
+    public void sayHi(boolean flag)
+    {
+        if(flag)
+            this.jlabel.setText("<html><center>Kirti Jha<br>HI!</center></html>");
+        else
+            this.jlabel.setText("Kirti Jha");
+    }   
    
 }
 
