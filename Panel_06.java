@@ -9,6 +9,7 @@ import javax.swing.border.BevelBorder;
  * Date: 19 Jan 2019
  */
 
+@SuppressWarnings("serial")
 public class Panel_06 extends JPanel implements PanelInterface{
 	
 	JLabel label_name;
@@ -18,29 +19,25 @@ public class Panel_06 extends JPanel implements PanelInterface{
 		
 		this.setBackground(Color.PINK);
 		this.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
-		this.setLayout(null);
  		
-		label_name = new JLabel("Shefali Anand", JLabel.CENTER);
-		label_name.setFont(new Font("Comic Sans MS", Font.BOLD,30));
+		label_name = new JLabel("<HTML> Shefali Anand <HTML>", JLabel.CENTER);
+		label_name.setFont(new Font("Comic Sans MS", Font.BOLD, 30));
 		label_name.setForeground(Color.BLUE);
-		label_name.setBounds(5, 20, 300, 30);
 		
 		this.add(label_name);
 		
-		label_hi = new JLabel("Hi", JLabel.CENTER);
-		label_hi.setFont(new Font("Comic Sans MS", Font.BOLD,30));
+		label_hi = new JLabel("<HTML> <BR> Hi </HTML>", JLabel.CENTER);
+		label_hi.setFont(new Font("Comic Sans MS", Font.BOLD, 30));
 		label_hi.setForeground(Color.BLUE);
-		label_hi.setBounds(5, 60, 300, 30);
 		
 		this.add(label_hi);
 		
+		label_hi.setVisible(false);
 	}
 
 	@Override
 	public void sayHi(boolean flag) {
-		
-		if(flag == false)
-			label_hi.setVisible(false);	
+		label_hi.setVisible(flag);	
 	}
 	
 }
