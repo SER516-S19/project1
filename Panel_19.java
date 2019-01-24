@@ -9,7 +9,7 @@ import javax.swing.border.LineBorder;
  */
 
 
-public class Panel_19 extends JPanel
+public class Panel_19 extends JPanel implements PanelInterface
 {
 
 
