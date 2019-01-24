@@ -7,14 +7,14 @@ public class Panel_63 extends JPanel implements PanelInterface{
 
 	public Panel_63() {
 
-		JLabel label_63 = new JLabel(); 	//creating label with my name
+		JLabel label_63 = new JLabel();
 		label_63.setText(name);
-		label_63.setFont(new Font("Lucida Handwriting", Font.BOLD, 20));	//setting font to the label
+		label_63.setFont(new Font("Lucida Handwriting", Font.BOLD, 20));
 
 		add(label_63);
-		setLayout(new GridBagLayout());		//Align name to center
-		setBackground(Color.cyan);	//setting background color to cyan
-		setBorder(BorderFactory.createLineBorder(Color.black, 1));	//setting border of the panel
+		setLayout(new GridBagLayout());
+		setBackground(Color.cyan);
+		setBorder(BorderFactory.createLineBorder(Color.black, 1));
 
 	}
 
@@ -22,6 +22,9 @@ public class Panel_63 extends JPanel implements PanelInterface{
 	public void sayHi(boolean flag) {
 		if(flag){
 			name = "Dhruv Patel said Hi!!";
+		}
+		else{
+			name = "Dhruv Patel";
 		}
 	}
 }
