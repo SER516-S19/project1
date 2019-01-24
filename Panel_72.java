@@ -28,7 +28,7 @@ import java.awt.*;
 		JLabel panelLabel = (JLabel)getComponent(0);
 		if(flag)
 		{
-			panelLabel.setText("<html>Alsha Samantaray<br/>HI</html>");
+			panelLabel.setText("<html>Alsha Samantaray<br/>Hi!</html>");
 		}
 		else
 		{
