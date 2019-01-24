@@ -5,7 +5,7 @@ import java.awt.*;
  * Author: Bharat Goel
  */
 
-public class Tab_27 extends JPanel {
+public class Tab_27 extends JPanel implements TabInterface {
 
     String myTab = "Bharat";
 
@@ -41,4 +41,13 @@ public class Tab_27 extends JPanel {
 
     }
 
+    @Override
+    public void startSayingHi() {
+
+    }
+
+    @Override
+    public void stopSayingHi() {
+
+    }
 }

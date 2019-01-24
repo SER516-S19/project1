@@ -49,8 +49,6 @@ public class Frame_81 extends JFrame {
                             .getComponentAt(previousTabIndex))
                             .stopSayingHi();
 
-                        previousTabIndex = currentTabIndex;
-
                         //start timer on selected tab
                         ((TabInterface)tabbedPane
                             .getComponentAt(currentTabIndex))
@@ -62,6 +60,9 @@ public class Frame_81 extends JFrame {
                         tabbedPane.getComponentAt(currentTabIndex)
                                                         .getName()
                         + " " + e.toString());
+                }
+                finally{
+                    previousTabIndex = currentTabIndex;
                 }
             }
         });
