@@ -17,7 +17,8 @@ public class Panel_51 extends JPanel implements PanelInterface
     Panel_51()
     {
 
-        JLabel jlabel = new JLabel("Gangadhara Matti");
+        JLabel jlabel = new JLabel();
+        jlabel.setText("Gangadhar Matti");
         jlabel.setFont(new Font("Verdana",1,20));
 
         setBackground(Color.LIGHT_GRAY);
@@ -28,11 +29,12 @@ public class Panel_51 extends JPanel implements PanelInterface
 
     @Override
     public void sayHi(boolean flag) {
-        //displays Hi<User Name> if flag is true else hides it
-        if(flag){
-            panelName = "Hi! Gangadhar Matti";
-        }else{
-            panelName = "Gangadhar Matti";
-        }
+        JLabel jLabel = (JLabel)getComponent(0);
+        if(flag)
+            jLabel.setText("<html>Gangadhar Matti<br/> Hi!</html>");
+        else
+            jLabel.setText("Gangadhar Matti");
     }
+
+
 }
