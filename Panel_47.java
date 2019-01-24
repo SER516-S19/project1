@@ -27,6 +27,5 @@ public class Panel_47 extends JPanel implements PanelInterface{
 	public void sayHi(boolean visible){
 		greeting.setVisible(visible);
 		this.repaint();
-
 	}
 }
