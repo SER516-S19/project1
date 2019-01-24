@@ -36,8 +36,7 @@ public class Panel_18 extends JPanel implements PanelInterface {
 	
 	public void sayHi(boolean flag)
     { 
-		if(flag == true) {
-			label2.setVisible(true);
+		
+			label2.setVisible(flag);
 		}
     } 
-}
