@@ -6,7 +6,10 @@ import javax.swing.border.LineBorder;
  *
  * @author Suraj Atmakuri gitID: 07
  */
-public class Panel_07 extends JPanel {
+/*interface PanelInterface{//FOR TESTING
+        public void sayHi(boolean a);
+}*/
+public class Panel_07 extends JPanel implements PanelInterface {
 	
 	Panel_07() {
 		JLabel label = new JLabel();
@@ -17,6 +20,19 @@ public class Panel_07 extends JPanel {
 		setBounds(10, 10, 250, 60);
 		setBackground(Color.RED);
 	}
+	public void sayHi(boolean flag)
+	{
+		JLabel label = (JLabel)getComponent(0);
+		if(flag)
+		{
+			label.setText("<html>Suraj Atmakuri <br/> <p 'text-align:center;'>Hi!</p></html>");
+		}
+		else
+		{
+			label.setText("Suraj Atmakuri");
+		}
+	}
+
 
 	/*public static void main(String args[]) { //FOR TESTING 
 		JFrame frame = new JFrame();
@@ -27,6 +43,5 @@ public class Panel_07 extends JPanel {
         frame.setVisible(true);
 		System.out.println("JPanel program");
 	}*/
-	
-	
+		
 }
