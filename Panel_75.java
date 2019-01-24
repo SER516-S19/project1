@@ -19,8 +19,6 @@ public class Panel_75 extends JPanel implements PanelInterface{
 		setBackground(Color.LIGHT_GRAY);
 		setVisible(true);
 		add(jlabel);
-		sayHi(true);
-		sayHi(false);
 		
 	}
 
