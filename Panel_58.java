@@ -34,4 +34,5 @@ public class Panel_58 extends JPanel implements PanelInterface
 		{
 			label.setText("Prashansa");
 		}
+	}
 }
