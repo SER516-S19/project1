@@ -40,7 +40,7 @@ class Panel_44 extends JPanel implements PanelInterface{
     public void sayHi(boolean flag)
     {
         if(flag){
-            this.nameLabel.setText("Hi!");
+            this.nameLabel.setText("Koushik Kotamraju Hi!");
         }
         else{
             this.nameLabel.setText("Koushik Kotamraju");
