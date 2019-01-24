@@ -7,16 +7,16 @@ import javax.swing.border.LineBorder;
 
 public class Panel_05 extends JPanel implements PanelInterface
    {
-   	JLabel labelmsg = new JLabel("Hi");   //creating a label for Hi
+   	JLabel labelmsg = new JLabel("Hi", JLabel.CENTER);   //creating a label for Hi
 
 	public Panel_05() 
 	   {
          //creating a label for name display                              
-         JLabel jlabel_name = new JLabel("JANANI ANAND_05",JLabel.CENTER);
-	     jlabel_name.setForeground(Color.white);
-	     jlabel_anme.setFont(new Font("Berlin Sanas FB",Font.BOLD,30));
+         JLabel label_name = new JLabel("JANANI ANAND_05",JLabel.CENTER);
+	     label_name.setForeground(Color.white);
+	     label_anme.setFont(new Font("Berlin Sanas FB",Font.BOLD,30));
 	     
-	     this.add(jlabel_name);
+	     this.add(label_name);
 	     this.setBackground(Color.blue);
  	     this.setBorder(new LineBorder(Color.BLACK));
 
