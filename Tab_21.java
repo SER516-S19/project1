@@ -108,7 +108,7 @@ public class Tab_21 extends JPanel implements TabInterface, Runnable
         }
     }
     
-    private class BlankPanel extends JPanel implements PanelInterface
+    private class BlankPanel extends JPanel //implements PanelInterface
     {
         String panelText;
         JLabel label;
@@ -116,26 +116,32 @@ public class Tab_21 extends JPanel implements TabInterface, Runnable
         
         public BlankPanel()
         {
+            /*
             this.setLayout(new GridBagLayout());
             label = new JLabel("<html><center>Panel Missing<br></center></html>");
             add(label);
             panelText = "";
+            */
         }
         
         public BlankPanel(String panelNum)
         {
+            /*
             this();
             panelText = ": " + panelNum;
             sayHi(false);
+            */
         }
         
-        @Override
+        //@Override
         public void sayHi(boolean flag)
         {
+            /*
             if(flag)
                 label.setText("<html><center>Panel Missing" + panelText + "<br>HI</center></html>");
             else
                 label.setText("<html><center>Panel Missing" + panelText + "<br></center></html>");
+            */
         }
         
     }
