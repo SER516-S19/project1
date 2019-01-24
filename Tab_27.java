@@ -56,7 +56,7 @@ public class Tab_27 extends JPanel implements TabInterface {
             //@Override
             public void run() {
                 try{
-                    if(tick > 0 && tick < 19){
+                    if(tick > 0 && tick < 18){
                         ((PanelInterface)allPanels[tick]).sayHi(true);
                         ((PanelInterface)allPanels[tick-1]).sayHi(false);
                     }
@@ -64,7 +64,7 @@ public class Tab_27 extends JPanel implements TabInterface {
                         ((PanelInterface)allPanels[tick]).sayHi(true);
                         ((PanelInterface)allPanels[19]).sayHi(false);
                     }
-                    else if (tick == 19) {
+                    else if (tick == 18) {
                         ((PanelInterface)allPanels[tick]).sayHi(true);
                         ((PanelInterface)allPanels[tick-1]).sayHi(false);
                         tick = -1;
@@ -84,15 +84,4 @@ public class Tab_27 extends JPanel implements TabInterface {
         tick = 0;
     }
 
-    public static void main(String[] args) {
-        JFrame f;
-        f = new JFrame();
-        JPanel tab1 = new Tab_27();
-        JTabbedPane tp = new JTabbedPane();
-        tp.addTab( tab1.getName(),tab1);
-        f.getContentPane().add(tp);
-        f.setSize(800, 800);
-        f.setVisible(true);
-        ((Tab_27) tab1).startSayingHi();
-    }
 }
