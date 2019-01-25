@@ -1,38 +1,54 @@
 import java.awt.*; 
 import javax.swing.*;
 
-/* 
+/** 
  * @author:  Bijayalaxmi Panda
+ * @version: 3.0
+ */
+
+/**
+ * Implements the PanelInterface to show 'Hi' in the panel
+ * @see PanelInterface
  */
 
 public class Panel_59 extends JPanel implements PanelInterface {
 	
-	private String myLabelName = "<html>Bijayalaxmi Panda</html>";
-	private String myLabelGreeting = "<html>Bijayalaxmi Panda <br> Hi! </html>";
+	final String labelText = "<html>Bijayalaxmi Panda</html>";
+	final String labelTextWithGreeting = "<html>Bijayalaxmi Panda <br> Hi! </html>";
 	
 	Panel_59() {
-		myPanel();
+		initPanel();
 	}
 	
-	private void myPanel() {
-		JLabel myPanelInfo = new JLabel();
-		myPanelInfo.setText(myLabelName);
-		myPanelInfo.setVerticalTextPosition(SwingConstants.CENTER);
-		myPanelInfo.setFont(new Font("Verdana", Font.BOLD, 18));
-		myPanelInfo.setHorizontalAlignment(JLabel.CENTER);
-		myPanelInfo.setVerticalTextPosition(JLabel.CENTER);
+	/**
+	 * A method to set the Text, Background color, font in the panel
+	 */
+	private void initPanel() {
+		JLabel panelInfo = new JLabel();
+		panelInfo.setText(labelText);
+		panelInfo.setVerticalTextPosition(SwingConstants.CENTER);
+		panelInfo.setFont(new Font("Verdana", Font.BOLD, 18));
+		panelInfo.setHorizontalAlignment(JLabel.CENTER);
+		panelInfo.setVerticalTextPosition(JLabel.CENTER);
 		
 		this.setBackground(Color.yellow);
-		this.add(myPanelInfo);
+		this.add(panelInfo);
 	}
 	
+	/**
+	 * OverRide method to show 'Hi' or not in the panel
+	 * depending on the hiFlag value
+	 * @param hiFlag
+	 * @see PanelInterface
+	 */
 	@Override
 	public void sayHi(boolean hiFlag) {
-		JLabel myPanelInfo = (JLabel)getComponent(0);
+		JLabel panelInfo = (JLabel)getComponent(0);
+		
 		if (hiFlag) {
-			myPanelInfo.setText(myLabelGreeting);
+			panelInfo.setText(labelTextWithGreeting);
 		} else {
-			myPanelInfo.setText(myLabelName);
+			panelInfo.setText(labelText);
 		}
 		
 	}	
