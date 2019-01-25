@@ -24,6 +24,8 @@ public class Panel_79 extends JPanel implements PanelInterface
         add(label);
         setBackground(Color.GREEN);
     }
+   
+    @Override
     /**
     * Display "HI" with label name on the Panel. 
     *
@@ -32,7 +34,6 @@ public class Panel_79 extends JPanel implements PanelInterface
     * flag = false will display just the name 
     * 
     */
-    @Override
     public void sayHi(boolean flag)
     {
         if (flag){
