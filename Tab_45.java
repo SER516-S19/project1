@@ -29,7 +29,6 @@ public class Tab_45 extends JPanel implements TabInterface {
             "25", "42", "86", "13",
             "85", "58", "36", "73"
     };
-    //Allows me to easily iterate over panels in my tab
     private JPanel[] panels = new JPanel[20];
     
     //index of next panel to display "hi"
@@ -37,16 +36,15 @@ public class Tab_45 extends JPanel implements TabInterface {
     
     public Tab_45() {
         hiTimer = new Timer();
-        this.setLayout(new GridLayout(5, 4));
-        //add panels
+        setLayout(new GridLayout(5, 4));
         for (int i = 0; i < panelNumbers.length; i++) {
             try {
                 Class<?> panelClass = Class.forName("Panel_" + panelNumbers[i]);
                 JPanel panel = (JPanel) panelClass.getDeclaredConstructor().newInstance();
-                this.panels[i] = panel;
-                this.add(panel);
+                panels[i] = panel;
+                add(panel);
             } catch (Exception e) {
-                this.addError(panelNumbers[i]);
+                addError(panelNumbers[i]);
             }
         }
     }
@@ -57,20 +55,27 @@ public class Tab_45 extends JPanel implements TabInterface {
         panel.add(label);
         this.add(panel);
     }
-    
-    //part of TabInterface, returns name for tab.
+
     public String getName() {
         return "David Lahtinen";
     }
     
+    private int nextHiDisplayIndex() {
+        return hiDisplayIndex + 1 >= panels.length ? 0 : (hiDisplayIndex + 1);
+    }
+    
+    private int previousHiDisplayIndex() {
+        return hiDisplayIndex - 1 < 0 ? (panels.length - 1) : (hiDisplayIndex - 1);
+    }
+    
     public void startSayingHi() {
         hiDisplayIndex = 0;
-        try {
-            hiTimer.cancel();
-        }catch(IllegalStateException e){
-            //timer was already cancelled; this is good
-        }catch(NullPointerException npe){
-            //first time timer was initialized. No sweat
+        if (hiTimer != null){
+            try {
+                hiTimer.cancel();
+            }catch(IllegalStateException e){
+                //timer was already cancelled; this is good
+            }
         }
         hiTimer = new Timer();
         hiTimer.scheduleAtFixedRate(new HiWave(), 0, 1000);
@@ -78,14 +83,13 @@ public class Tab_45 extends JPanel implements TabInterface {
     
     public void stopSayingHi() {
         hiDisplayIndex = 0;
-        try {
-            hiTimer.cancel();
-        } catch (IllegalStateException e){
-            //In this case, the timer was already cancelled.
-        } catch (NullPointerException npe){
-            //in this case, the timer was not yet instantiated.
-            //this should never be called, but it's a good failsafe to have
-            // if stopSayingHi() is called before startSayingHi
+        if (hiTimer != null) {
+            try {
+                hiTimer.cancel();
+            } catch (IllegalStateException e) {
+                //In this case, the timer was already cancelled.
+            }
+        } else {
             System.out.println("[WARN]: stopSayingHi() called before startSayingHi() in Tab_45.");
         }
         for (JPanel p : panels) {
@@ -100,15 +104,7 @@ public class Tab_45 extends JPanel implements TabInterface {
             }
         }
     }
-    
-    private int previousHiDisplayIndex() {
-        return hiDisplayIndex - 1 < 0 ? (panels.length - 1) : (hiDisplayIndex - 1);
-    }
-    
-    private int nextHiDisplayIndex() {
-        return hiDisplayIndex + 1 >= panels.length ? 0 : (hiDisplayIndex + 1);
-    }
-    
+
     //Task to be executed by hiTimer
     //Causes each panel to say "hi" in turn, one after the other
     //panel ceases to say "hi" as the next starts.
@@ -119,30 +115,29 @@ public class Tab_45 extends JPanel implements TabInterface {
                 if (panels[prev] instanceof PanelInterface) {
                     try {
                         ((PanelInterface) panels[prev]).sayHi(false);
-                    } catch (Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 } else {
                     System.out.println("Panel_" + panelNumbers[prev] + " does not implement PanelInterface");
                 }
-                
+    
                 if (panels[hiDisplayIndex] instanceof PanelInterface) {
                     try {
                         ((PanelInterface) panels[hiDisplayIndex]).sayHi(true);
-                    } catch (Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 } else {
-                    System.out.println("Panel_" + panelNumbers[hiDisplayIndex] + 
-                        " does not implement PanelInterface");
+                    System.out.println("Panel_" + panelNumbers[hiDisplayIndex] +
+                            " does not implement PanelInterface");
                 }
                 hiDisplayIndex = nextHiDisplayIndex();
-                
+    
             } catch (Exception e) {
                 System.out.println("Exception in Tab_45 task timer execution");
                 e.printStackTrace();
             }
         }
     }
-    
 }
