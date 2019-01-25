@@ -2,9 +2,9 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
-* For SER 516 
+* For SER 516 Project
 * @author Aprajita Thakur
-* @version 1.0
+* @version 1.2
 * @since 01-17-2019
 */
 
@@ -13,6 +13,10 @@ public class Panel_79 extends JPanel implements PanelInterface
     private String name = "Aprajita Thakur";
     private JLabel label = new JLabel();
     
+    /**
+    *  Panel_79 constructor to set name
+    *  and styles 
+    */
     public Panel_79() 
     {
         label.setText(name);
@@ -23,7 +27,9 @@ public class Panel_79 extends JPanel implements PanelInterface
     /**
     * Display "HI" with label name on the Panel. 
     *
-    * @param  flag   Checking for true/false conditions 
+    * @param  flag  To display HI with name or not
+    * flag = true wil display HI with name
+    * flag = false will display just the name 
     * 
     */
     @Override
