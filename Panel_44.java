@@ -35,6 +35,7 @@ class Panel_44 extends JPanel implements PanelInterface{
     
     /**
     * This overridden method from the interface toggles the text on the panel to show Hi when the flag is true.
+     * @param flag - This is the signal flag variable from the tab class to add Hi to the Label text.
      */
     @Override
     public void sayHi(boolean flag)
