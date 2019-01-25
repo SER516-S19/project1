@@ -1,3 +1,12 @@
+/**
+ * Tab_45 is meant to contain the tabs of 20 people (gitIDs below)
+ * it creates a wave of "Hi"s when the tab is openend
+ *
+ * @author David Lahtinen
+ * @version 1.1
+ * @since 2019-01-24
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.Timer;
