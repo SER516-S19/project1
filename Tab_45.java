@@ -48,7 +48,7 @@ public class Tab_45 extends JPanel implements TabInterface {
         JPanel panel = new JPanel();
         JLabel label = new JLabel("Panel " + panelNumber + " Error");
         panel.add(label);
-        this.add(panel);
+        add(panel);
     }
 
     @Override
