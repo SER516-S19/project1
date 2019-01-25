@@ -78,7 +78,7 @@ public class Tab_45 extends JPanel implements TabInterface {
             }
         }
         hiTimer = new Timer();
-        hiTimer.scheduleAtFixedRate(new HiWave(), 0, 1000);
+        hiTimer.scheduleAtFixedRate(new HiWave(), hiDelay, hiLength);
     }
     
     public void stopSayingHi() {
