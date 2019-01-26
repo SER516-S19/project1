@@ -10,18 +10,43 @@ import javax.swing.border.LineBorder;
  */
 
 
-public class Panel_13 extends JPanel
+public class Panel_13 extends JPanel implements PanelInterface
 {
 
-    Panel_13()
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 13L;
+
+	Panel_13()
     {
 
-        JLabel jlabel = new JLabel("Subhradeep Biswas");
-        jlabel.setFont(new Font("Arial", Font.PLAIN, 20));
-
+		this.removeAll();
+		JLabel jlabel = new JLabel("Subhradeep Biswas");
+		jlabel.setFont(new Font("Arial", Font.PLAIN, 20));
+		add(jlabel);
         setBackground(Color.LIGHT_GRAY);
         setBorder(new LineBorder(Color.BLACK));
         setVisible(true);
-        add(jlabel);
+        
+    }
+    
+    public void sayHi(boolean flag)
+    {
+    	this.removeAll();
+    	if (flag == true)
+    	{
+    		
+    		JLabel jlabel = new JLabel("Hi    Subhradeep Biswas");
+    		jlabel.setFont(new Font("Arial", Font.PLAIN, 20));
+    		add(jlabel);
+    	}
+    	if (flag == false)
+    	{
+    		
+    		JLabel jlabel = new JLabel("Subhradeep Biswas");
+    		jlabel.setFont(new Font("Arial", Font.PLAIN, 20));
+    		add(jlabel);
+    	}
     }
 }

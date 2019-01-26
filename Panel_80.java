@@ -1,32 +1,49 @@
+import java.awt.*;
 import javax.swing.*;
 
-public class Panel_80 extends JPanel 
-{
+/** 
+ * For SER 516
+ * Panel 80 with name and hi Labels
+ * @author Sajith Thattazhi
+ * @version 1.3
+ * @since 01-18-2019
+ * 
+ */
 
-    public Panel_80()
+public class Panel_80 extends JPanel implements PanelInterface
+{    
+	private JLabel nameLabel = new JLabel("Sajith Thattazhi", JLabel.CENTER);
+	private JLabel hiLabel = new JLabel("Hi", JLabel.CENTER);
+
+    /**
+	 * Constructor to Stylize Label
+	 */
+	public Panel_80()
 	{
-        initComponents();
-    }
-    
-	private void initComponents()
-	{
 
-        JLabel jLabel1 = new JLabel();
-
-        this.setBackground(new java.awt.Color(255, 204, 102));
-        this.setMaximumSize(new java.awt.Dimension(500, 300));
-        this.setMinimumSize(new java.awt.Dimension(500, 300));
-
-        jLabel1.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel1.setFont(new java.awt.Font("Algerian", 0, 24));
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel1.setText("Sajith Thattazhi");
+        this.setBackground(new Color(255, 204, 102));
+		this.setLayout(null);
 		
-		this.add(jLabel1);
-    }                       
-
-    
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JPanel jPanel1;
+        nameLabel.setFont(new java.awt.Font("Algerian", 0, 24));
+        nameLabel.setForeground(new java.awt.Color(204, 0, 0));
+		nameLabel.setBounds(5, 20, 300, 30);
+		
+		this.add(nameLabel);
+		
+		hiLabel.setFont(new java.awt.Font("Algerian", 0, 48));
+        hiLabel.setForeground(new java.awt.Color(204, 0, 0));
+		hiLabel.setBounds(5, 60, 300, 30);
+		
+		this.add(hiLabel);
+		
+		hiLabel.setVisible(false);
+    }
 	
+	/**
+	 * Display "Hi" with Name on Panel
+	 * @param flag  Holding true/false values
+	 */
+	public void sayHi(boolean flag) {
+        this.hiLabel.setVisible(flag);
+    }
 }
