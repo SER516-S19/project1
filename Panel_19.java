@@ -4,8 +4,8 @@ import javax.swing.border.LineBorder;
 
 
 /*
- * Author: Aneesh Dalvi
- * ID: 19
+ * @author: Aneesh Dalvi
+ * @ID: 19
  */
 
 
@@ -27,8 +27,9 @@ public class Panel_19 extends JPanel implements PanelInterface
 
     }
 
-     @Override
-    public void sayHi(boolean flag) {
+    @Override
+    public void sayHi(boolean flag)
+    {
         JLabel labelName = (JLabel)getComponent(0);
         if(flag)
         {
