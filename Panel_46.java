@@ -19,7 +19,6 @@ public class Panel_46 extends JPanel implements PanelInterface {
 	
 	public Panel_46() 
 	{
-		
 		myLabel.setText(myName);
 		myLabel.setFont(new Font("Arial Bold Italic", Font.BOLD,15));
 		add(myLabel);
