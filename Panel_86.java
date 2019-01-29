@@ -1,66 +1,50 @@
-/*
- @author Aditya Vikram
- @Panel 86
- */
-
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel_86 extends JPanel implements PanelInterface{
+/**  The below class implements Panel 86
+ *
+ * @author : Aditya Vikram
+ * @version : 2.0
+ * @GitId : 86
+ */
+
+public class Panel_86 extends JPanel implements PanelInterface {
 	
-	/*
-	 Class Constructor
-	 */
+	private static final long serialVersionUID = 1L;
 	private JLabel timerLabel;
+	
 	public Panel_86() {
+		
 		initPanel();
 	}
 
+	
 	/*
-	 The below method is used to create the panel with name
+	 * The below method is used to create the panel with name
 	 */
 	
 	private void initPanel() {
-		String name = "Aditya Vikram";
-		String message = "Hi";
 		
-		//JFrame frame = new JFrame(); //To test the panel
-		//JPanel panel = new JPanel(); //To test the panel
+		String name = "Aditya Vikram";
+		String dispMessage = "Hi";
 
 		JLabel label = new JLabel(name);
-		timerLabel = new JLabel(message);
+		timerLabel = new JLabel(dispMessage);
 		
-		this.add(label);
-		this.add(timerLabel);
-		this.setBackground(Color.CYAN);
+		add(label);
+		add(timerLabel);
+		setBackground(Color.CYAN);
 
 		label.setFont(new Font("Papyrus", Font.BOLD, 30));
 		timerLabel.setFont(new Font("Papyrus", Font.BOLD, 30));
 		
 		label.setVisible(true);
 		timerLabel.setVisible(false);
-				
-		/* To test the panel
-		 frame.add(panel);
-		 frame.setSize(300, 150);
-         	 frame.setVisible(true);
-		 */
-		
 	}
+	
 	
 	@Override
-	public void sayHi(boolean flag) {
-		this.timerLabel.setVisible(flag);
-	}
-	
-	/*
-	 Main Function
-	 */
-	
-	/* To test the panel
-	public static void main(String args[]) {
-		Panel_86 panel = new Panel_86();
-	}
-	 */
-	
+	public void sayHi(boolean isTimerLabelVisible) {
+		timerLabel.setVisible(isTimerLabelVisible);
+	}		
 }
