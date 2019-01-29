@@ -1,4 +1,3 @@
-
 /**
  * Create a panel that shows the name of a student and 
  * displays "Hi" when the sayHi method is called.
@@ -53,7 +52,6 @@ public class Panel_71 extends JPanel implements PanelInterface
     /**
      *  Overrides sayHi method to ensure that the hiLabel text is visible when 
      * a true parameter is passed to the method
-     * 
      * @see PanelInterface.java
      * @param flag Boolean variable sets hiLabel to visible if true
      * */
