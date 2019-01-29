@@ -6,13 +6,23 @@ import java.awt.*;
  * GitID: 70
 */
 
-public class Panel_70 extends JPanel {
+public class Panel_70 extends JPanel implements PanelInterface{
+
+    JLabel labelName;
+    JLabel labelMessage = new JLabel("Hi");
 
     public Panel_70() {
-        JLabel jLabel = new JLabel("Nikhila Saini");
-   	    jLabel.setFont(new Font("Algerian", Font.BOLD, 24));
+        labelName = new JLabel("Nikhila Saini");
+        labelName.setFont(new Font("Algerian", Font.BOLD, 24));
 	    this.setBackground(Color.CYAN);
-        this.add(jLabel);
+        this.add(labelName);
+
+        this.add(labelMessage);
+        labelMessage.setFont(new Font("Algerian", Font.BOLD, 20));
+        labelMessage.setVisible(false);
     }
 
+    public void sayHi(boolean flag){
+            labelMessage.setVisible(flag);
+    }
 }

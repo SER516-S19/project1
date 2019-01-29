@@ -1,21 +1,25 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel_57 extends JPanel {
+public class Panel_57 extends JPanel implements PanelInterface{
+    JLabel nameLabel;
+    String panelText;
+
     public Panel_57() {
-        init();
-    }
-    
-    /**
-     * Method to Initialize components of the JPanel
-     */
-    private void init() {
         this.setLayout(new GridBagLayout());
-        JLabel nameLabel = new JLabel("Carnic");
+        nameLabel = new JLabel("Carnic");
+        nameLabel.setFont(new Font("Verdana", Font.BOLD, 20));
         this.add(nameLabel);
-        this.setBackground(Color.yellow);
+        this.setBackground(Color.gray);
         this.setVisible(true);
     }
     
-   
+    public void sayHi(boolean flag)
+    {
+        if(flag)
+            this.nameLabel.setText("Hi Carnic!");
+        else
+            this.nameLabel.setText("Carnic");
+    }
+    
 }

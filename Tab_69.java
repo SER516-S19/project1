@@ -26,7 +26,7 @@ public class Tab_69 extends JPanel implements TabInterface{
                     {
                         PanelInterface panelInterface = (PanelInterface) getComponent(i);
                         panelInterface.sayHi(true);
-                        sleep(2000);
+                        sleep(1000);
                         panelInterface.sayHi(false);
 
                     }

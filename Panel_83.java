@@ -16,9 +16,10 @@ public class Panel_83 extends JPanel implements PanelInterface{
         this.setBackground(Color.WHITE);
       this.add(jl);	
     }
+	@Override
 	 public void sayHi(boolean flag) {
      if(flag){
-       jl.setText("Bhavana"+" Hi");
+       jl.setText("Bhavana" +" Hi");
      }
      else {
        jl.setText("Bhavana");
