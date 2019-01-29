@@ -10,8 +10,6 @@ import javax.swing.border.LineBorder;
 
 public class Panel_51 extends JPanel implements PanelInterface
 {
-    public String panelName = "Gangadhar Matti";
-
     Panel_51()
     {
         JLabel jlabel = new JLabel();
