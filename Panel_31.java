@@ -2,38 +2,43 @@ import java.awt.*;
 import javax.swing.*;
  
  /**
- * A panel that displays a name is created in this Class
- * Author : Srivan Reddy Gutha, sgutha3@asu.edu ,GitID : 31
+ * SER - 516 - Software Agility
+ * Panel_31 that displays name along with Hi label
+ * @author Srivan Reddy Gutha , sgutha3@asu.edu 
+ * @version 1.3
+ * @since 01-18-2019
  */
  
 public class Panel_31 extends JPanel implements PanelInterface
 {
+	
+  	private JLabel labelName = new JLabel("Srivan Reddy");
+	private JLabel labelHi = new JLabel("Hi");
+
+	/**
+	 * Stylizing the Label using constructor
+	 */
 	public Panel_31()
 	{
 
+		this.setBackground(Color.RED);		
+	
+		labelName.setFont(new Font("Arial",1,40));
+	
+		this.add(labelName);	
+	
+		labelHi.setFont(new Font("Arial",1,40));
+	
+		this.add(labelHi);
 
-	this.add(j_label);
-	this.add(j_labelHi);			
-	
-	this.setBackground(Color.RED);		
-	
-	j_label.setFont(new Font("Arial",1,40));
-	j_label.setText("Srivan Reddy");	
-	
-	j_labelHi.setFont(new Font("Arial",1,40));
-	j_labelHi.setText("Hi");
-
-	JLabel j_label = new JLabel();
-	JLabel j_labelHi = new JLabel();
-
-	j_labelHi.setVisible(false);
-	
+		labelHi.setVisible(false);
 	}
 
+	/**
+	 * Visibility of "Hi" label is set based on flag
+	 * @param flag holds the values either true or false
+	 */
 	public void sayHi(boolean flag) {
-        this.j_labelHi.setVisible(flag);
+        this.labelHi.setVisible(flag);
     }
-
-	private JLabel j_labelHi;
-
 }

@@ -1,172 +1,142 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class Tab_45 extends JPanel{
+/**
+ * Tab_45 is meant to contain the tabs of 20 people (gitIDs below)
+ * it creates a wave of "Hi"s when the tab is openend
+ *
+ * @author David Lahtinen
+ * @version 2.0
+ * @since 2019-01-24
+ */
+
+public class Tab_45 extends JPanel implements TabInterface {
     
-    public Tab_45(){
-        //2 rows * 5 columns = 20 name panels
-        this.setLayout(new GridLayout(5, 4));
-        
-        try {
-            Class<?> c47 = Class.forName("Panel_47");
-            JPanel p47 = (JPanel) c47.getDeclaredConstructor().newInstance();
-            this.add(p47);
-        } catch (Exception e){
-            addError("47");
+    private Timer hiTimer;
+    private int hiDelay = 0;
+    private int hiLength = 1000;
+    //The gitIds of the students involved
+    private String[] panelNumbers = {
+            "47", "60", "71", "38",
+            "54", "74", "09", "76",
+            "33", "07", "03", "68",
+            "25", "42", "86", "13",
+            "85", "58", "36", "73"
+    };
+    private JPanel[] panels = new JPanel[20];
+    //index of next panel to display "hi"
+    private int hiDisplayIndex = 0;
+    
+    public Tab_45() {
+        hiTimer = new Timer();
+        setLayout(new GridLayout(5, 4));
+        for (int i = 0; i < panelNumbers.length; i++) {
+            try {
+                Class<?> panelClass = Class.forName("Panel_" + panelNumbers[i]);
+                JPanel panel = (JPanel) panelClass.getDeclaredConstructor().newInstance();
+                panels[i] = panel;
+                add(panel);
+            } catch (Exception e) {
+                addError(panelNumbers[i]);
+            }
         }
-        try {
-            Class<?> c60 = Class.forName("Panel_60");
-            JPanel p60 = (JPanel) c60.getDeclaredConstructor().newInstance();
-            this.add(p60);
-        } catch (Exception e){
-            addError("60");
-        }
-        try {
-            Class<?> c71 = Class.forName("Panel_71");
-            JPanel p71 = (JPanel) c71.getDeclaredConstructor().newInstance();
-            this.add(p71);
-        } catch (Exception e){
-            addError("71");
-        }
-        try {
-            Class<?> c38 = Class.forName("Panel_38");
-            JPanel p38 = (JPanel) c38.getDeclaredConstructor().newInstance();
-            this.add(p38);
-        } catch (Exception e){
-            addError("38");
-        }
-        try{
-            Class<?> c54 = Class.forName("Panel_54");
-            JPanel p54 = (JPanel) c54.getDeclaredConstructor().newInstance();
-            this.add(p54);
-        } catch (Exception e){
-            addError("54");
-        }
-        //Ishan
-        try{
-            Class<?> c74 = Class.forName("Panel_74");
-            JPanel p74 = (JPanel) c74.getDeclaredConstructor().newInstance();
-            this.add(p74);
-        } catch(Exception e){
-            addError("74");
-        }
-        //Mayank
-        try{
-            Class<?> c09 = Class.forName("Panel_09");
-            JPanel p09 = (JPanel) c09.getDeclaredConstructor().newInstance();
-            this.add(p09);
-        } catch (Exception e){
-            addError("09");
-        }
-        //Vaibhav
-        try{
-            Class<?> c76 = Class.forName("Panel_76");
-            JPanel p76 = (JPanel) c76.getDeclaredConstructor().newInstance();
-            this.add(p76);
-        } catch(Exception e){
-            addError("76");
-        }
-        try{
-            Class<?> c33 = Class.forName("Panel_33");
-            JPanel p33 = (JPanel) c33.getDeclaredConstructor().newInstance();
-            this.add(p33);
-        } catch (Exception e){
-            addError("33");
-        }
-        try{
-            Class<?> c07 = Class.forName("Panel_07");
-            JPanel p07 = (JPanel) c07.getDeclaredConstructor().newInstance();
-            this.add(p07);
-        } catch (Exception e) {
-            addError("07");
-        }
-        try{
-            Class<?> c03 = Class.forName("Panel_03");
-            JPanel p03 = (JPanel) c03.getDeclaredConstructor().newInstance();
-            this.add(p03);
-        } catch (Exception e){
-            addError("03");
-        }
-        //Hari
-        try{
-            Class<?> c68 = Class.forName("Panel_68");
-            JPanel p68 = (JPanel) c68.getDeclaredConstructor().newInstance();
-            this.add(p68);
-        } catch (Exception e){
-            addError("68");
-        }
-        //Sai
-        try{
-            Class<?> c25 = Class.forName("Panel_25");
-            JPanel p25 = (JPanel) c25.getDeclaredConstructor().newInstance();
-            this.add(p25);
-        } catch(Exception e){
-            addError("25");
-        }
-        try{
-            Class<?> c42 = Class.forName("Panel_42");
-            JPanel p42 = (JPanel) c42.getDeclaredConstructor().newInstance();
-            this.add(p42);
-        } catch(Exception e){
-            addError("42");
-        }
-        try{
-            Class<?> c86 = Class.forName("Panel_86");
-            JPanel p86 = (JPanel) c86.getDeclaredConstructor().newInstance();
-            this.add(p86);
-        } catch(Exception e){
-            addError("86");
-        }
-        try{
-            Class<?> c13 = Class.forName("Panel_13");
-            JPanel p13 = (JPanel) c13.getDeclaredConstructor().newInstance();
-            this.add(p13);
-        } catch (Exception e){
-            addError("13");
-        }
-        try{
-            Class<?> c85 = Class.forName("Panel_85");
-            JPanel p85 = (JPanel) c85.getDeclaredConstructor().newInstance();
-            this.add(p85);
-        } catch (Exception e){
-            addError("85");
-        }
-        try{
-            Class<?> c58 = Class.forName("Panel_58");
-            JPanel p58 = (JPanel) c58.getDeclaredConstructor().newInstance();
-            this.add(p58);
-        } catch (Exception e){
-            addError("58");
-        }
-        try{
-            Class<?> c36 = Class.forName("Panel_36");
-            JPanel p36 = (JPanel) c36.getDeclaredConstructor().newInstance();
-            this.add(p36);
-        } catch (Exception e){
-            addError("36");
-        }
-        try{
-            Class<?> c73 = Class.forName("Panel_73");
-            JPanel p73 = (JPanel) c73.getDeclaredConstructor().newInstance();
-            this.add(p73);
-        } catch (Exception e){
-            addError("73");
-        }
-        
     }
     
-    private void addError(String panelName){
+    private void addError(String panelNumber) {
         JPanel panel = new JPanel();
-        JLabel label = new JLabel("Panel " + panelName + " Error");
+        JLabel label = new JLabel("Panel " + panelNumber + " Error");
         panel.add(label);
-        this.add(panel);
-        
+        add(panel);
     }
-    
-    
-    //called by frame to set tab name
-    public String getName(){
+
+    @Override
+    public String getName() {
         return "David Lahtinen";
     }
     
+    private int nextHiDisplayIndex() {
+        return hiDisplayIndex + 1 >= panels.length ? 0 : (hiDisplayIndex + 1);
+    }
+    
+    private int previousHiDisplayIndex() {
+        return hiDisplayIndex - 1 < 0 ? (panels.length - 1) : (hiDisplayIndex - 1);
+    }
+    
+    @Override
+    public void startSayingHi() {
+        hiDisplayIndex = 0;
+        if (hiTimer != null){
+            try {
+                hiTimer.cancel();
+            }catch(IllegalStateException e){
+                //timer was already cancelled; this is good
+            }
+        }
+        hiTimer = new Timer();
+        hiTimer.scheduleAtFixedRate(new HiWave(), hiDelay, hiLength);
+    }
+    
+    @Override
+    public void stopSayingHi() {
+        hiDisplayIndex = 0;
+        if (hiTimer != null) {
+            try {
+                hiTimer.cancel();
+            } catch (IllegalStateException e) {
+                //In this case, the timer was already cancelled.
+            }
+        } else {
+            System.out.println("[WARN]: stopSayingHi() called before startSayingHi() in Tab_45.");
+        }
+        for (JPanel p : panels) {
+            if (p instanceof PanelInterface) {
+                try {
+                    ((PanelInterface) p).sayHi(false);
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            } else {
+                System.out.println("[ERROR]: Panel does not implement panelInterface");
+            }
+        }
+    }
+
+    /* Task to be executed by hiTimer
+      Causes each panel to say "hi" in turn, one after the other
+      panel ceases to say "hi" as the next starts.
+    */
+    private class HiWave extends TimerTask {
+        public void run() {
+            try {
+                int prev = previousHiDisplayIndex();
+                if (panels[prev] instanceof PanelInterface) {
+                    try {
+                        ((PanelInterface) panels[prev]).sayHi(false);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    System.out.println("[ERROR]: Panel_" + panelNumbers[prev] + " does not implement PanelInterface");
+                }
+    
+                if (panels[hiDisplayIndex] instanceof PanelInterface) {
+                    try {
+                        ((PanelInterface) panels[hiDisplayIndex]).sayHi(true);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    System.out.println("[ERROR]: Panel_" + panelNumbers[hiDisplayIndex] +
+                            " does not implement PanelInterface");
+                }
+                hiDisplayIndex = nextHiDisplayIndex();
+    
+            }  catch (Exception e) {
+                System.out.println("[ERROR]: Exception in Tab_45 task timer execution");
+                e.printStackTrace();
+            }
+        }
+    }
 }

@@ -1,24 +1,29 @@
 import java.awt.*;
 
 import javax.swing.*;
-public class Panel_76 extends JPanel
+public class Panel_76 extends JPanel implements PanelInterface
 {
-    public Panel_76()
+    private javax.swing.JLabel l;
+    private javax.swing.JLabel msg;
+    
+	public Panel_76()
     {
-        initComponents();
-    }
-    public void initComponents()
-    {
-    //JPanel p = new JPanel();
-    JLabel l = new JLabel("Vaibhav Singhal");
-    l.setHorizontalAlignment(JLabel.CENTER);
-    l.setFont(new Font("Calibri",1,20));
+        l = new JLabel("Vaibhav Singhal",JLabel.CENTER);
+        l.setFont(new Font("Calibri",Font.BOLD + Font.ITALIC,25));
+        this.add(l);
 
-    this.add(l);
-    this.setBounds(10,10,250,60);
-    this.setBackground(Color.YELLOW);
+        msg = new JLabel("<html><br> Hi </br></html>");
+        msg.setFont(new Font("Calibri",Font.BOLD + Font.ITALIC,20));
+        this.add(msg);
+        
+        this.setBounds(10,10,250,60);
+        this.setBackground(Color.YELLOW);
+ 
+        msg.setVisible(false);
     }
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    public void sayHi(boolean flag)
+    {
+    	this.msg.setVisible(flag);
+    }
 
 }

@@ -5,23 +5,25 @@ import java.awt.*;
  * Author: Abhishek Gupta
  * Created: 1/19/2019
  */
-public class Panel_29 extends JPanel {
+public class Panel_29 extends JPanel implements PanelInterface {
+    private JLabel label = new JLabel();
+    private String name = "Abhishek Gupta";
     public Panel_29() {
-        init();
+        setLayout(new GridBagLayout());
+        label.setText(name);
+        add(label);
+        setBackground(Color.lightGray);
+        setVisible(true);
     }
     
-    /**
-     * Method to Initialize components of the JPanel
-     */
-    private void init() {
-        this.setLayout(new GridBagLayout());
-        JLabel nameLabel = new JLabel("Abhishek Gupta");
-        this.add(nameLabel);
-        this.setBackground(Color.lightGray);
-        this.setVisible(true);
-    }
+    @Override
+	public void sayHi(boolean flag) {
+		if(flag) {
+            label.setText(name + " " + "HI");
+        } 
+        else {
+			label.setText(name);
+		}
+	}
     
-    public static void main(String args[]) {
-    	new Panel_29();
-    }
 }

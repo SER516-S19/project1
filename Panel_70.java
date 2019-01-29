@@ -1,15 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
 
-/*
+/**
  * Author: Nikhila Saini
  * GitID: 70
 */
 
-public class Panel_70 extends JPanel {
+public class Panel_70 extends JPanel implements PanelInterface{
 
     JLabel labelName;
-    JLabel labelMessage;
+    JLabel labelMessage = new JLabel("Hi");
 
     public Panel_70() {
         labelName = new JLabel("Nikhila Saini");
@@ -17,16 +17,14 @@ public class Panel_70 extends JPanel {
 	    this.setBackground(Color.CYAN);
         this.add(labelName);
 
-        labelMessage = new JLabel("Hi");
-        labelMessage.setFont(new Font("Algerian", Font.BOLD, 24));
         this.add(labelMessage);
+        labelMessage.setFont(new Font("Algerian", Font.BOLD, 24));
         labelMessage.setVisible(false);
     }
 
+    // Visibility of message Hi on Screen is set using boolean parameter flag
     public void sayHi(boolean flag){
-        if(flag)
-            labelMessage.setVisible(true);
-        else
-            labelMessage.setVisible(false);
+        labelMessage.setVisible(flag);
     }
+
 }

@@ -5,14 +5,15 @@ import javax.swing.*;
  * Panel_44 describes the panel in a certain tab in the application.
  * The panel consists of FirstName and LastName of the author.
  * @author Koushik Kotamraju
- * @version 1.0
+ * @version 2.0
  */
 
-class Panel_44 extends JPanel {
+class Panel_44 extends JPanel implements PanelInterface{
 
     /**
     * Class constructor.
     */
+    JLabel nameLabel;
     public Panel_44() {
         init();
     }
@@ -22,12 +23,28 @@ class Panel_44 extends JPanel {
      */
     private void init() {
         
-        JLabel label = new JLabel("Koushik Kotamraju");
-        label.setFont(new Font("Papyrus",Font.PLAIN,15));
+        nameLabel = new JLabel();
+        nameLabel.setText("Koushik Kotamraju");
+        nameLabel.setFont(new Font("Papyrus",Font.PLAIN,15));
         this.setLayout(new GridBagLayout());
         this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         this.setVisible(true);
         this.setBackground(Color.LIGHT_GRAY);
-        this.add(label);       
+        this.add(nameLabel);       
+    }
+    
+    /**
+    * This overridden method from the interface toggles the text on the panel to show Hi when the flag is true.
+     */
+    @Override
+    public void sayHi(boolean flag)
+    {
+        if(flag){
+            this.nameLabel.setText("Koushik Kotamraju Hi!");
+        }
+        else{
+            this.nameLabel.setText("Koushik Kotamraju");
+        }
+            
     }
 }
