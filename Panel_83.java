@@ -25,7 +25,7 @@ public class Panel_83 extends JPanel implements PanelInterface{
        jLbl.setBounds(10,50,190,60);
        jLbl.setForeground(Color.BLUE);
        this.setBackground(Color.WHITE);
-       this.add(jl);	
+       this.add(jLbl);	
     }
 
 	@Override
