@@ -23,12 +23,12 @@ public class Panel_04 extends JPanel implements PanelInterface {
      * Displays {@code DISPLAY_NAME} if {@code flag} value is false.
      */
     @Override
-	public void sayHi(boolean flag) {
-		if(flag) {
-			DISPLAY_NAME_LABEL.setText(DISPLAY_NAME + " " + "HI");
-        } 
-        else {
-			DISPLAY_NAME_LABEL.setText(DISPLAY_NAME);
+    public void sayHi(boolean flag) {
+    	if(flag) {
+    		DISPLAY_NAME_LABEL.setText(DISPLAY_NAME + " " + "HI");
+        }
+    	else {
+        	DISPLAY_NAME_LABEL.setText(DISPLAY_NAME);
 		}
 	}
    
