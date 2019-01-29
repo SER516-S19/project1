@@ -25,13 +25,12 @@ public class Panel_29 extends JPanel implements PanelInterface {
     * the text on the panel to show Hi when the flag is true.
     */
     @Override
-	public void sayHi(boolean flag) {
-		if(flag) {
-            label.setText(UserName + " " + "HI");
-        } 
-        else {
-			label.setText(UserName);
-		}
+    public void sayHi(boolean flag) {
+	if(flag) {
+		label.setText(UserName + " " + "HI");
 	}
-    
+	else {
+		label.setText(UserName);
+	}
+    }  
 }
