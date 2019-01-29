@@ -3,46 +3,47 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 
 
-/*
- * @author:  Subhradeep Biswas
- * GitID: 13
- * Creating panel_13
- */
+ //***********************************************************************************************************
+ // Panel 13 implementation for Student "Subhradeep Biswas" Under Tab "David"
+ // Prints "Hi Subhradeep" in Panel 13 when sayHi (hiFlag = true), Otherwise prints "Subhradeep"
+ // @author:  Subhradeep Biswas
+ // GitID: 13
+ //***********************************************************************************************************
 
 
 public class Panel_13 extends JPanel implements PanelInterface
 {
 
-	private JLabel jlabelHi = new JLabel("HI");
+	private JLabel jLabelHi = new JLabel("HI");
 	
 	
 	Panel_13()
     {
 
 		
-		JLabel jlabel = new JLabel("Subhradeep Biswas");
-		jlabel.setFont(new Font("Arial", Font.PLAIN, 20));
-		jlabelHi.setFont(new Font("Arial", Font.PLAIN, 20));
-		add(jlabel);
-		add(jlabelHi);
+		JLabel jLabelName = new JLabel("Subhradeep");
+		jLabelName.setFont(new Font("Arial", Font.PLAIN, 20));
+		jLabelHi.setFont(new Font("Arial", Font.PLAIN, 20));
+		add(jLabelName);
+		add(jLabelHi);
         setBackground(Color.LIGHT_GRAY);
         setBorder(new LineBorder(Color.BLACK));
         
         
     }
     
-    public void sayHi(boolean flag)
+    public void sayHi(boolean hiFlag)
     {
     	
-    	if (flag == true)
+    	if (hiFlag == true)
     	{    		
-    		jlabelHi.setVisible(true);
+    		jLabelHi.setVisible(true);
     	}
     	else
     	{
-    		jlabelHi.setVisible(false);
+    		jLabelHi.setVisible(false);
     	}
     	
-    	jlabelHi.repaint();
+    	jLabelHi.repaint();
     }
 }
