@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 *    Class to create the Tab 21 and to contain all of the panels on Gold Team
 *    @author: Joshua Drumm
 *    @version 2.0
-*    @since   1/28/2019
+*    @since   1/29/2019
 */
 
 public final class Tab_21 extends JPanel implements TabInterface, Runnable
@@ -16,6 +16,8 @@ public final class Tab_21 extends JPanel implements TabInterface, Runnable
     
     private Thread timerThread;
     private boolean threadInterrupted;
+    
+    //Panel # corresponding to the assigned GitID
     private static String[] panelNums = {"53", "82", "29", "87", "40", "02",
                                          "22", "57", "34", "15", "77", "44",
                                          "83", "28"};
