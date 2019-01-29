@@ -1,28 +1,33 @@
 import java.awt.*;
 import javax.swing.*;
 
-
-/* Objective of this class is to create a panel with label
-Label contains First name & Last name of the student */
-
-//Author :  Krishna Gurram
-
+/**
+ * This class creates Panel_30 with my name
+ * @author Krishna Gurram
+ * @version 1.1
+ */
 
  class Panel_30 extends JPanel implements PanelInterface {
 
-   private String myName = "Krishna Gurram";
-   private JLabel nameLabel = new JLabel(myName);
-
+   private String name = "Krishna Gurram";
+   private JLabel nameLabel = new JLabel(name);
+/**
+* Calls a method that creates the Panel with name
+*/
    Panel_30() {
-     createPanel(); //creates the Panel with Name
+     createPanel(); 
    }
+  /**
+  * This method returns name and Hi if @param flag is true and
+  * returns only name if it is false
+  */
 
    public void sayHi(boolean flag) {
      if(flag){
-       nameLabel.setText(myName+" Hi");
+       nameLabel.setText(name+" Hi");
      }
      else {
-       nameLabel.setText(myName);
+       nameLabel.setText(name);
      }
    }
 

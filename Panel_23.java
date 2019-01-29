@@ -13,43 +13,27 @@ public class Panel_23 extends JPanel implements PanelInterface {
 
     /**
      * Panel 23 Constructor
-     * Calls makePanel()
+     * Creates a JPanel with a hi label and name label
      */
     public Panel_23() {
-        
+        setBackground(Color.YELLOW);
+        setLayout(new BorderLayout());
+
         hiLabel = new JLabel("HI");
         nameLabel = new JLabel("Trevor Forrey");
         hiLabel.setHorizontalAlignment(JLabel.CENTER);
         nameLabel.setHorizontalAlignment(JLabel.CENTER);
 
-        setLayout(new BorderLayout());
-
         add(nameLabel);
-        setBackground(Color.YELLOW);
-    }
-
-     /**
-     * sayHi
-     * Adds/Removes "HI" label from the panel
-     */
-    public void sayHi(boolean sayHi) {
-        if (sayHi) {
-            add(hiLabel, BorderLayout.SOUTH);
-        } else {
-            remove(hiLabel);
-        }
-        validate();
+        add(hiLabel, BorderLayout.SOUTH);
+        hiLabel.setVisible(false);
     }
 
     /**
-     * Test Code
+     * sayHi
+     * Adds/Removes "HI" label visibility from the panel
      */
-    // public static void main(String[] args) {
-    //     JFrame f = new JFrame("Panel Example");
-    //     f.setSize(300,300);    
-    //     Panel_23 myPanel = new Panel_23();
-    //     f.add(myPanel);  
-    //     f.setVisible(true);  
-    //     myPanel.sayHi(true);
-    // }
+    public void sayHi(boolean shouldSayHi) {
+        hiLabel.setVisible(shouldSayHi);
+    }
 }

@@ -4,6 +4,8 @@ import javax.swing.border.LineBorder;
 
 /**
  * @author Amanjot Singh
+ * Version 2
+ * Description: Panel class for ID: 56. This panel will display the name and Hi inside the tab.
  */
 
 class Panel_56 extends JPanel implements PanelInterface {
@@ -23,11 +25,9 @@ class Panel_56 extends JPanel implements PanelInterface {
         JLabel labelForHi = (JLabel)getComponent(0);
         if(flag){
             labelForHi.setText("Amanjot Singh Hi");
-            labelForHi.setFont(new Font("Verdana", 1, 20));
         }
         else{
             labelForHi.setText("Amanjot Singh");
-            labelForHi.setFont(new Font("Verdana", 1, 16));
         }
     }
 }
