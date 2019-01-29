@@ -7,6 +7,11 @@ import javax.swing.border.LineBorder;
  * @gitID:   12
  */
 
+ /**
+ *	Create a panel with the label Lehar Bhatt
+ *	to be displayed on the tab
+ */
+
 public class Panel_12 extends JPanel implements PanelInterface
 {
 	
