@@ -1,18 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
 
-/*--------------------------
-This Panel belongs to Tab_21.
-Author: Tsao Yu-Ting
-E-Mail: ytsao2@asu.edu
-Date:   1/19/2019
-----------------------------*/
+/**
+ * This Panel belongs to Tab_21.
+ * @author Tsao Yu-Ting
+ * @email ytsao2@asu.edu
+ * @date 1/19/2019
+ */
 
 @SuppressWarnings("serial")
 public class Panel_82 extends JPanel implements PanelInterface {
 
-	JLabel label;
-	String myName = "Tsao Yu-Ting";
+	private JLabel label;
+	private String myName = "Tsao Yu-Ting";
 	
 	public Panel_82() {
 		
@@ -29,7 +29,6 @@ public class Panel_82 extends JPanel implements PanelInterface {
 	public void sayHi(boolean flag) {
 		if (flag == true) {
 			this.label.setText(myName + " HI!");
-//			this.label.setText("<html>" + myName + "<br/>HI</html>");
 		} else {
 			this.label.setText(myName);
 		}

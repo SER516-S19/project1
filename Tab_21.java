@@ -1,26 +1,34 @@
-/*  
-    Class to create the Tab 21 and to contain all of the panels on Gold Team
-    Author: Joshua Drumm
-    E-Mail: jkdrumm@asu.edu
-    Date:   1/19/2019
-*/
-
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Tab_21 extends JPanel implements TabInterface, Runnable
-{
-    Thread timerThread;
-    boolean interrupted;
-    private static String[] panelNums = {"53", "82", "29", "87", "40", "02", "22", "57", "34", "15", "77", "44", "83", "28"};
+/**  
+*    Class to create the Tab 21 and to contain all of the panels on Gold Team
+*    @author: Joshua Drumm
+*    @version 2.0
+*    @since   1/29/2019
+*/
 
+public final class Tab_21 extends JPanel implements TabInterface, Runnable
+{
+    private static final int THREAD_SLEEP_TIME = 1000;
+    
+    private Thread timerThread;
+    private boolean threadInterrupted;
+    
+    //Panel # corresponding to the assigned GitID
+    private static String[] panelNums = {"53", "82", "29", "87", "40", "02",
+                                         "22", "57", "34", "15", "77", "44",
+                                         "83", "28"};
     
     public Tab_21()
     {
         this.setLayout(new GridLayout(5, 4, 5, 5));
-        addPanels();
+        for(int i = 0; i < panelNums.length; i++)
+            addPanel(panelNums[i]);
+        for(int i = 0; i < 20 - panelNums.length; i++)
+            addPanel("");
     }
 
     public Tab_21(String name)
@@ -39,33 +47,29 @@ public class Tab_21 extends JPanel implements TabInterface, Runnable
     {
         try
         {
-            Class<?> clazz = Class.forName("Panel_" + panelClassNum);
-            Object newTab = clazz.getDeclaredConstructor().newInstance();
-            this.add((JPanel)newTab);
+            Class<?> panelClass = Class.forName("Panel_" + panelClassNum);
+            Object newPanel = panelClass.getDeclaredConstructor().newInstance();
+            this.add((JPanel) newPanel);
         }
         catch (Exception e)
         {
-            JPanel newPanel;
+            JPanel newPanel = new JPanel();
             if(panelClassNum != "")
-                newPanel = new BlankPanel(panelClassNum);
-            else
-                newPanel = new BlankPanel();
+            {
+                newPanel = new JPanel();
+                newPanel.setLayout(new GridBagLayout());
+                newPanel.add(new JLabel("<html><center>Panel Missing: " +
+                                         panelClassNum +
+                                         "<br></center></html>"));
+            }
             this.add(newPanel);
         }
-    }
-    
-    public void addPanels()
-    {
-        for(int i = 0; i < panelNums.length; i++)
-            addPanel(panelNums[i]);
-        for(int i = 0; i < 20 - panelNums.length; i++)
-            addPanel("");
     }
 
     @Override
     public void startSayingHi()
     {
-        interrupted = false;
+        threadInterrupted = false;
         timerThread = new Thread(this);
         timerThread.start();
     }
@@ -73,82 +77,47 @@ public class Tab_21 extends JPanel implements TabInterface, Runnable
     @Override
     public void stopSayingHi()
     {
-        interrupted = true;
+        threadInterrupted = true;
         timerThread.interrupt();
     }
 
     @Override
     public void run()
     {
-        int hiPanel = 0;
-        int lastPanel = -1;
-        while(!interrupted)
+        int currentHiPanelIndex = 0; //Current panel to say hi
+        int lastHiPanelIndex = -1;   //Last panel that said hi
+        while(!threadInterrupted)
         {
             try
             {
-                Object o = this.getComponent(hiPanel);
-                while(!(o instanceof PanelInterface))
+                Object currentHiPanel = this.getComponent(currentHiPanelIndex);
+                while(!(currentHiPanel instanceof PanelInterface))
                 {
-                    if(++hiPanel >= this.getComponentCount())
-                        hiPanel = 0;
-                    o = this.getComponent(hiPanel);
+                    if(++currentHiPanelIndex >= this.getComponentCount())
+                        currentHiPanelIndex = 0;
+                    currentHiPanel = this.getComponent(currentHiPanelIndex);
                 }
-                ((PanelInterface) (o)).sayHi(true);
-                if(hiPanel != lastPanel && lastPanel != -1)
-                    ((PanelInterface) (this.getComponent(lastPanel))).sayHi(false);
-                lastPanel = hiPanel;
-                if(++hiPanel >= this.getComponentCount())
-                    hiPanel = 0;
-                Thread.sleep(1000);
+                ((PanelInterface) (currentHiPanel)).sayHi(true);
+                if(currentHiPanelIndex != lastHiPanelIndex &&
+                        lastHiPanelIndex != -1)
+                    ((PanelInterface)
+                        (this.getComponent(lastHiPanelIndex))).sayHi(false);
+                lastHiPanelIndex = currentHiPanelIndex;
+                if(++currentHiPanelIndex >= this.getComponentCount())
+                    currentHiPanelIndex = 0;
+                Thread.sleep(THREAD_SLEEP_TIME);
             }
             catch(InterruptedException e)
             {
-                ((PanelInterface) (this.getComponent(lastPanel))).sayHi(false);
+                ((PanelInterface)
+                    (this.getComponent(lastHiPanelIndex))).sayHi(false);
             }
             catch(Exception e)
             {
                 e.printStackTrace();
-                if(++hiPanel >= this.getComponentCount())
-                    hiPanel = 0;
+                if(++currentHiPanelIndex >= this.getComponentCount())
+                    currentHiPanelIndex = 0;
             }
         }
-    }
-    
-    private class BlankPanel extends JPanel //implements PanelInterface
-    {
-        String panelText;
-        JLabel label;
-        JLabel hiLabel;
-        
-        public BlankPanel()
-        {
-            /*
-            this.setLayout(new GridBagLayout());
-            label = new JLabel("<html><center>Panel Missing<br></center></html>");
-            add(label);
-            panelText = "";
-            */
-        }
-        
-        public BlankPanel(String panelNum)
-        {
-            /*
-            this();
-            panelText = ": " + panelNum;
-            sayHi(false);
-            */
-        }
-        
-        //@Override
-        public void sayHi(boolean flag)
-        {
-            /*
-            if(flag)
-                label.setText("<html><center>Panel Missing" + panelText + "<br>HI</center></html>");
-            else
-                label.setText("<html><center>Panel Missing" + panelText + "<br></center></html>");
-            */
-        }
-        
     }
 }
