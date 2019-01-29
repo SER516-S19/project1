@@ -5,12 +5,15 @@ import javax.swing.*;
  * Personal Panel which ID is 15 
  * @author Meng-Ze Chen
  * @version 1.0
+ * @email mchen149@asu.edu.
  */
 
 public class Panel_15 extends JPanel implements PanelInterface{
-	JLabel nameLabel;
+	private JLabel nameLabel;
+	private String nameStr = "Meng-Ze Chen";
+
 	public Panel_15() {
-		nameLabel = new JLabel("Meng-Ze Chen");
+		nameLabel = new JLabel(nameStr);
 		nameLabel.setFont(new Font("Rage Italic",Font.BOLD, 20));
 		nameLabel.setForeground(Color.PINK);
 		nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -21,10 +24,10 @@ public class Panel_15 extends JPanel implements PanelInterface{
 
      @Override
         public void sayHi(boolean flag) {
-        if(flag) {
-            nameLabel.setText("Meng-Ze Chen HI!");
-        }else {
-            nameLabel.setText("Meng-Ze Chen");
+        if (flag) {
+            nameLabel.setText(nameStr + " HI!");
+        } else {
+            nameLabel.setText(nameStr);
         }
     }
 }
