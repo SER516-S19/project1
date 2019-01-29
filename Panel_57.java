@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel_57 extends JPanel {
+public class Panel_57 extends JPanel implements PanelInterface{
     JLabel nameLabel;
     String panelText;
 

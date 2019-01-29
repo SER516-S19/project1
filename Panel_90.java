@@ -1,6 +1,10 @@
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  * Panel_90 creation
@@ -9,37 +13,33 @@ import javax.swing.*;
  * @version 1.0
  */
 
+
 public class Panel_90 extends JPanel implements PanelInterface{
-	
-    private JLabel hiLabel;
-    private JLabel nameLabel;
 
-    /**
-     * Panel 90 Constructor
-        */
+    JLabel labelHi;
+
     public Panel_90() {
-        
-        hiLabel = new JLabel("HI");
-        nameLabel = new JLabel("Xiangwei Zheng");
-        hiLabel.setHorizontalAlignment(JLabel.CENTER);
-        nameLabel.setHorizontalAlignment(JLabel.CENTER);
-
-        setLayout(new BorderLayout());
-
-        add(nameLabel);
-        setBackground(Color.CYAN);
+        JLabel nameLabel = new JLabel("Xiangwei Zheng");
+        nameLabel.setFont(new Font("Verdana", Font.BOLD,20));
+        this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        this.add(nameLabel);
+        this.setBackground(Color.cyan);
+        this.setVisible(true);
     }
-    /**
-     * add and remove Hi
-        */
-    public void sayHi(boolean sayHi) {
-        if (sayHi) {
-            add(hiLabel, BorderLayout.SOUTH);
-        } else {
-            remove(hiLabel);
-        }
-        validate();
-    }
-	
-	
+
+    @Override
+	public void sayHi(boolean flag)
+	{
+		JLabel hiLabel=(JLabel)getComponent(0);
+		if(flag) {
+			hiLabel.setText("<html>Xiangwei Zheng<br/>Hi</html>");
+		    }
+		else {
+			hiLabel.setText("Xiangwei Zheng");
+		    }
+
+
+      }
+
+
 }

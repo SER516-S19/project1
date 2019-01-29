@@ -22,8 +22,8 @@ class Panel_56 extends JPanel implements PanelInterface {
     public void sayHi(boolean flag) {
         JLabel labelForHi = (JLabel)getComponent(0);
         if(flag){
-            labelForHi.setText("Hi");
-            labelForHi.setFont(new Font("Verdana", 1, 40));
+            labelForHi.setText("Amanjot Singh Hi");
+            labelForHi.setFont(new Font("Verdana", 1, 20));
         }
         else{
             labelForHi.setText("Amanjot Singh");
