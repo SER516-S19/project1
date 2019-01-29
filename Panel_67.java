@@ -3,9 +3,10 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 
 
-/*
- * Author: Bhawana Prasad
+/**
  * This program returns panel with a name on it. It also displays name and hi at periodic interval.
+ * @author: Bhawana Prasad
+ * @version 23 January 2018
  * ID: 67
  */
 
