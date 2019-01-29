@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class Panel_04 extends JPanel implements PanelInterface {
 
-	private static final String DISPLAY_NAME = "Pradeep Ambalam Jawaharlal";
+    private static final String DISPLAY_NAME = "Pradeep Ambalam Jawaharlal";
     private static final JLabel DISPLAY_NAME_LABEL = new JLabel(DISPLAY_NAME);
 
     /** Constructs a {@code JPanel} subclass and adds the {@code DISPLAY_NAME_LABEL} to this instance. */
