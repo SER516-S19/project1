@@ -1,12 +1,23 @@
+
 import javax.swing.*;
 import java.awt.*;
 
+/*	SER 516
+ *	Panel 55 with name and hi Labels
+ * @author Narendra Mohan Murali Mohan
+ * @version 1.3
+ * 
+ * 
+ */
+
 public class Panel_55 extends JPanel implements PanelInterface{
-	public Panel_55() {
-		initComponents();
-	}
+	
+	/**
+	 * Constructor for Label
+	 */
 	private JLabel hiLabel;
-private void initComponents() {
+	public Panel_55() {
+	
 	
 	
 	JLabel label = new JLabel("Narendra Mohan");
@@ -24,9 +35,13 @@ private void initComponents() {
 
 
 }
+	/**
+	 * Display "Hi" with Name on Panel
+	 * @param flag  Holding true/false values
+	 */
+	public void sayHi(boolean flag) 
 
-public void sayHi(boolean flag) 
+	{ 		hiLabel.setVisible(flag);
+	}
 
-{ 	this.hiLabel.setVisible(flag);
-}
 }

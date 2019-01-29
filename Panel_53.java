@@ -2,39 +2,41 @@ import javax.swing.*;
 import java.awt.*;
 
 /**Panel Class Panel_53
- * Author: Abhinab Mohanty
- * Created: 1/18/2019
+ * @author : Abhinab Mohanty
+ * @version : 2.0
+ * @since : 1/18/2019
  */
 public class Panel_53 extends JPanel implements PanelInterface{
-    JLabel nameLabel;
     JLabel greetingLabel;
+
     public Panel_53() {
-        this.setLayout(new FlowLayout( FlowLayout.CENTER));
-        this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        JPanel labelPanel = new JPanel();
-        labelPanel.setLayout( new GridLayout( 2 , 1 ) );
-        nameLabel = new JLabel();
+        setLayout(new GridBagLayout());
+        setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        JLabel nameLabel = new JLabel();
+        Font labelFont = new Font("Arial", Font.BOLD,20);
+        nameLabel.setText(" Abhinab Mohanty ");
+        nameLabel.setFont(labelFont);
+
         greetingLabel = new JLabel("");
-        nameLabel.setText("Abhinab Mohanty");
-        nameLabel.setFont(new Font("Arial", Font.BOLD,20));
-        labelPanel.add(nameLabel);
-        labelPanel.add(greetingLabel);
-        labelPanel.setBackground(Color.cyan);
-        this.add(labelPanel);
-        this.setBackground(Color.cyan);
-        this.setVisible(true);
+        greetingLabel.setFont(labelFont);
+
+        add(nameLabel);
+        add(greetingLabel);
+        setBackground(Color.cyan);
+        setVisible(true);
     }
 
     /**
      * Overriden Method to display "HI" on queue
+     * @param flag - boolean value to enable or disable greeting
      */
 
      @Override
         public void sayHi(boolean flag) {
         if(flag) {
-            this.greetingLabel.setText("\t"+"HI");
+            greetingLabel.setText("HI !");
         }else {
-            this.greetingLabel.setText("");
+            greetingLabel.setText("");
         }
     }
 

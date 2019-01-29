@@ -1,43 +1,48 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  * @author Archana Madhavan
- *
- * Description :Creating a class Panel_49 which extends JPanel class and displays the name using 
- * label in a Panel. 
+ * @version 3.0 SER516 Project1
  */
-import java.awt.*;
-import javax.swing.*;
 
+/**
+ * Creating a Panel to show name and a label saying Hi.
+ */
 public class Panel_49 extends JPanel implements PanelInterface {
-	
-	//Creating Label for "Hi"
-	JLabel HiLabel= new JLabel("Hi");
-	Panel_49() {
-				
-		//Creating Label with necessary specifications
-		JLabel myName = new JLabel("Archana Madhavan");
-		myName.setFont(new Font("Verdana", Font.BOLD, 24));
 
-		//setting Panel specifications
-		this.add(myName);
+	// Creating Label for "Hi"
+	JLabel hiLabel = new JLabel("Hi");
+
+	Panel_49() {
+
+		// Creating Label to display name
+		JLabel nameLabel = new JLabel("Archana Madhavan");
+		nameLabel.setFont(new Font("Verdana", Font.BOLD, 24));
+
+		// setting Panel specifications
+		this.add(nameLabel);
 		this.setBackground(Color.YELLOW);
-		
-		//Setting the Label to false initially
-		HiLabel.setFont(new Font("Verdana",Font.BOLD,24));
-		HiLabel.setPreferredSize(new Dimension(50, 50));
-		this.add(HiLabel);
-		HiLabel.setVisible(false);
-		
+
+		hiLabel.setFont(new Font("Verdana", Font.BOLD, 24));
+		hiLabel.setPreferredSize(new Dimension(50, 50));
+		this.add(hiLabel);
+		hiLabel.setVisible(false);
+
 	}
 
 	@Override
+	/*
+	 * method to set the visibility of the label depending on flag value.
+	 */
 	public void sayHi(boolean flag) {
-			
-		if(flag)
-			HiLabel.setVisible(true);
-		else
-			HiLabel.setVisible(false);
+
+		hiLabel.setVisible(flag);
+
 	}
-		
-	
+
 }

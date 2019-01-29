@@ -1,33 +1,47 @@
 import javax.swing.*;
-import java.awt.*;  
+import java.awt.*;
 import javax.swing.border.*;
+
 @SuppressWarnings("serial")
-public class Panel_84 extends JPanel implements PanelInterface {
 
 /**
- * panel which displays name as "Shashidhar Reddy" is created in this Class
- * Author : Shashidhar, Panel 84, svanter1@asu.edu
+ * Only For SER 516, Panel 84 with name and Hi Labels
+ * 
+ * @author Shashidhar Reddy Vanteru
+ * @since 01-18-2019
+ * 
  */
-	
-    public Panel_84() {
-    	JLabel label_Name = new JLabel("Shashidhar reddy",JLabel.CENTER); 
-    	Color color= new java.awt.Color(0,255,255);
-    	Border line_border=new LineBorder(Color.GRAY);
-    	Font font_setter = new Font("TimesRoman", Font.BOLD+Font.ITALIC, 22);
-    	this.add(label_Name);
-    	label_Name.setFont(font_setter);
-    	
-    	label_Hi = new JLabel("<html><br>Hi</html>",JLabel.CENTER); 
-    	 this.add(label_Hi);
-    	 label_Hi.setVisible(false);
-    	 label_Hi.setFont(font_setter);
-        this.setBackground(color);
-        this.setForeground(Color.BLACK); 
-        this.setBorder(line_border); 
-    }
- public void sayHi(boolean flag) {
-	 this.label_Hi.setVisible(flag);
+
+public class Panel_84 extends JPanel implements PanelInterface {
+	private JLabel labelName = new JLabel("Shashidhar reddy", JLabel.CENTER);
+	private JLabel labelMessage = new JLabel("<html><br>Hi</html>", JLabel.CENTER);
+
+	// Constructor to style label and Panel
+	public Panel_84() {
+
+		Color color = new java.awt.Color(0, 255, 255);
+		Border lineBorder = new LineBorder(Color.GRAY);
+		Font fontSetter = new Font("TimesRoman", Font.BOLD + Font.ITALIC, 22);
+
+		this.setBackground(color);
+		this.setForeground(Color.BLACK);
+		this.setBorder(lineBorder);
+
+		labelName.setFont(fontSetter);
+		this.add(labelName);
+
+		labelMessage.setVisible(false);
+		labelMessage.setFont(fontSetter);
+		this.add(labelMessage);
+	}
+
+	/**
+	 * Method for displaying "Hi" message with @param flag which can be false or
+	 * true
+	 */
+	public void sayHi(boolean flag) {
+		this.labelMessage.setVisible(flag);
+
+	}
 
 }
-	private JLabel label_Hi;
- }

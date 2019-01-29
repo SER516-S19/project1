@@ -1,34 +1,40 @@
 import java.awt.*;  
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-/*
-  @author Janani Anand, Git ID- 05
- */
+/**
+  *@author Janani Anand, Git ID- 05
+  *SER516-Software Agility
+  *Project 1: 
+  *The class displays the name and a secong label msg- 'Hi'
+  */
 
+@SuppressWarnings("serial")
 public class Panel_05 extends JPanel implements PanelInterface
    {
-   	JLabel labelmsg = new JLabel("Hi", JLabel.CENTER);   //creating a label for Hi
+           /*creating a label for Hi timer display*/
+          JLabel labelMsg = new JLabel("Hi", JLabel.CENTER);  
 
-	public Panel_05() 
-	   {
-         //creating a label for name display                              
-         JLabel label_name = new JLabel("JANANI ANAND_05",JLabel.CENTER);
-	     label_name.setForeground(Color.white);
-	     label_name.setFont(new Font("Berlin Sanas FB",Font.BOLD,30));
+          public Panel_05() 
+              {
+                  /*creating a label for name display and setting specifications*/                              
+         	  JLabel labelName = new JLabel("JANANI ANAND_05",JLabel.CENTER);
+	  labelName.setForeground(Color.white);
+	  labelName.setFont(new Font("Berlin Sanas FB",Font.BOLD,25));
 	     
-	     this.add(label_name);
-	     this.setBackground(Color.blue);
- 	     this.setBorder(new LineBorder(Color.BLACK));
+	  this.add(labelName);
+	  this.setBackground(Color.blue);
+ 	  this.setBorder(new LineBorder(Color.BLACK));
 
- 	     this.add(labelmsg);
-         labelmsg.setForeground(Color.ORANGE);
-         labelmsg.setFont(new Font("Calibri", Font.ITALIC, 22));
-         labelmsg.setVisible(false); 
-        }
+ 	  this.add(labelMsg);
+                  labelMsg.setForeground(Color.ORANGE);
+                  labelMsg.setFont(new Font("Calibri", Font.ITALIC, 25));
+                  labelMsg.setVisible(false); 
+              }
 	  
-     public void sayHi(boolean flag){
-       	labelmsg.setVisible(flag);
-       }
-
-
-}
+/**
+    * This method sets label visibility, displays 'Hi' based on boolean parameter passed.
+    */
+                public void sayHi(boolean flag){
+       	labelMsg.setVisible(flag);
+                }
+   }

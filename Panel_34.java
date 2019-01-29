@@ -1,6 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * 
+ * @author Kirti Jha GitID 34
+ *
+ */
+
 public class Panel_34 extends JPanel implements PanelInterface {
     JLabel jlabel;
     public Panel_34()
