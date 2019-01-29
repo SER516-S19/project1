@@ -1,6 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * --------------------------
+ * 
+ * @author Carnic
+ * This Panel belongs to Tab Jashua Drumm.(Tab 21)
+ *  ----------------------------
+ */
+
+
+
 public class Panel_57 extends JPanel implements PanelInterface{
     JLabel nameLabel;
     String panelText;
@@ -17,9 +27,10 @@ public class Panel_57 extends JPanel implements PanelInterface{
     public void sayHi(boolean flag)
     {
         if(flag)
-            this.nameLabel.setText("Hi Carnic!");
+            //central alligning the text
+            this.nameLabel.setText("<html><center>Hi<br>Carnic!</center></html>");
         else
-            this.nameLabel.setText("Carnic");
+            this.nameLabel.setText("<html><center>Carnic!</center></html>");
     }
     
 }
