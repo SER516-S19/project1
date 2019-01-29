@@ -1,9 +1,3 @@
-/**
- *
-  * @author Kumar Prabhu Kalyan
- * gitID: 38
- */
-
 import java.awt.Color;
 import java.awt.Font;
 
@@ -11,6 +5,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
+/**
+ *
+ * @author Kumar Prabhu Kalyan Description - The class is a panel which displays
+ *         a label.
+ */
 public class Panel_38 extends JPanel implements PanelInterface {
 
 	private static final long serialVersionUID = 1L;
@@ -18,7 +17,6 @@ public class Panel_38 extends JPanel implements PanelInterface {
 	private JLabel nameOnSwitchLabel;
 
 	Panel_38() {
-
 		nameLabel = new JLabel("Kumar");
 		nameOnSwitchLabel = new JLabel("Kumar says Hi.");
 		nameLabel.setFont(new Font("Arial", 1, 20));
@@ -29,9 +27,7 @@ public class Panel_38 extends JPanel implements PanelInterface {
 		setBackground(Color.WHITE);
 		add(nameLabel);
 		setBorder(new LineBorder(Color.BLACK));
-
 		setVisible(true);
-
 	}
 
 	@Override
@@ -39,14 +35,10 @@ public class Panel_38 extends JPanel implements PanelInterface {
 		if (flag) {
 
 			this.remove(nameLabel);
-
 			this.add(nameOnSwitchLabel);
-
 		} else {
-
 			this.remove(nameOnSwitchLabel);
 			this.add(nameLabel);
-
 		}
 		this.validate();
 		this.repaint();
