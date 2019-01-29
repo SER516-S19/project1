@@ -11,36 +11,26 @@ import javax.swing.border.LineBorder;
  //***********************************************************************************************************
 
 
-public class Panel_13 extends JPanel implements PanelInterface
-{
+public class Panel_13 extends JPanel implements PanelInterface{
 
 	private JLabel jLabelHi = new JLabel("HI");
 	
-	
-	Panel_13()
-    {
-
-		
+	Panel_13(){
 		JLabel jLabelName = new JLabel("Subhradeep");
 		jLabelName.setFont(new Font("Arial", Font.PLAIN, 20));
 		jLabelHi.setFont(new Font("Arial", Font.PLAIN, 20));
 		add(jLabelName);
 		add(jLabelHi);
+		jLabelHi.setVisible(false);
         setBackground(Color.LIGHT_GRAY);
         setBorder(new LineBorder(Color.BLACK));
-        
-        
     }
     
-    public void sayHi(boolean hiFlag)
-    {
-    	
-    	if (hiFlag == true)
-    	{    		
+    public void sayHi(boolean hiFlag){
+    	if (hiFlag == true){    		
     		jLabelHi.setVisible(true);
     	}
-    	else
-    	{
+    	else{
     		jLabelHi.setVisible(false);
     	}
     	
