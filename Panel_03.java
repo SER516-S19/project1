@@ -1,6 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Class: Panel_03
+ * Description: A named panel with a name on it.
+ * Author: John Alden
+ * Course: SER 516
+ * Date: 1/29/19
+ * Project: 1
+**/
 public class Panel_03 extends JPanel implements PanelInterface{
     private JLabel name_label;
     private JLabel hi_label;
