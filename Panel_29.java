@@ -27,10 +27,10 @@ public class Panel_29 extends JPanel implements PanelInterface {
     @Override
     public void sayHi(boolean flag) {
 	if(flag) {
-		label.setText(UserName + " " + "HI");
+		PanelLabel.setText(UserName + " " + "HI");
 	}
 	else {
-		label.setText(UserName);
+		PanelLabel.setText(UserName);
 	}
     }  
 }
