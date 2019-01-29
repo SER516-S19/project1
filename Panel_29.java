@@ -21,7 +21,7 @@ public class Panel_29 extends JPanel implements PanelInterface {
     }
     
     /**
-    * This method has been overridden from the interface toggles
+    * This method has been overridden using the interface that toggles
     * the text on the panel to show Hi when the flag is true.
     */
     @Override
