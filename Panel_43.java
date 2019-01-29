@@ -5,9 +5,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Aravinda Sai Kondamari
- * @GitId 43
+ * This class creates a Jpanel and its contents
+ * that will be used in tabs as per the project.
+ * 
+ * @author Aravinda Sai Kondamari - AravindSaiK
+ * @version 2.0
+ * Id: 43
  */
 
 public class Panel_43 extends JPanel implements PanelInterface{
@@ -19,7 +22,7 @@ public class Panel_43 extends JPanel implements PanelInterface{
         labelName.setFont(new Font("TimesRoman", Font.ITALIC, 24));
         labelName.setHorizontalAlignment(JLabel.CENTER);
         labelName.setVerticalAlignment(JLabel.CENTER);
-        labelHi = new JLabel("Hi");
+        labelHi = new JLabel("Hi!");
         labelHi.setFont(new Font("TimesRoman", Font.BOLD, 26));
         labelHi.setHorizontalAlignment(JLabel.CENTER);
         setLayout(new BorderLayout());
@@ -27,6 +30,10 @@ public class Panel_43 extends JPanel implements PanelInterface{
         setBackground(Color.GREEN);
     }
 
+    /** 
+     * Method from common interface, when
+     * called will display "Hi!".
+     */
     @Override
     public void sayHi(boolean showHi) {
           if (showHi) {

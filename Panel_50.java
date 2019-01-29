@@ -1,9 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 
-/**Panel Class Panel_50
- * Author: Siva Pranav Mandadi
- * Created: 1/20/2019
+/** Panel Class Panel_50
+ * @author: Siva Pranav Mandadi
+ * @gitID : 50
+ * @since : 1/20/2019
  */
 public class Panel_50 extends JPanel implements PanelInterface {
     public Panel_50() {
@@ -15,10 +16,16 @@ public class Panel_50 extends JPanel implements PanelInterface {
         this.setBackground(Color.cyan);
         this.setVisible(true);
     }
-
+	
+	/**
+	* Override method to say 'HI!
+	*/
+	
     @Override
 	public void sayHi(boolean flag)
 	{
+
+		
 		JLabel hiLabel=(JLabel)getComponent(0);
 		if(flag) {
 			hiLabel.setText("<html>Siva Pranav Mandadi<br/>Hi!</html>");

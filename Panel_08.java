@@ -1,5 +1,3 @@
-
-//This file displays author's name on the JPanel.
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.Border;
