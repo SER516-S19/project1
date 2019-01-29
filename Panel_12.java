@@ -7,20 +7,18 @@ import javax.swing.border.LineBorder;
  * @author:  Lehar Bhatt
  * @gitID:   12
  */
-
+/**
+* Creates a panel with label Lehar Bhatt
+*/
 
 public class Panel_12 extends JPanel
 {
-	
-	Panel_12()  
-    {  
-	    
-	    JLabel jlabel = new JLabel("Lehar Bhatt");
-	    jlabel.setFont(new Font("Verdana",1,20));
-	    
-        setBackground(Color.LIGHT_GRAY);
-        setBorder(new LineBorder(Color.red));
-        setVisible(true);
-        add(jlabel);	    
+    Panel_12() {
+      	JLabel jlabel = new JLabel("Lehar Bhatt");
+      	jlabel.setFont(new Font("Verdana",1,20));
+      	setBackground(Color.LIGHT_GRAY);
+	setBorder(new LineBorder(Color.red));
+	setVisible(true);
+	add(jlabel);	    
     }
 }
