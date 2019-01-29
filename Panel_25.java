@@ -1,35 +1,27 @@
-
 import java.awt.*;  
 import javax.swing.border.LineBorder;
 import javax.swing.*;  
+/*
+SER-516
+Author 		: Sai Vinay. G
+Version		: 1.0
+Start Date	: 01/20/2019
+*/
 public class Panel_25 extends JPanel implements PanelInterface{  
-   JLabel l25 = new JLabel("Sai Vinay. G");
-	Panel_25()  
-        {  
-   //     JFrame f25= new JFrame("Panel_25");    
-     //   JPanel p25=new JPanel(); 
+   JLabel label_25 = new JLabel("Sai Vinay. G");
+	// Creating a panel that displays a name.
+	Panel_25()  {   
         this.setBackground(Color.CYAN);
         this.setBounds(15, 30, 250, 250);
         this.setBorder(new LineBorder(Color.BLUE));
-        this.setAlignmentX(CENTER_ALIGNMENT);
-        this.setAlignmentY(CENTER_ALIGNMENT);
-        this.add(l25);
-   /*    f25.add(this);  
-                f25.setSize(450,450);    
-                f25.setLayout(null);    
-                f25.setVisible(true);    */
-       
+        this.add(label_25);
         } 
-	 public void sayHi(boolean flag) {
-     	if(flag) {
-     		l25.setText("SAI VINAY. G" + "HI");
+	public void sayHi(boolean flag) {
+     		if(flag) {
+     			label_25.setText("SAI VINAY. G" + "HI");
+     		}
+     		else {
+     			label_25.setText("SAI VINAY. G");
+     		}
      	}
-     	else {
-     		l25.setText("SAI VINAY. G");
-     	}
-     }
-   /*    public static void main(String args[])  
-        {  
-        new Panel_25();  
-        }  */
-    }
+}
