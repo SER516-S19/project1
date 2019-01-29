@@ -1,45 +1,34 @@
-import java.awt.*;  
-import javax.swing.*;
-import javax.swing.border.LineBorder;
+import java.awt.Font;
 
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
-/*  Author Mayank Batra 
- * This class returns a panel on object creation 
- * panel creation is carried out under constructor
+/**
+ * SER 516
+ * 
+ * @author Mayank Batra @Version: 1.3 @Start Date: 01/20/2019
  */
 
 @SuppressWarnings("serial")
-public class Panel_09 extends JPanel
-{
-	Panel_09()  
-    {  
- //   JFrame f= new JFrame("Panel Example");  //    For testing
-        // Created a panel
-//    JPanel panel=new JPanel();
-    // Created label
-    JLabel jlabel = new JLabel("Mayank ID 09");
-    // Font defined for label
-    jlabel.setFont(new Font("Verdana",1,20));
-    this.add(jlabel);
-    // added label to panel
- //   panel.add(jlabel);
-    // boder and background defined for panel
- //   panel.setBorder(new LineBorder(Color.BLACK)); 
-    // panel.setBounds(10,10,250,60);    
-    // panel.setBackground(Color.WHITE);  
-     
-//    f.add(panel);  
-//            f.setSize(600,600);    
-//            f.setLayout(null);    		//For Testing 
-//            f.setVisible(true);    
-// 
-    }  
+public class Panel_09 extends JPanel implements PanelInterface {
+	private JLabel jlabel;
 
-//	public static void main(String[] args)
-//	{
-//		new Panel_09();						//For Testing 
-//
-//	}
+	Panel_09() {
+		// A default constructor initializes a panel with labels
+		jlabel = new JLabel("Mayank ID 09");
+		jlabel.setFont(new Font("Calibri", 2, 20));
+		this.add(jlabel);
+	}
 
-
+	@Override
+	public void sayHi(boolean showHi) {
+		// Public function to implement the Hi functionality with normal if else
+		// comparison
+		if (showHi == true) {
+			// if condition evaluates to true show hi at the end
+			jlabel.setText("Mayank ID 09 HI ");
+		} else { // if condition is not true then show normal text
+			jlabel.setText("Mayank ID 09 ");
+		}
+	}
 }

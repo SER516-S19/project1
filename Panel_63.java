@@ -1,25 +1,30 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class Panel_63 extends JPanel {
+public class Panel_63 extends JPanel implements PanelInterface{
+
+	private String name = "Dhruv Patel";
+	JLabel label_63 = new JLabel();
 
 	public Panel_63() {
 
-		createPanel();
-		
+		label_63.setText(name);
+		label_63.setFont(new Font("Lucida Handwriting", Font.BOLD, 20));
+
+		add(label_63);
+		setLayout(new GridBagLayout());
+		setBackground(Color.cyan);
+		setBorder(BorderFactory.createLineBorder(Color.black, 1));
+
 	}
 
-	private void createPanel(){
-
-		JLabel name = new JLabel("Dhruv Patel"); 	//creating label with my name
-		name.setFont(new Font("Courier", Font.BOLD, 20));	//setting font to the label
-
-		add(name);
-		setLayout(new GridBagLayout());		//Align name to center
-		setBackground(Color.cyan);	//setting background color to cyan
-		setBorder(BorderFactory.createLineBorder(Color.black, 1));	//setting border of the panel
-
-
-
+	@Override
+	public void sayHi(boolean flag) {
+		if(flag){
+			label_63.setText("Dhruv Patel said Hi!!");
+		}
+		else{
+			label_63.setText("Dhruv Patel");
+		}
 	}
 }

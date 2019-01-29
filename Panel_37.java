@@ -1,4 +1,3 @@
-
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JLabel;
@@ -9,7 +8,7 @@ import javax.swing.JPanel;
  * ID: 37
  */
 
-public class Panel_37 extends JPanel
+public class Panel_37 extends JPanel implements PanelInterface
 {
 
 /* Constructor for panel */
@@ -18,7 +17,7 @@ public class Panel_37 extends JPanel
 	  buildPanel_37();
    }
   
-  private void buildPanel_37()
+  private void buildPanel_37() 
   {  
 	     JLabel label = new JLabel("Harshita Kajal");
 	  
@@ -29,4 +28,18 @@ public class Panel_37 extends JPanel
 	     add(label);	     
 	  
   }
+  
+  @Override
+	public void sayHi(boolean flag) {
+		JLabel myLabel = (JLabel)getComponent(0);
+		if(flag)
+		{
+			myLabel.setText("<html>Harshita Kajal<br/>Hi!</html>");
+		}
+		else
+		{
+			myLabel.setText("Harshita Kajal");
+		}
+	}
+
 }
