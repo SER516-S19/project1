@@ -1,12 +1,11 @@
   	import java.awt.*;
 	import javax.swing.*;
 	/*
-	 * Class name: Panel_24
-	 * Name: Gadde Vijaya Mounika 
-	 * ASU ID-1213038097
-	 */
+	Name: Gadde Vijaya Mounika 
+	ASU ID-1213038097
+	*/
 	public class Panel_24 extends JPanel implements PanelInterface {
-		
+		// Creating a panel that displays a name.
 		public Panel_24() {
 			JLabel name = new JLabel();
 	    		name.setText("Vijaya Mounika Gadde");
@@ -24,7 +23,6 @@
 	     		}
 	     	else{
 		     hilabel.setText("Vijaya Mounika Gadde");
-	     		}
+	     	    }
 	   	}	
-
 	}
