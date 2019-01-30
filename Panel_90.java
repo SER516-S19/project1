@@ -1,27 +1,22 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
-
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * Panel_90 creation
- * 
+ * Panel_90 creation，
+ * used to show "Xiangwei Zheng" and "Hi" on panel with format 
  * @author Xiangwei Zheng
  * @version 1.2
  */
-
-/*Panel 90, used to show "Xiangwei Zheng" and "Hi" on panel with format
- * 
- * */
 public class Panel_90 extends JPanel implements PanelInterface{
-
     JLabel labelHi;
-    /*Panel 90, constructor, initialize nameLabel and setting
-     * 
-     * */
+	
+    /**
+     * Panel 90 constructor, initialize nameLabel and font,bord,color
+     **/
     public Panel_90() {
         JLabel nameLabel = new JLabel("Xiangwei Zheng");
         nameLabel.setFont(new Font("Verdana", Font.BOLD,20));
@@ -31,13 +26,12 @@ public class Panel_90 extends JPanel implements PanelInterface{
         this.setVisible(true);
     }
 
-    @Override
-    /*sayHi function, show Hi on panel based on the timer setting
+	 /*sayHi function, show Hi on panel based on the timer setting
      * @para: flag, flag to show Hi or not.
      * flag = 0, will show "Xiangwei Zheng" only
      * flag = 1, will show ""Xiangwei Zheng Hi "
-     * 
-     */
+     */	
+    @Override
 	public void sayHi(boolean flag)
 	{
 		JLabel hiLabel=(JLabel)getComponent(0);
@@ -47,9 +41,5 @@ public class Panel_90 extends JPanel implements PanelInterface{
 		else {
 			hiLabel.setText("Xiangwei Zheng");
 		    }
-
-
       }
-
-
 }
