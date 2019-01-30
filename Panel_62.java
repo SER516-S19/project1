@@ -7,8 +7,11 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 
 public class Panel_62 extends JPanel implements PanelInterface {
-	Panel_62(){  
+	//Main Tab will automatically call the default constructor.
+	Panel_62(){ 
+		//Creating new label
 		JLabel label = new JLabel("Sumanth Paranjape");
+		//Setting label attributes
 		label.setFont(new Font("Segoe UI",Font.PLAIN,20)); 
 		setBorder(new LineBorder(Color.orange));
 		setBackground(Color.lightGray);
@@ -17,10 +20,11 @@ public class Panel_62 extends JPanel implements PanelInterface {
 	}
 	
 	@Override
-	public void sayHi(boolean flag) {
+	public void sayHi(boolean toggleFlag) {
 		JLabel labelName = (JLabel)getComponent(0);
-		if(flag)
+		if(toggleFlag)
 		{
+			//Using HTML to print Hi! in new line
 			labelName.setText("<html>Sumanth Paranjape<br/>Hi!</html>");
 		}
 		else
