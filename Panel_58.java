@@ -3,9 +3,11 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 
 
-/*
+/** The below class implements Panel 58
+ * This panel is a part of tab no 45
+ * It displays student's name Prashansa
  * @author: Prashansa
-    GIT Id: 58
+ *  GIT Id: 58
  * Creating panel 58
  */
 
@@ -23,12 +25,18 @@ public class Panel_58 extends JPanel implements PanelInterface
 		jlabel.setText("Prashansa");
         add(jlabel);
     }
+    
+	/*
+	 * The below method is used to display Hi 
+	 * below the student name when flag is true
+	 */
+    
     public void sayHi(boolean flag)
 	{
 		JLabel label = (JLabel)getComponent(0);
 		if(flag)
 		{
-			label.setText("<html>Prashansa <br/> <p 'text-align:center;'>Hi!</p>/html>");
+			label.setText("<html>Prashansa<br/><center/>Hi!</html>");
 		}
 		else
 		{

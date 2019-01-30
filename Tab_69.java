@@ -1,59 +1,61 @@
-/** Tab5 containing 20 panel
- * Author: Jahnvi Rai jrai4
- */
-
 import javax.swing.*;
 import java.awt.*;
+
+/**  Fifth tab in the frame containing 20 panels displaying
+ * students name and "Hi"
+ *
+ * @author : Jahnvi Rai
+ * @version : 2.0
+ * @since : 01/19/2019
+ */
 
 
 public class Tab_69 extends JPanel implements TabInterface{
 
-    private Thread t;
-    private Boolean flag = true;
+    private Thread thread;
+    private Boolean startStopThread = true;
 
     @Override
     public void startSayingHi() {
-        flag = true;
-        t = new Thread() {
+        startStopThread = true;
+        thread = new Thread() {
             @Override
             public void run() {
 
-                int i=0;
-                while(flag)
+                int panelCount=0;
+                while(startStopThread)
                 {
-                    i=i%20;
+                    panelCount=panelCount%20;
                     try
                     {
-                        PanelInterface panelInterface = (PanelInterface) getComponent(i);
+                        PanelInterface panelInterface = (PanelInterface) getComponent(panelCount);
                         panelInterface.sayHi(true);
-                        sleep(2000);
+                        sleep(1000);
                         panelInterface.sayHi(false);
-
                     }
                     catch(Exception e)
                     {
-
+                        // If empty panel, move to the next panel
                     }
-                    i++;
+                    panelCount++;
                 }
-                t.interrupt();
+                thread.interrupt();
 
             }
         };
-        t.start();
+        thread.start();
 
     }
 
     @Override
     public void stopSayingHi() {
-        if (t != null) {
-            flag=false;
+        if (thread != null) {
+            startStopThread =false;
 
         }
     }
 
 
-    //Method called from the main frame to access the tab name
     public String getName() {
         return tabName;
     }
@@ -69,14 +71,16 @@ public class Tab_69 extends JPanel implements TabInterface{
             "Panel_89","Panel_62","Panel_37","Panel_66","Panel_72","Panel_67","Panel_64","Panel_75",
             "Panel_50", "Panel_XX","Panel_XX","Panel_XX","Panel_XX","Panel_XX"};
 
-    // Default constructor
+
     Tab_69() {
         this.setLayout(new GridLayout(5,4));
         addPanel();
 
-
    }
-    //Method to check for existing class panels and add them
+
+    /* Function to check for existing panel classes
+    and add them to the tab
+     */
     private void addPanel(){
         for(int i =0;i<panelNames.length;i++){
             try{

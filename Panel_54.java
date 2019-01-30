@@ -8,24 +8,25 @@ import javax.swing.JPanel;
 
 /**
  * Panel_54
- * Author: Sabyasachi Mohanty (1215188091) Created:
- * 1/21/2019
+ * Author: Sabyasachi Mohanty (1215188091) 
+ * Created: 1/21/2019
+ * Panel Id: 54
  */
 public class Panel_54 extends JPanel implements PanelInterface {
 
-	private JLabel nameLabel;
-	private JLabel nameWithHiLabel;
+	private JLabel labelName;
+	private JLabel labelNameWithHi;
 
 	private static final long serialVersionUID = 1L;
 
 	public Panel_54() {
-		nameLabel = new JLabel("Sabyasachi");
-		nameWithHiLabel = new JLabel("Sabyasachi  Hi");
+		labelName = new JLabel("Sabyasachi");
+		labelNameWithHi = new JLabel("Sabyasachi  Hi");
 		this.setLayout(new GridBagLayout());
 		this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		nameLabel.setFont(new Font("Arial", Font.BOLD, 14));
-		nameWithHiLabel.setFont(new Font("Arial", Font.BOLD, 14));
-		this.add(nameLabel);
+		labelName.setFont(new Font("Arial", Font.BOLD, 14));
+		labelNameWithHi.setFont(new Font("Arial", Font.BOLD, 14));
+		this.add(labelName);
 		this.setBackground(Color.gray);
 		this.setVisible(true);
 	}
@@ -33,12 +34,12 @@ public class Panel_54 extends JPanel implements PanelInterface {
 	@Override
 	public void sayHi(boolean flag) {
 		if (flag) {
-			this.remove(nameLabel);
-			this.add(nameWithHiLabel);
+			this.remove(labelName);
+			this.add(labelNameWithHi);
 
 		} else {
-			this.remove(nameWithHiLabel);
-			this.add(nameLabel);
+			this.remove(labelNameWithHi);
+			this.add(labelName);
 		}
 		
 		this.validate();
@@ -46,4 +47,3 @@ public class Panel_54 extends JPanel implements PanelInterface {
 	}
 	
 }
-

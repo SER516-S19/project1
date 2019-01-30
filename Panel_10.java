@@ -1,38 +1,52 @@
 import java.awt.Color;
 import java.awt.Font;
-
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * Creation of Panel_10 
+ * @author Ankita Shivanand
+ * @version 3.0
+ */
+
 public class Panel_10 extends JPanel implements PanelInterface {
 	
-	/**
-	 * @author Ankita
-	 */
 	private String name = "Ankita Shivanand";
 	private JLabel jlabelObj = new JLabel();
 	
+	/**
+    	*  Panel_10 constructor to create and style the panel 
+    	*/
 
-	public Panel_10() {
+	public Panel_10() 
+	{
 		jlabelObj.setText(name);
-		/* Set Font*/
 		jlabelObj.setFont(new Font("Courier",Font.BOLD,20));
 		add(jlabelObj);
-		/*Set background color*/
 		setBackground(Color.YELLOW);
 		
 	}
-
-	/* Implementing the method from PaneInterface */
+	
+	/**
+    	* Display name with "HI" based on flag. 
+    	*
+    	* @param flag, To display name with HI or not
+    	* flag = true wil display name with HI
+    	* flag = false will display just the name 
+   	* 
+    	*/
 	 @Override
-		public void sayHi(boolean flag) {
-			if(flag) {
-				jlabelObj.setText(name + " " + "HI");
+	public void sayHi(boolean flag) 
+	{
+		if(flag) 
+		{
+			jlabelObj.setText(name + " " + "HI");
 	        } 
-	        else {
+	        else 
+		{
 	        	jlabelObj.setText(name);
-			}
 		}
+	}
 				
 	
 }

@@ -4,6 +4,8 @@ import javax.swing.border.LineBorder;
 
 /**
  * @author Vaibhav Bhasin
+ * version 2
+ * Description: Panel class to display inside tab for Vaibhav Bhasin
  */
 
 class Panel_11 extends JPanel implements PanelInterface {
@@ -22,13 +24,10 @@ class Panel_11 extends JPanel implements PanelInterface {
     public void sayHi(boolean flag) {
         JLabel labelForHi = (JLabel)getComponent(0);
         if(flag){
-            labelForHi.setText("Hi");
-            labelForHi.setFont(new Font("Verdana", 0, 35));
-           
+            labelForHi.setText("Vaibhav Bhasin Hi");
         }
         else{
             labelForHi.setText("Vaibhav Bhasin");
-            labelForHi.setFont(new Font("Verdana", 0, 20));
         }
     }
 }

@@ -5,23 +5,32 @@ import java.awt.*;
  * Author: Abhishek Gupta
  * Created: 1/19/2019
  */
-public class Panel_29 extends JPanel {
+public class Panel_29 extends JPanel implements PanelInterface {
+    private JLabel PanelLabel = new JLabel();
+    private String UserName = "Abhishek Gupta";
+	
+    /**
+    * Class constructor.
+    */
     public Panel_29() {
-        init();
+        setLayout(new GridBagLayout());
+        PanelLabel.setText(UserName);
+        add(PanelLabel);
+        setBackground(Color.lightGray);
+        setVisible(true);
     }
     
     /**
-     * Method to Initialize components of the JPanel
-     */
-    private void init() {
-        this.setLayout(new GridBagLayout());
-        JLabel nameLabel = new JLabel("Abhishek Gupta");
-        this.add(nameLabel);
-        this.setBackground(Color.lightGray);
-        this.setVisible(true);
-    }
-    
-    public static void main(String args[]) {
-    	new Panel_29();
-    }
+    * This method has been overridden using the interface that toggles
+    * the text on the panel to show Hi when the flag is true.
+    */
+    @Override
+    public void sayHi(boolean flag) {
+	if(flag) {
+		PanelLabel.setText(UserName + " " + "HI");
+	}
+	else {
+		PanelLabel.setText(UserName);
+	}
+    }  
 }

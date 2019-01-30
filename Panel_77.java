@@ -2,17 +2,18 @@ import javax.swing.*;
 import java.awt.*;
 
 /*
-    Author - Jainish Soni
-    GitID - 77
-
+ *  Author - Jainish Soni
+ *  GitID - 77
+ *  This Panel belongs to Joshua Drumm(Tab_21).
  */
 public class Panel_77 extends JPanel implements PanelInterface {
 
-    public String p_Name = "Jainish Soni";
+    public String myName = "Jainish Soni";
+    JLabel label;
     public Panel_77(){
 
         this.setLayout(new GridBagLayout());
-        JLabel label = new JLabel(p_Name);
+        label = new JLabel(myName);
         label.setAlignmentX(CENTER_ALIGNMENT);
         this.add(label);
         this.setAlignmentX(CENTER_ALIGNMENT);
@@ -21,10 +22,10 @@ public class Panel_77 extends JPanel implements PanelInterface {
     @Override
         public void sayHi(boolean flag){
         if (flag){
-            p_Name = "Hi Jainish Soni";
+            label.setText("Hi " + myName);
         }
         else {
-            p_Name = "Jainish Soni";
+            label.setText(myName);
         }
     }
 }
