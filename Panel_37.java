@@ -3,15 +3,17 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-/* panel_37 creation for displaying panel name 
+/** panel_37 creation for displaying panel name with 'Hi'
  * @author: Harshita Kajal
- * ID: 37
+ * @ID: 37
+ * @gitUserID: HarshitaKAM
+ * @version 1.1
  */
 
 public class Panel_37 extends JPanel implements PanelInterface
 {
 
-/* Constructor for panel */
+// Constructor for buildPanel attributes
   public Panel_37()  
    {  
 	  buildPanel_37();
