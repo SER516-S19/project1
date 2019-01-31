@@ -12,8 +12,9 @@ public class Panel_42 extends JPanel implements PanelInterface {
 	
 	private String name = "Naren kumar Konchada";
 	private JLabel nameLabel;
-	
-	//Constructor
+	/**
+	*  Panel_42 constructor to create and style the panel 
+	*/
 	public Panel_42() {
 		nameLabel = new JLabel(name);
 		nameLabel.setFont(new Font("Arial", Font.ITALIC, 20));
@@ -21,7 +22,14 @@ public class Panel_42 extends JPanel implements PanelInterface {
 		this.setBackground(Color.lightGray);
 		this.setVisible(true);
 	}
-
+	/**
+	* Display name with "HI" based on flag. 
+	*
+	* @param flag, To display name with HI or not
+	* flag = true will display name with HI
+	* flag = false will display just the name 
+	* 
+	*/
 	@Override
 	public void sayHi(boolean flag) {
 		if (flag) {
@@ -30,7 +38,5 @@ public class Panel_42 extends JPanel implements PanelInterface {
 		else {
 			nameLabel.setText(name);
 		}
-		
 	}
-
 }
