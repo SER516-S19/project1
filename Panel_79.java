@@ -2,10 +2,11 @@ import java.awt.*;
 import javax.swing.*;
 
 /**
-* For SER 516 Project
-* @author Aprajita Thakur
-* @version 1.2
-* @since 01-17-2019
+*   Panel_79 class for creating a Panel containing 
+*   label name "Aprajita Thakur"
+*   @author Aprajita Thakur
+*   @version 1.3
+*   @since 01-17-2019
 */
 
 public class Panel_79 extends JPanel implements PanelInterface
@@ -27,16 +28,16 @@ public class Panel_79 extends JPanel implements PanelInterface
    
     @Override
     /**
-    * Display "HI" with label name on the Panel. 
+    *   Display "HI" with label name on the Panel. 
     *
-    * @param  flag  To display HI with name or not
-    * flag = true wil display HI with name
-    * flag = false will display just the name 
+    *   @param  greet  To display HI with name or not
+    *   greet = true wil display HI with name
+    *   greet = false will display just the name 
     * 
     */
-    public void sayHi(boolean flag)
+    public void sayHi(boolean greet)
     {
-        if (flag){
+        if (greet){
             label.setText(name + " "+ "HI");
         }
         else{
