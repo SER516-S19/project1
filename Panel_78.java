@@ -2,15 +2,13 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 
-/* 
+/** 
+ *	Used to create a panel with a label having the users name.
+ *
  * @author:  Viraj Talaty
  * @gitID:   78
  */
 
- /**
- *	Used to create a panel with a label
- *	having the users name.
- */
 public class Panel_78 extends JPanel implements PanelInterface
 {
 	/**
@@ -29,21 +27,17 @@ public class Panel_78 extends JPanel implements PanelInterface
 	}
 	
 	/**
-	*	When the hiFlag is set to true user name
-	*	along with a Hi! is shown.
+	*	When the hiFlag is set to true user name along with a Hi! is shown.
 	*	If the hiFlag is false only user name is shown.
+	*
 	*	@param hiFlag
 	*/
 	@Override
 	public void sayHi(boolean hiFlag) {
 		JLabel lblName = (JLabel)getComponent(0);
 		if(hiFlag)
-		{
 			lblName.setText("<html>Viraj Talaty<br/>Hi!</html>");
-		}
 		else
-		{
 			lblName.setText("Viraj Talaty");
-		}
 	}
 }
